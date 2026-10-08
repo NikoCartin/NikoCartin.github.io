@@ -96,7 +96,7 @@ img { display: block; max-width: 100%; }
 .fact-row { display: flex; justify-content: space-between; padding-top: 10px; color: rgba(255,255,255,.68); font-size: .72rem; }
 .fact-row b { color: var(--paper); font-size: .74rem; }
 .scroll-note { position: absolute; left: 5vw; bottom: 38px; display: flex; gap: 9px; align-items: center; color: rgba(255,255,255,.48); font-family: var(--font-mono); font-size: .6rem; letter-spacing: .08em; text-transform: uppercase; }
-.scroll-note span { width: 26px; height: 1px; background: var(--coral); }
+.scroll-note span { width: 6px; height: 6px; flex: 0 0 6px; border-radius: 50%; background: var(--coral); }
 
 .intro-strip { display: flex; gap: 28px; align-items: center; justify-content: space-between; padding: 28px 5vw; color: var(--ink); background: var(--coral); }
 .intro-strip p { max-width: 670px; margin: 0; font-size: 1.05rem; letter-spacing: -.025em; }
