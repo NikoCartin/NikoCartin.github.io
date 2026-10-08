@@ -35,7 +35,7 @@ The production output is generated in `dist/` and contains the static files depl
 
 ## Deployment
 
-Every push to `main` runs `.github/workflows/deploy-pages.yml`. The workflow installs dependencies, builds the Vite site, uploads the `dist/` artifact, and deploys it through GitHub Pages.
+GitHub Pages serves the generated static files from the root of `main`. Every push to `main` runs `.github/workflows/deploy-pages.yml`, builds the Vite site, refreshes the root `index.html` and `assets/` output, and pushes the generated files back with a skip-CI commit.
 
 ## Portfolio focus
 
