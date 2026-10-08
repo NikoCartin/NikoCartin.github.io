@@ -379,7 +379,7 @@ export default function Home() {
           </p>
           <div className="hero-actions">
             <a className="button button-primary" href="#work">View selected work <ArrowRight size={17} /></a>
-            <a className="button button-quiet" href="mailto:nicolascartinreyes@gmail.com">Start a conversation <Mail size={17} /></a>
+            <a className="button button-quiet" href="https://mail.google.com/mail/?view=cm&fs=1&to=nicolascartinreyes@gmail.com&su=Portfolio%20inquiry&body=Hi%20Nicol%C3%A1s%2C%0A%0AI%27d%20like%20to%20discuss%20a%20project%20with%20you." target="_blank" rel="noreferrer">Start a conversation <Mail size={17} /></a>
             <a className="resume-link" href="/assets/Nicolas-Cartin-Reyes-Resume-2026.pdf" target="_blank" rel="noreferrer">Resume PDF <ArrowUpRight size={15} /></a>
           </div>
         </div>
