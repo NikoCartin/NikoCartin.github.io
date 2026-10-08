@@ -122,10 +122,10 @@ const earlierProjects = [
   },
   {
     title: "MarbellaCR & NossoCR",
-    type: "E-commerce · Branding · SEO",
-    text: "Built and managed storefront experiences for Costa Rican fashion retailers, combining product catalogs, promotions, WhatsApp commerce, social content, SEO, and visual merchandising.",
+    type: "WordPress · WooCommerce · Branding · SEO",
+    text: "Built and managed the WordPress and WooCommerce storefront for NossoCR, combining product catalogs, promotions, WhatsApp commerce, social content, SEO, and visual merchandising.",
     image: "/assets/marbella-banner.png",
-    link: "https://github.com/NikoCartin/NikoCartin",
+    link: "https://nossocr.com/",
   },
   {
     title: "Laravel inventory system",
@@ -397,7 +397,7 @@ export default function Home() {
       <section className="intro-strip">
         <p><strong>From checkout logic to campaign performance,</strong> I bridge development, product operations, UX, digital marketing, SEO, CRO, and growth work.</p>
         <div className="intro-tools" aria-label="Core technologies">
-          <span>LIQUID</span><span>REACT</span><span>RUST/WASM</span><span>GRAPHQL</span><span>PYTHON</span><span>DIGITAL MARKETING</span><span>SEO</span><span>CRO</span>
+          <span>LIQUID</span><span>REACT</span><span>RUST/WASM</span><span>GRAPHQL</span><span>PYTHON</span><span>WORDPRESS</span><span>WOOCOMMERCE</span><span>DIGITAL MARKETING</span><span>SEO</span><span>CRO</span>
         </div>
       </section>
 
@@ -696,6 +696,7 @@ export default function Home() {
               <span className="eyebrow"><span className="eyebrow-dot" />3M UX design stretch assignment</span>
               <h3>Design-system thinking for complex, content-heavy experiences.</h3>
               <p>Contributed to key 3M.com page redesign work using the Modular Design System, Figma research and prototypes, accessibility considerations, documentation, and validation with the global UX team.</p>
+              <a className="text-link" href="https://www.3m.com/" target="_blank" rel="noreferrer">Visit 3M.com <ArrowUpRight size={15} /></a>
             </div>
           </div>
         </div>
