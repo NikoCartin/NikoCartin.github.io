@@ -367,7 +367,7 @@ export default function Home() {
 
       <section className="hero" id="top">
         <div className="hero-portrait" aria-hidden="true">
-          <img src="/assets/nicolas-graduation-portrait.webp" alt="" />
+          <img src="/assets/nicolas-graduation-portrait.webp" alt="" loading="eager" fetchPriority="high" decoding="async" />
         </div>
         <div className="hero-grid" />
         <div className="hero-content">
@@ -403,7 +403,7 @@ export default function Home() {
 
       <section className="education-section">
         <div className="section-shell education-grid">
-          <div className="education-photo"><img src="/assets/nicolas-graduation-uia.jpg" alt="Nicolás Cartín Reyes at his graduation ceremony from UIA." /></div>
+          <div className="education-photo"><img src="/assets/nicolas-graduation-uia.jpg" alt="Nicolás Cartín Reyes at his graduation ceremony from UIA." loading="lazy" decoding="async" /></div>
           <div className="education-copy">
             <span className="eyebrow"><span className="eyebrow-dot" />Education &amp; perspective</span>
             <h2>Technical depth, business context, and a reason to keep learning.</h2>
@@ -460,7 +460,7 @@ export default function Home() {
                 </a>
               </div>
               <a className="project-image" href={project.link} target="_blank" rel="noreferrer" aria-label={project.linkLabel}>
-                <img src={project.image} alt="" />
+                <img src={project.image} alt="" loading="lazy" decoding="async" />
                 <span className="image-arrow"><ArrowUpRight size={21} /></span>
               </a>
             </article>
@@ -485,7 +485,7 @@ export default function Home() {
           <div className="echelon-work-grid">
             {echelonWorkstreams.map((workstream, index) => (
               <article className="echelon-card" key={workstream.title}>
-                <div className="echelon-card-media"><img src={workstream.image} alt="" /><span>0{index + 1}</span></div>
+                <div className="echelon-card-media"><img src={workstream.image} alt="" loading="lazy" decoding="async" /><span>0{index + 1}</span></div>
                 <div className="echelon-card-body">
                   <span className="project-eyebrow">{workstream.tags.join(" · ")}</span>
                   <h3>{workstream.title}</h3>
@@ -529,7 +529,7 @@ export default function Home() {
             <div className="case-study-grid">
               {echelonCommerceCases.map((project) => (
                 <article className="case-study-card" key={project.title}>
-                  <a className="case-study-media" href={project.liveUrl ?? project.link} target="_blank" rel="noreferrer"><img src={project.image} alt="" /><span><ArrowUpRight size={17} /></span></a>
+                  <a className="case-study-media" href={project.liveUrl ?? project.link} target="_blank" rel="noreferrer"><img src={project.image} alt="" loading="lazy" decoding="async" /><span><ArrowUpRight size={17} /></span></a>
                   <div className="case-study-body">
                     <span className="case-study-area">{project.area}</span>
                     <h4>{project.title}</h4>
@@ -554,7 +554,7 @@ export default function Home() {
             <div className="case-study-grid">
               {primalCommerceCases.map((project) => (
                 <article className="case-study-card" key={project.title}>
-                  <a className="case-study-media" href={project.link} target="_blank" rel="noreferrer"><img src={project.image} alt="" /><span><ArrowUpRight size={17} /></span></a>
+                  <a className="case-study-media" href={project.link} target="_blank" rel="noreferrer"><img src={project.image} alt="" loading="lazy" decoding="async" /><span><ArrowUpRight size={17} /></span></a>
                   <div className="case-study-body">
                     <span className="case-study-area">{project.area}</span>
                     <h4>{project.title}</h4>
@@ -612,7 +612,7 @@ export default function Home() {
                 <div><b>0%</b><span>Unsubscribe</span></div>
               </div>
               <div className="campaign-proof">
-                <img src="/assets/hmma-midyear-campaign-metrics.png" alt="Performance dashboard for the Hablemos de MMA Mid-Year Promo email campaign." />
+                <img src="/assets/hmma-midyear-campaign-metrics.png" alt="Performance dashboard for the Hablemos de MMA Mid-Year Promo email campaign." loading="lazy" decoding="async" />
               </div>
               <p className="campaign-caption">Hablemos de MMA · 70 recipients · July 2026. The performance snapshot also recorded a 5.7% bounce rate, a useful signal for list hygiene and deliverability review.</p>
             </article>
@@ -640,13 +640,13 @@ export default function Home() {
                   <span><Check size={15} />Mobile-first composition</span>
                 </div>
               </div>
-              <div className="email-phone-preview"><img src="/assets/hmma-midyear-email-design.png" alt="Mid-year promotional email designed for Hablemos de MMA customers." /></div>
+              <div className="email-phone-preview"><img src="/assets/hmma-midyear-email-design.png" alt="Mid-year promotional email designed for Hablemos de MMA customers." loading="lazy" decoding="async" /></div>
             </div>
             <div className="campaign-history-case">
               <span className="campaign-mini-label">Campaign portfolio</span>
               <h3>A repeatable campaign practice, with measurable learnings.</h3>
               <p>The campaign library includes welcome, promotion, loyalty, and seasonal Black November sends. Results are reviewed across open rate, click rate, CTOR, recipients, and list quality to guide the next iteration.</p>
-              <img src="/assets/hmma-campaign-history.png" alt="Hablemos de MMA campaign history showing performance metrics across promotional, welcome, and seasonal emails." />
+              <img src="/assets/hmma-campaign-history.png" alt="Hablemos de MMA campaign history showing performance metrics across promotional, welcome, and seasonal emails." loading="lazy" decoding="async" />
             </div>
           </div>
           <div className="email-proof-row">
@@ -680,7 +680,7 @@ export default function Home() {
           <div className="archive-grid">
             {earlierProjects.map((project) => (
               <article className="archive-card" key={project.title}>
-                <a className="archive-media" href={project.link} target="_blank" rel="noreferrer"><img src={project.image} alt="" /><span><ArrowUpRight size={17} /></span></a>
+                <a className="archive-media" href={project.link} target="_blank" rel="noreferrer"><img src={project.image} alt="" loading="lazy" decoding="async" /><span><ArrowUpRight size={17} /></span></a>
                 <div className="archive-copy">
                   <span>{project.type}</span>
                   <h3>{project.title}</h3>
@@ -691,7 +691,7 @@ export default function Home() {
             ))}
           </div>
           <div className="ux-case-strip">
-            <img src="/assets/three-m-ux.png" alt="3M Annual Report page redesign example from a UX design portfolio case." />
+            <img src="/assets/three-m-ux.png" alt="3M Annual Report page redesign example from a UX design portfolio case." loading="lazy" decoding="async" />
             <div>
               <span className="eyebrow"><span className="eyebrow-dot" />3M UX design stretch assignment</span>
               <h3>Design-system thinking for complex, content-heavy experiences.</h3>
@@ -737,7 +737,7 @@ export default function Home() {
               <a className="text-link" href={githubUrl} target="_blank" rel="noreferrer">Browse GitHub projects <ArrowUpRight size={16} /></a>
             </div>
           </div>
-          <div className="hmma-image-wrap"><img src="/assets/hmma-platform.webp" alt="Hablemos de MMA platform preview." /></div>
+          <div className="hmma-image-wrap"><img src="/assets/hmma-platform.webp" alt="Hablemos de MMA platform preview." loading="lazy" decoding="async" /></div>
         </div>
       </section>
 
