@@ -48,7 +48,7 @@ const engineeringCases = [
     eyebrow: "Commercial UX · Production recovery",
     title: "A commercial storefront hardened for real operational pressure.",
     body: "Maintained React-powered Shopify product experiences, quote flows, technical product data, routing, lead capture, and asset quality. Recovered a production JavaScript regression and introduced a controlled deployment and rollback baseline.",
-    image: "/assets/echelon-commercial.png",
+    image: "/assets/echelon-commercial-hero.webp",
     tags: ["React", "Shopify", "Formspree", "QA", "Git"],
     link: "https://github.com/NikoCartin/echelon-commercial-portfolio",
     linkLabel: "Read the case-study overview",
@@ -107,7 +107,7 @@ const echelonWorkstreams = [
   {
     title: "Commercial storefront hardening",
     text: "Improved product-data presentation, quote flows, Market Segment capture, specification downloads, navigation, technical SEO, runtime recovery, and stable production deployment for Echelon Commercial.",
-    image: "/assets/echelon-commercial.png",
+    image: "/assets/echelon-commercial-catalog.webp",
     tags: ["React", "Formspree", "Production QA"],
   },
 ];
@@ -612,7 +612,9 @@ export default function Home() {
                 <div><b>0%</b><span>Unsubscribe</span></div>
               </div>
               <div className="campaign-proof">
-                <img src="/assets/hmma-midyear-campaign-metrics.png" alt="Performance dashboard for the Hablemos de MMA Mid-Year Promo email campaign." loading="lazy" decoding="async" />
+                <a className="image-link" href="https://hablemosdemma.com/" target="_blank" rel="noreferrer" aria-label="Visit Hablemos de MMA">
+                  <img src="/assets/hmma-midyear-campaign-metrics.png" alt="Performance dashboard for the Hablemos de MMA Mid-Year Promo email campaign." loading="lazy" decoding="async" />
+                </a>
               </div>
               <p className="campaign-caption">Hablemos de MMA · 70 recipients · July 2026. The performance snapshot also recorded a 5.7% bounce rate, a useful signal for list hygiene and deliverability review.</p>
             </article>
@@ -640,13 +642,13 @@ export default function Home() {
                   <span><Check size={15} />Mobile-first composition</span>
                 </div>
               </div>
-              <div className="email-phone-preview"><img src="/assets/hmma-midyear-email-design.png" alt="Mid-year promotional email designed for Hablemos de MMA customers." loading="lazy" decoding="async" /></div>
+              <div className="email-phone-preview"><a className="image-link" href="https://hablemosdemma.com/" target="_blank" rel="noreferrer" aria-label="Visit Hablemos de MMA"><img src="/assets/hmma-midyear-email-design.png" alt="Mid-year promotional email designed for Hablemos de MMA customers." loading="lazy" decoding="async" /></a></div>
             </div>
             <div className="campaign-history-case">
               <span className="campaign-mini-label">Campaign portfolio</span>
               <h3>A repeatable campaign practice, with measurable learnings.</h3>
               <p>The campaign library includes welcome, promotion, loyalty, and seasonal Black November sends. Results are reviewed across open rate, click rate, CTOR, recipients, and list quality to guide the next iteration.</p>
-              <img src="/assets/hmma-campaign-history.png" alt="Hablemos de MMA campaign history showing performance metrics across promotional, welcome, and seasonal emails." loading="lazy" decoding="async" />
+              <a className="image-link" href="https://hablemosdemma.com/" target="_blank" rel="noreferrer" aria-label="Visit Hablemos de MMA"><img src="/assets/hmma-campaign-history.png" alt="Hablemos de MMA campaign history showing performance metrics across promotional, welcome, and seasonal emails." loading="lazy" decoding="async" /></a>
             </div>
           </div>
           <div className="email-proof-row">
@@ -691,7 +693,7 @@ export default function Home() {
             ))}
           </div>
           <div className="ux-case-strip">
-            <img src="/assets/three-m-ux.png" alt="3M Annual Report page redesign example from a UX design portfolio case." loading="lazy" decoding="async" />
+            <a className="image-link" href="https://www.3m.com/" target="_blank" rel="noreferrer" aria-label="Visit 3M.com"><img src="/assets/three-m-ux.png" alt="3M Annual Report page redesign example from a UX design portfolio case." loading="lazy" decoding="async" /></a>
             <div>
               <span className="eyebrow"><span className="eyebrow-dot" />3M UX design stretch assignment</span>
               <h3>Design-system thinking for complex, content-heavy experiences.</h3>
@@ -738,7 +740,7 @@ export default function Home() {
               <a className="text-link" href={githubUrl} target="_blank" rel="noreferrer">Browse GitHub projects <ArrowUpRight size={16} /></a>
             </div>
           </div>
-          <div className="hmma-image-wrap"><img src="/assets/hmma-platform.webp" alt="Hablemos de MMA platform preview." loading="lazy" decoding="async" /></div>
+          <div className="hmma-image-wrap"><a className="image-link" href="https://hablemosdemma.com/" target="_blank" rel="noreferrer" aria-label="Visit Hablemos de MMA"><img src="/assets/hmma-platform.webp" alt="Hablemos de MMA platform preview." loading="lazy" decoding="async" /></a></div>
         </div>
       </section>
 
