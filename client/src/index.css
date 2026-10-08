@@ -73,8 +73,8 @@ img { display: block; max-width: 100%; }
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(11,15,22,.98) 0%, rgba(11,15,22,.88) 31%, rgba(11,15,22,.45) 65%, rgba(11,15,22,.6) 100%); }
 .hero-grid { position: absolute; z-index: -1; inset: 0; background-image: linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px); background-size: 70px 70px; mask-image: linear-gradient(90deg, black 0%, black 42%, transparent 78%); opacity: .42; }
 .hero-content { width: min(790px, 61vw); padding-top: 35px; }
-.availability-pill { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,.16); padding: 7px 11px; border-radius: 99px; color: rgba(255,255,255,.72); font-family: var(--font-mono); font-size: .61rem; letter-spacing: .025em; text-transform: uppercase; }
-.availability-pill > span { width: 7px; height: 7px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 0 4px rgba(217,236,104,.11); }
+.availability-pill { display: inline-flex; align-items: center; gap: 8px; width: fit-content; max-width: 100%; box-sizing: border-box; border: 1px solid rgba(255,255,255,.16); padding: 7px 11px; border-radius: 99px; color: rgba(255,255,255,.72); font-family: var(--font-mono); font-size: .61rem; line-height: 1.35; letter-spacing: .025em; text-transform: uppercase; white-space: normal; }
+.availability-pill > .availability-dot { width: 7px; height: 7px; flex: 0 0 7px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 0 4px rgba(217,236,104,.11); }
 .hero-kicker { margin: 30px 0 15px; color: var(--blue); font-family: var(--font-mono); font-size: .74rem; letter-spacing: .03em; text-transform: uppercase; }
 .hero h1 { max-width: 840px; margin: 0; font-size: clamp(3.5rem, 6.1vw, 7.2rem); line-height: .92; font-weight: 600; letter-spacing: -.075em; }
 .hero h1 em { color: var(--coral); font-family: var(--font-display); font-style: italic; font-weight: 600; }
@@ -346,7 +346,7 @@ img { display: block; max-width: 100%; }
   .hmma-image-wrap { min-height: 340px; }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 840px) {
   .site-header { height: 67px; padding: 0 22px; }
   .brand { gap: 8px; font-size: .76rem; }
   .brand-mark { width: 26px; height: 26px; font-size: 1rem; }
@@ -359,7 +359,7 @@ img { display: block; max-width: 100%; }
   .hero-content { width: 100%; padding-top: 0; }
   .hero-portrait { top: 285px; right: -18px; width: 205px; height: 275px; opacity: .38; }
   .hero-grid { background-size: 45px 45px; opacity: .28; }
-  .availability-pill { font-size: .53rem; }
+  .availability-pill { align-items: flex-start; max-width: 100%; padding: 7px 10px; font-size: .53rem; line-height: 1.45; letter-spacing: .02em; }
   .hero-kicker { margin-top: 23px; font-size: .61rem; }
   .hero h1 { font-size: clamp(3.15rem, 15vw, 4.5rem); }
   .hero-lede { margin-top: 22px; font-size: .94rem; }

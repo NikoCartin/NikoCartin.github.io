@@ -371,7 +371,7 @@ export default function Home() {
         </div>
         <div className="hero-grid" />
         <div className="hero-content">
-          <div className="availability-pill"><span />Available for remote Shopify &amp; full-stack work</div>
+          <div className="availability-pill"><span className="availability-dot" />Available for remote Shopify, full-stack &amp; digital strategy work</div>
           <p className="hero-kicker">Full Stack Developer &amp; Digital Strategist · Shopify Plus</p>
           <h1>I build commerce<br /><em>that works.</em></h1>
           <p className="hero-lede">
