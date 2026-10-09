@@ -294,10 +294,14 @@ img { display: block; max-width: 100%; }
 .archive-copy .text-link { margin-top: 17px; color: #171b22; font-size: .69rem; }
 .archive-copy .text-link:hover { color: #416bbb; }
 .ux-case-strip { display: grid; grid-template-columns: minmax(320px, .72fr) 1fr; gap: 30px; align-items: center; margin-top: 22px; padding: 25px; background: #fff; border: 1px solid rgba(17,21,29,.1); border-radius: 13px; }
-.ux-case-strip img { width: 100%; height: 230px; object-fit: cover; object-position: left center; border-radius: 8px; }
+.ux-case-strip .image-link { overflow: hidden; border-radius: 8px; }
+.ux-case-strip img { width: 100%; height: 230px; object-fit: cover; object-position: left center; border-radius: 8px; transition: transform 360ms var(--ease-out), filter 360ms var(--ease-out); }
+.ux-case-strip .image-link:hover img, .ux-case-strip .image-link:focus-visible img { transform: scale(1.06); filter: brightness(1.04); }
 .ux-case-strip .eyebrow { color: #406cbb; }
 .ux-case-strip h3 { max-width: 650px; margin: 12px 0 10px; font-size: 1.7rem; line-height: 1.02; letter-spacing: -.05em; }
 .ux-case-strip p { max-width: 730px; margin: 0; color: #646268; font-size: .8rem; line-height: 1.53; }
+.ux-case-strip .text-link { margin-top: 18px; color: #1d4e91; font-family: var(--font-mono); font-size: .64rem; letter-spacing: .02em; text-decoration: underline; text-decoration-color: rgba(29,78,145,.35); text-underline-offset: 4px; }
+.ux-case-strip .text-link:hover { color: #b94e3d; text-decoration-color: currentColor; }
 
 .platform-section { padding-top: 130px; padding-bottom: 124px; background: var(--ink); }
 .platform-header { display: flex; justify-content: space-between; gap: 38px; align-items: end; }
