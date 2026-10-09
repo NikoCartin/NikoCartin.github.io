@@ -11,6 +11,7 @@ import {
   Layers3,
   Linkedin,
   Mail,
+  MessageCircle,
   Menu,
   Send,
   ShieldCheck,
@@ -792,6 +793,16 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      <a
+        className="whatsapp-float"
+        href="https://wa.me/50660336576"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Chat with Nícolas on WhatsApp"
+        title="Chat on WhatsApp"
+      >
+        <MessageCircle size={25} strokeWidth={2.4} aria-hidden="true" />
+      </a>
     </main>
   );
 }
