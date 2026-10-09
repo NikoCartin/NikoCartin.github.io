@@ -543,6 +543,16 @@ export default function Home() {
             </div>
             <a className="featured-app-link" href="https://echelonfit.com/pages/partners" target="_blank" rel="noreferrer">See live experience <ArrowUpRight size={17} /></a>
           </div>
+          <div className="featured-app">
+            <div className="featured-app-mark"><Layers3 size={23} /></div>
+            <div className="featured-app-copy">
+              <span>Open-source starter</span>
+              <h3>Domain-Verified Partner Benefits Starter</h3>
+              <p>Generalized the partner-verification architecture into a reusable Shopify starter for employee, alumni, membership, and B2B programs. It includes Customer Account API authentication, OAuth 2.0 with PKCE, exact domain eligibility, MySQL persistence, encrypted token storage, App Proxy security, and one-time discount issuance.</p>
+              <div className="tag-list"><Tag>Node.js</Tag><Tag>Shopify Liquid</Tag><Tag>OAuth 2.0 + PKCE</Tag><Tag>MySQL</Tag><Tag>Security tests</Tag></div>
+            </div>
+            <a className="featured-app-link" href="https://github.com/NikoCartin/shopify-domain-verified-partner-benefits-starter" target="_blank" rel="noreferrer">View public repository <ArrowUpRight size={17} /></a>
+          </div>
 
           <div className="case-group">
             <div className="case-group-heading"><span>01 / Echelon</span><h3>Commerce, infrastructure, and customer experience across regional storefronts.</h3></div>
