@@ -11,7 +11,6 @@ import {
   Layers3,
   Linkedin,
   Mail,
-  MessageCircle,
   Menu,
   Send,
   ShieldCheck,
@@ -801,7 +800,7 @@ export default function Home() {
         aria-label="Chat with Nícolas on WhatsApp"
         title="Chat on WhatsApp"
       >
-        <MessageCircle size={25} strokeWidth={2.4} aria-hidden="true" />
+        <img src="/assets/whatsapp-official.svg" alt="" aria-hidden="true" />
       </a>
     </main>
   );
