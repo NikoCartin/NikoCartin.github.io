@@ -364,7 +364,7 @@ export default function Home() {
           <a href="#work" onClick={closeMenu}>Work</a>
           <a href="#echelon" onClick={closeMenu}>Echelon</a>
           <a href="#shopify-work" onClick={closeMenu}>Cases</a>
-          <a href="#email" onClick={closeMenu}>Email</a>
+          <a href="#email" onClick={closeMenu}>Email Marketing</a>
           <a href="#archive" onClick={closeMenu}>Archive</a>
           <a href="#strategy" onClick={closeMenu}>Expertise</a>
           <a href="#systems" onClick={closeMenu}>Systems</a>
