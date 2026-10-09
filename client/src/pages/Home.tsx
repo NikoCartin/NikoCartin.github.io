@@ -349,7 +349,7 @@ export default function Home() {
       <header className="site-header">
         <a className="brand" href="#top" onClick={closeMenu} aria-label="Go to the top of the portfolio">
           <span className="brand-mark">N</span>
-          <span>Nicolás Cartín Reyes</span>
+          <span>Nícolas Cartín Reyes</span>
         </a>
         <button
           type="button"
@@ -389,8 +389,8 @@ export default function Home() {
           </p>
           <div className="hero-actions">
             <a className="button button-primary" href="#work">View selected work <ArrowRight size={17} /></a>
-            <a className="button button-quiet" href="https://mail.google.com/mail/?view=cm&fs=1&to=nicolascartinreyes@gmail.com&su=Portfolio%20inquiry&body=Hi%20Nicol%C3%A1s%2C%0A%0AI%27d%20like%20to%20discuss%20a%20project%20with%20you." target="_blank" rel="noreferrer">Start a conversation <Mail size={17} /></a>
-            <a className="resume-link" href="/assets/Nicolas-Cartin-Reyes-Resume-2026.pdf" target="_blank" rel="noreferrer">Resume PDF <ArrowUpRight size={15} /></a>
+            <a className="button button-quiet" href="https://mail.google.com/mail/?view=cm&fs=1&to=nicolascartinreyes@gmail.com&su=Portfolio%20inquiry&body=Hi%20N%C3%ADcolas%2C%0A%0AI%27d%20like%20to%20discuss%20a%20project%20with%20you." target="_blank" rel="noreferrer">Start a conversation <Mail size={17} /></a>
+            <a className="resume-link" href="/assets/Nícolas-Cartín-Reyes-Resume-2026.pdf" target="_blank" rel="noreferrer">Resume PDF <ArrowUpRight size={15} /></a>
           </div>
         </div>
         <aside className="hero-fact-card" aria-label="Professional overview">
@@ -413,7 +413,7 @@ export default function Home() {
 
       <section className="education-section">
         <div className="section-shell education-grid">
-          <div className="education-photo"><img src="/assets/nicolas-graduation-uia.jpg" alt="Nicolás Cartín Reyes at his graduation ceremony from UIA." loading="lazy" decoding="async" /></div>
+          <div className="education-photo"><img src="/assets/nicolas-graduation-uia.jpg" alt="Nícolas Cartín Reyes at his graduation ceremony from UIA." loading="lazy" decoding="async" /></div>
           <div className="education-copy">
             <span className="eyebrow"><span className="eyebrow-dot" />Education &amp; perspective</span>
             <h2>Technical depth, business context, and a reason to keep learning.</h2>
@@ -784,7 +784,7 @@ export default function Home() {
           <a className="contact-email" href="mailto:nicolascartinreyes@gmail.com">nicolascartinreyes@gmail.com <ArrowUpRight size={20} /></a>
         </div>
         <div className="footer-bottom section-shell">
-          <span>© {new Date().getFullYear()} Nicolás Cartín Reyes</span>
+          <span>© {new Date().getFullYear()} Nícolas Cartín Reyes</span>
           <div>
             <a href={githubUrl} target="_blank" rel="noreferrer"><Github size={17} /> GitHub</a>
             <a href={linkedInUrl} target="_blank" rel="noreferrer"><Linkedin size={17} /> LinkedIn</a>
