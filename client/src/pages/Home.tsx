@@ -69,7 +69,7 @@ const capabilities = [
   {
     icon: Code2,
     title: "Full-stack foundations",
-    text: "Liquid, TypeScript, JavaScript, React, Ruby, Python, PHP, Laravel, REST, GraphQL, MySQL, HTML, CSS, and production-ready Git workflows.",
+    text: "Liquid, TypeScript, JavaScript, React, Node.js, Ruby, Python, PHP, Laravel, REST, GraphQL, MySQL, HTML, CSS, and production-ready Git workflows.",
   },
   {
     icon: ShieldCheck,
