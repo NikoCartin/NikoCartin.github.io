@@ -115,8 +115,10 @@ img { display: block; max-width: 100%; }
 .education-highlight span { display: block; color: #406cbb; font-family: var(--font-mono); font-size: .58rem; letter-spacing: .05em; text-transform: uppercase; }
 .education-highlight strong { display: block; margin-top: 8px; font-family: var(--font-display); font-size: 1.32rem; line-height: 1.08; letter-spacing: -.04em; }
 .education-highlight b { display: block; margin-top: 6px; color: #5d5b5d; font-family: var(--font-mono); font-size: .65rem; font-weight: 500; }
-.education-tags { display: flex; gap: 7px; flex-wrap: wrap; margin-top: 23px; }
-.education-tags .tag { border-color: rgba(17,21,29,.2); color: #46454a; }
+.education-credentials { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; margin: 24px 0 22px; padding-top: 20px; border-top: 1px solid rgba(17,21,29,.18); }
+.education-credentials > div { min-width: 0; }
+.education-credentials span { display: block; color: #406cbb; font-family: var(--font-mono); font-size: .58rem; letter-spacing: .05em; text-transform: uppercase; }
+.education-credentials p { margin: 9px 0 0; color: #5d5b5d; font-size: .78rem; line-height: 1.5; }
 
 .strategy-section { padding: 112px 0 118px; color: var(--ink); background: #e9e6de; }
 .strategy-section .section-heading .eyebrow { color: #406cbb; }
@@ -126,9 +128,6 @@ img { display: block; max-width: 100%; }
 .strategy-card > span { color: #e8755e; font-family: var(--font-mono); font-size: .62rem; }
 .strategy-card h3 { margin: 31px 0 9px; font-size: 1.18rem; line-height: 1.02; letter-spacing: -.04em; }
 .strategy-card p { margin: 0; color: #636166; font-size: .75rem; line-height: 1.49; }
-.credential-rail { display: grid; grid-template-columns: 185px 1fr; gap: 25px; margin-top: 42px; padding-top: 17px; border-top: 1px solid rgba(17,21,29,.18); }
-.credential-rail span { color: #406cbb; font-family: var(--font-mono); font-size: .6rem; letter-spacing: .03em; text-transform: uppercase; }
-.credential-rail p { margin: 0; color: #636166; font-size: .73rem; line-height: 1.55; }
 
 .section-shell { width: min(1320px, 100%); margin: auto; padding-left: 5vw; padding-right: 5vw; }
 .work-section { padding-top: 135px; padding-bottom: 105px; background: var(--ink); }
@@ -385,11 +384,11 @@ img { display: block; max-width: 100%; }
   .education-copy h2 { font-size: 2.85rem; }
   .education-copy p { font-size: .88rem; }
   .education-highlight { margin-top: 18px; }
+  .education-credentials { grid-template-columns: 1fr; gap: 18px; margin-top: 21px; }
   .strategy-section { padding: 78px 0; }
   .strategy-grid { grid-template-columns: 1fr; margin-top: 42px; }
   .strategy-card { min-height: auto; padding: 21px; }
   .strategy-card h3 { margin-top: 22px; }
-  .credential-rail { grid-template-columns: 1fr; gap: 9px; margin-top: 32px; }
   .section-shell { padding-left: 22px; padding-right: 22px; }
   .work-section { padding-top: 83px; padding-bottom: 68px; }
   .section-heading h2 { margin-top: 13px; font-size: clamp(2.35rem, 11vw, 3.6rem); }

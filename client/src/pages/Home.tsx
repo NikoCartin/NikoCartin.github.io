@@ -147,32 +147,32 @@ const strategicDomains = [
   {
     number: "01",
     title: "Product, AI & automation",
-    text: "Duke University specialization in Machine Learning for Product Owners, AI Product Management, prompt engineering, generative AI, workflow automation, and practical product thinking.",
+    text: "Translate product goals into clear requirements, practical automation, AI-assisted workflows, and systems teams can operate with confidence.",
   },
   {
     number: "02",
     title: "Web & commerce",
-    text: "Valedictorian training in Web Design & Full Stack Development, Software Engineering studies, Shopify Plus, Liquid, React, PHP/MySQL, Laravel, APIs, and e-commerce systems.",
+    text: "Build and maintain storefronts, applications, APIs, product systems, and e-commerce paths across frontend, backend, and platform layers.",
   },
   {
     number: "03",
     title: "Growth & digital marketing",
-    text: "Digital Marketing Diploma from UIA, SEO, SEM, paid media, content strategy, email marketing, brand positioning, social campaigns, and conversion-focused experiences.",
+    text: "Connect SEO, CRO, paid media, email marketing, content, and brand positioning to the customer journey and the commercial goal.",
   },
   {
     number: "04",
     title: "UX & creative systems",
-    text: "3M UX design experience, Figma, design systems, accessibility, visual content, photography, video, storytelling, and customer-centered interface decisions.",
+    text: "Use design systems, accessibility, visual content, photography, video, and customer-centered thinking to make complex products easier to understand.",
   },
   {
     number: "05",
     title: "Business & operations",
-    text: "Business Administration technical degree with honors from TEC, B2B customer operations, Salesforce, SAP, Mocha, Formspree to HubSpot routing, reporting, and process improvement.",
+    text: "Bring business analysis, customer operations, CRM and ERP experience, reporting, process improvement, and implementation judgment to technical work.",
   },
   {
     number: "06",
     title: "Communication & enablement",
-    text: "Bilingual English and Spanish communication, technical support, interpreter coaching, Spanish audio annotation, training content, and cross-functional coordination.",
+    text: "Make technical work understandable through clear documentation, bilingual communication, training content, and cross-functional coordination.",
   },
 ];
 
@@ -399,7 +399,7 @@ export default function Home() {
           <div className="fact-divider" />
           <div className="fact-row"><span>Web Design &amp; Full Stack Development</span><b>Valedictorian</b></div>
           <div className="fact-row"><span>Business Administration · TEC</span><b>Honors</b></div>
-          <div className="fact-row"><span>Machine Learning for Product Owners</span><b>Duke University</b></div>
+          <div className="fact-row"><span>AI Product Management Specialization</span><b>Duke University</b></div>
         </aside>
         <div className="scroll-note"><span />Scroll to explore</div>
       </section>
@@ -415,17 +415,26 @@ export default function Home() {
         <div className="section-shell education-grid">
           <div className="education-photo"><img src="/assets/nicolas-graduation-uia.jpg" alt="Nícolas Cartín Reyes at his graduation ceremony from UIA." loading="lazy" decoding="async" /></div>
           <div className="education-copy">
-            <span className="eyebrow"><span className="eyebrow-dot" />Education &amp; perspective</span>
-            <h2>Technical depth, business context, and a reason to keep learning.</h2>
-            <p>I graduated <strong>valedictorian</strong> from Universidad Fidélitas in Web Design &amp; Full Stack Development, and graduated with honors from Tecnológico de Costa Rica (TEC) with a Business Administration Technical Degree.</p>
-            <p>I also completed Software Engineering studies at Fidélitas and earned a Digital Marketing Diploma from UIA. My continuing education includes Product Management, AI, UX/UI, cybersecurity, and digital marketing.</p>
+            <span className="eyebrow"><span className="eyebrow-dot" />Education &amp; selected credentials</span>
+            <h2>A technical foundation with product and business context.</h2>
+            <p>I graduated <strong>valedictorian</strong> from Universidad Fidélitas in the Web Design &amp; Full Stack Development Specialization, and graduated with honors from the Tecnológico de Costa Rica (TEC) with a Business Administration Technical Degree.</p>
+            <p>My academic background also includes Software Engineering at Universidad Fidélitas from 2014 to 2016, Advertising Design at Universidad Americana (UAM), and a Professional Diploma in Digital Marketing from Universidad Internacional de las Américas (UIA).</p>
             <div className="education-highlight">
               <span>Featured specialization</span>
-              <strong>Machine Learning for Product Owners</strong>
-              <b>Duke University</b>
+              <strong>AI Product Management Specialization</strong>
+              <b>Duke University · 2024</b>
+            </div>
+            <div className="education-credentials">
+              <div>
+                <span>Selected certifications</span>
+                <p>Managing Machine Learning Projects · Human Factors in AI · JavaScript Specialist Certification · MySQL 5.6 Database Administrator · Registered Scrum Basics™</p>
+              </div>
+              <div>
+                <span>Continuing study</span>
+                <p>Product management · Artificial intelligence · UX/UI · Cybersecurity · Digital marketing · Data science</p>
+              </div>
             </div>
             <p>That mix shapes how I work: I care about the code, but also about the product decision, the customer journey, the team operating the system, and the result after launch.</p>
-            <div className="education-tags"><Tag>Valedictorian · Fidélitas</Tag><Tag>TEC · Honors</Tag><Tag>Web Design &amp; Full Stack Development</Tag><Tag>Business Administration</Tag><Tag>Duke University · Machine Learning</Tag><Tag>Digital Marketing · UIA</Tag></div>
           </div>
         </div>
       </section>
@@ -434,8 +443,8 @@ export default function Home() {
         <div className="section-shell">
           <SectionHeading
             eyebrow="Digital strategy across disciplines"
-            title="A broader skill set, organized around outcomes."
-            text="My studies and certifications cover more than one technical lane. They help me connect product decisions, customer experience, marketing, technology, and operations in the same project."
+            title="How the disciplines show up in my work."
+            text="The portfolio shows the output. These are the lenses I bring to each project, from product and automation to customer experience, growth, and operations."
           />
           <div className="strategy-grid">
             {strategicDomains.map((domain) => (
@@ -446,7 +455,6 @@ export default function Home() {
               </article>
             ))}
           </div>
-          <div className="credential-rail"><span>Selected credentials &amp; study areas</span><p>Machine Learning for Product Owners · Duke University &nbsp; / &nbsp; Web Design &amp; Full Stack Development · Universidad Fidélitas &nbsp; / &nbsp; Business Administration · TEC &nbsp; / &nbsp; Digital Marketing · UIA &nbsp; / &nbsp; Software Engineering · Universidad Fidélitas &nbsp; / &nbsp; UX Design · 3M</p></div>
         </div>
       </section>
 
