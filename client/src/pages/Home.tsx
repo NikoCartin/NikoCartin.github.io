@@ -122,10 +122,17 @@ const earlierProjects = [
     link: "https://github.com/NikoCartin/landing-page-grupo-inmarca",
   },
   {
-    title: "NossoCR WooCommerce storefront",
-    type: "Lead Developer · WordPress · WooCommerce",
-    text: "As Lead Developer, built and managed the NossoCR WordPress and WooCommerce storefront, combining product catalogs, promotions, WhatsApp commerce, social content, SEO, and visual merchandising.",
+    title: "MarbellaCR no-code e-commerce",
+    type: "Lead Developer · Hostinger AI Website Builder",
+    text: "Recreated MarbellaCR's lost e-commerce site after the original agency did not provide the backups. Built a no-code Hostinger AI Website Builder solution with custom styling, layout design, graphic editing, promotions, WhatsApp catalog, social content, and SEO.",
     image: "/assets/marbella-banner.png",
+    link: "https://www.marbellacr.com/",
+  },
+  {
+    title: "NossoCR WordPress & WooCommerce",
+    type: "Lead Developer · WordPress · WooCommerce",
+    text: "Built and managed the NossoCR storefront with Elementor, WordPress theme customization, custom PHP, HTML, CSS, product catalogs, promotions, WhatsApp commerce, SEO, and visual merchandising.",
+    image: "/assets/nosso-storefront.png",
     link: "https://nossocr.com/",
   },
   {
@@ -365,7 +372,7 @@ export default function Home() {
           <a href="#work" onClick={closeMenu}>Work</a>
           <a href="#echelon" onClick={closeMenu}>Echelon</a>
           <a href="#shopify-work" onClick={closeMenu}>Cases</a>
-          <a href="#woocommerce" onClick={closeMenu}>WooCommerce</a>
+          <a href="#marbellacr" onClick={closeMenu}>MarbellaCR</a>
           <a href="#seo" onClick={closeMenu}>SEO</a>
           <a href="#email" onClick={closeMenu}>Email Marketing</a>
           <a href="#archive" onClick={closeMenu}>Archive</a>
@@ -756,28 +763,28 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="woocommerce-section" id="woocommerce">
+      <section className="marbellacr-section" id="marbellacr">
         <div className="section-shell">
-          <div className="woocommerce-heading-row">
+          <div className="marbellacr-heading-row">
             <SectionHeading
-              eyebrow="WooCommerce experience"
-              title="A storefront beyond Shopify."
-              text="As Lead Developer, I built and managed the NossoCR storefront for a Costa Rican multi-brand fashion retailer, combining WordPress, WooCommerce, content, and customer acquisition paths."
+              eyebrow="MarbellaCR · No-code e-commerce"
+              title="Rebuilding the storefront when the backups were gone."
+              text="After the original development agency failed to provide the WooCommerce backups, I recreated MarbellaCR's customer-facing e-commerce site as a practical no-code solution with Hostinger's AI Website Builder."
             />
-            <a className="text-link" href="https://nossocr.com/" target="_blank" rel="noreferrer">Visit NossoCR <ArrowUpRight size={16} /></a>
+            <a className="text-link" href="https://www.marbellacr.com/" target="_blank" rel="noreferrer">Visit MarbellaCR <ArrowUpRight size={16} /></a>
           </div>
-          <div className="woocommerce-feature">
-            <a className="woocommerce-feature-media image-link" href="https://nossocr.com/" target="_blank" rel="noreferrer" aria-label="Visit NossoCR"><img src="/assets/nosso-storefront.png" alt="NossoCR WordPress and WooCommerce storefront homepage." loading="lazy" decoding="async" /></a>
-            <div className="woocommerce-feature-copy">
-              <span className="project-eyebrow">NossoCR · WordPress &amp; WooCommerce</span>
-              <h3>Product discovery, promotions, and direct customer contact in one storefront.</h3>
-              <p>Built the customer-facing experience from scratch with Elementor, WordPress theme selection and customization, and custom PHP, HTML, and CSS. Connected product catalogs, promotional content, WhatsApp commerce, search visibility, and visual merchandising.</p>
-              <div className="woocommerce-facts">
-                <div><span>Platform</span><b>WordPress · WooCommerce · Elementor</b></div>
-                <div><span>Growth</span><b>SEO · Promotions · Social content</b></div>
-                <div><span>Commerce</span><b>Catalogs · Merchandising · WhatsApp</b></div>
+          <div className="marbellacr-feature">
+            <a className="marbellacr-feature-media image-link" href="https://www.marbellacr.com/" target="_blank" rel="noreferrer" aria-label="Visit MarbellaCR"><img src="/assets/marbella-banner.png" alt="MarbellaCR Hostinger AI Builder e-commerce storefront homepage." loading="lazy" decoding="async" /></a>
+            <div className="marbellacr-feature-copy">
+              <span className="project-eyebrow">MarbellaCR · Hostinger AI Website Builder</span>
+              <h3>A fast, maintainable rebuild without the original WooCommerce codebase.</h3>
+              <p>Recreated the online store from the available brand and product information, then shaped the customer experience with custom styling, layout design, graphic editing, product categories, promotional discounts, WhatsApp catalog integration, social content, and SEO.</p>
+              <div className="marbellacr-facts">
+                <div><span>Approach</span><b>No-code rebuild · Hostinger AI Website Builder</b></div>
+                <div><span>Commerce</span><b>Product catalog · Promotions · WhatsApp</b></div>
+                <div><span>Growth</span><b>SEO · Social content · Visual direction</b></div>
               </div>
-              <a className="text-link" href="https://github.com/NikoCartin/nossocr-wordpress" target="_blank" rel="noreferrer">View public case study <ArrowUpRight size={15} /></a>
+              <a className="text-link" href="https://github.com/NikoCartin/NikoCartin#marbellacr-e-commerce-platform" target="_blank" rel="noreferrer">View GitHub project record <ArrowUpRight size={15} /></a>
             </div>
           </div>
         </div>
