@@ -341,6 +341,17 @@ img { display: block; max-width: 100%; }
 .footer-bottom a { display: inline-flex; gap: 6px; align-items: center; transition: color 160ms var(--ease-out); }
 .footer-bottom a:hover { color: white; }
 
+@media (max-width: 1120px) {
+  .site-header { height: 67px; padding: 0 22px; }
+  .brand { gap: 8px; font-size: .76rem; }
+  .brand-mark { width: 26px; height: 26px; font-size: 1rem; }
+  .menu-toggle { display: grid; place-items: center; }
+  .site-nav { position: absolute; top: 67px; right: 0; left: 0; display: none; padding: 20px 22px 24px; align-items: stretch; gap: 15px; color: var(--paper); background: #131823; border-bottom: 1px solid var(--line-dark); }
+  .site-nav.is-open { display: flex; flex-direction: column; }
+  .site-nav > a { padding: 5px 0; }
+  .nav-github { width: fit-content; margin-top: 2px; padding: 8px 11px !important; }
+}
+
 @media (max-width: 940px) {
   .hero { min-height: 720px; }
   .hero-content { width: min(690px, 78vw); }
@@ -354,14 +365,6 @@ img { display: block; max-width: 100%; }
 }
 
 @media (max-width: 840px) {
-  .site-header { height: 67px; padding: 0 22px; }
-  .brand { gap: 8px; font-size: .76rem; }
-  .brand-mark { width: 26px; height: 26px; font-size: 1rem; }
-  .menu-toggle { display: grid; place-items: center; }
-  .site-nav { position: absolute; top: 67px; right: 0; left: 0; display: none; padding: 20px 22px 24px; align-items: stretch; gap: 15px; color: var(--paper); background: #131823; border-bottom: 1px solid var(--line-dark); }
-  .site-nav.is-open { display: flex; flex-direction: column; }
-  .site-nav > a { padding: 5px 0; }
-  .nav-github { width: fit-content; margin-top: 2px; padding: 8px 11px !important; }
   .hero { min-height: 690px; padding: 112px 22px 75px; }
   .hero-content { width: 100%; padding-top: 0; }
   .hero-portrait { top: 285px; right: -18px; width: 205px; height: 275px; opacity: .38; }
@@ -472,6 +475,17 @@ img { display: block; max-width: 100%; }
   .contact-email { font-size: .78rem; }
   .whatsapp-float { right: 16px; bottom: 16px; width: 50px; height: 50px; }
   .footer-bottom { align-items: flex-start; flex-direction: column; padding-bottom: 24px; }
+}
+
+@media (max-width: 420px) {
+  .email-design-case { grid-template-columns: 1fr; min-height: auto; padding-bottom: 20px; }
+  .email-case-copy { padding-bottom: 0; }
+  .email-phone-preview { width: min(100%, 143px); justify-self: end; height: 240px; }
+  .project-copy { padding-right: 0; }
+  .contact-email { max-width: 100%; overflow-wrap: anywhere; }
+  .case-facts div { grid-template-columns: 49px 1fr; gap: 6px; }
+  .featured-app { padding: 16px; }
+  .featured-app-copy h3 { font-size: 1.18rem; }
 }
 
 @media (prefers-reduced-motion: no-preference) {
