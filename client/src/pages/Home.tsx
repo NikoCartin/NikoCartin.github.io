@@ -385,15 +385,15 @@ export default function Home() {
         <div className="hero-grid" />
         <div className="hero-content">
           <div className="availability-pill"><span className="availability-dot" />Available for remote Shopify, full-stack &amp; digital strategy work</div>
-          <p className="hero-kicker">Full Stack Developer &amp; Digital Strategist · Shopify Plus</p>
+          <p className="hero-kicker">Full Stack Developer &amp; Digital Strategist · Shopify Plus <span className="platform-label">· WooCommerce</span></p>
           <h1>I build commerce<br /><em>that works.</em></h1>
           <p className="hero-lede">
-            Shopify Plus development, full-stack e-commerce, and lifecycle email for teams that need a reliable storefront and a clear path to purchase.
+            Shopify Plus and WooCommerce development, full-stack e-commerce, and lifecycle email for teams that need a reliable storefront and a clear path to purchase.
           </p>
           <div className="hero-actions">
             <a className="button button-primary" href="#work">View selected work <ArrowRight size={17} /></a>
             <a className="button button-quiet" href="https://mail.google.com/mail/?view=cm&fs=1&to=nicolascartinreyes@gmail.com&su=Portfolio%20inquiry&body=Hi%20N%C3%ADcolas%2C%0A%0AI%27d%20like%20to%20discuss%20a%20project%20with%20you." target="_blank" rel="noreferrer">Start a conversation <Mail size={17} /></a>
-            <a className="resume-link" href="/assets/Nícolas-Cartín-Reyes-Resume-2026.pdf" target="_blank" rel="noreferrer">Resume PDF <ArrowUpRight size={15} /></a>
+            <a className="resume-link" href="/assets/Nicolas-Cartin-Reyes-FlowCV-Resume-2026-10-12.pdf" target="_blank" rel="noreferrer">Resume PDF <ArrowUpRight size={15} /></a>
           </div>
         </div>
         <aside className="hero-fact-card" aria-label="Professional overview">
