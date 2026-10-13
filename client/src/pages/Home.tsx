@@ -371,6 +371,7 @@ export default function Home() {
           <a href="#strategy" onClick={closeMenu}>Expertise</a>
           <a href="#systems" onClick={closeMenu}>Systems</a>
           <a href="#contact" onClick={closeMenu}>Contact</a>
+          <a href={linkedInUrl} target="_blank" rel="noreferrer">LinkedIn</a>
           <a className="nav-github" href={githubUrl} target="_blank" rel="noreferrer">
             GitHub <ArrowUpRight size={15} />
           </a>
