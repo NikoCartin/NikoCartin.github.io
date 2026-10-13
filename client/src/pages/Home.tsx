@@ -122,9 +122,9 @@ const earlierProjects = [
     link: "https://github.com/NikoCartin/landing-page-grupo-inmarca",
   },
   {
-    title: "MarbellaCR & NossoCR",
-    type: "WordPress · WooCommerce · Branding · SEO",
-    text: "Built and managed the WordPress and WooCommerce storefront for NossoCR, combining product catalogs, promotions, WhatsApp commerce, social content, SEO, and visual merchandising.",
+    title: "NossoCR WooCommerce storefront",
+    type: "Lead Developer · WordPress · WooCommerce",
+    text: "As Lead Developer, built and managed the NossoCR WordPress and WooCommerce storefront, combining product catalogs, promotions, WhatsApp commerce, social content, SEO, and visual merchandising.",
     image: "/assets/marbella-banner.png",
     link: "https://nossocr.com/",
   },
@@ -365,6 +365,7 @@ export default function Home() {
           <a href="#work" onClick={closeMenu}>Work</a>
           <a href="#echelon" onClick={closeMenu}>Echelon</a>
           <a href="#shopify-work" onClick={closeMenu}>Cases</a>
+          <a href="#woocommerce" onClick={closeMenu}>WooCommerce</a>
           <a href="#seo" onClick={closeMenu}>SEO</a>
           <a href="#email" onClick={closeMenu}>Email Marketing</a>
           <a href="#archive" onClick={closeMenu}>Archive</a>
@@ -750,6 +751,33 @@ export default function Home() {
               <h3>Design-system thinking for complex, content-heavy experiences.</h3>
               <p>Contributed to key 3M.com page redesign work using the Modular Design System, Figma research and prototypes, accessibility considerations, documentation, and validation with the global UX team.</p>
               <a className="text-link" href="https://www.3m.com/" target="_blank" rel="noreferrer">Visit 3M.com <ArrowUpRight size={15} /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="woocommerce-section" id="woocommerce">
+        <div className="section-shell">
+          <div className="woocommerce-heading-row">
+            <SectionHeading
+              eyebrow="WooCommerce experience"
+              title="A storefront beyond Shopify."
+              text="As Lead Developer, I built and managed the NossoCR storefront for a Costa Rican multi-brand fashion retailer, combining WordPress, WooCommerce, content, and customer acquisition paths."
+            />
+            <a className="text-link" href="https://nossocr.com/" target="_blank" rel="noreferrer">Visit NossoCR <ArrowUpRight size={16} /></a>
+          </div>
+          <div className="woocommerce-feature">
+            <a className="woocommerce-feature-media image-link" href="https://nossocr.com/" target="_blank" rel="noreferrer" aria-label="Visit NossoCR"><img src="/assets/nosso-storefront.png" alt="NossoCR WordPress and WooCommerce storefront homepage." loading="lazy" decoding="async" /></a>
+            <div className="woocommerce-feature-copy">
+              <span className="project-eyebrow">NossoCR · WordPress &amp; WooCommerce</span>
+              <h3>Product discovery, promotions, and direct customer contact in one storefront.</h3>
+              <p>Built the customer-facing experience from scratch with Elementor, WordPress theme selection and customization, and custom PHP, HTML, and CSS. Connected product catalogs, promotional content, WhatsApp commerce, search visibility, and visual merchandising.</p>
+              <div className="woocommerce-facts">
+                <div><span>Platform</span><b>WordPress · WooCommerce · Elementor</b></div>
+                <div><span>Growth</span><b>SEO · Promotions · Social content</b></div>
+                <div><span>Commerce</span><b>Catalogs · Merchandising · WhatsApp</b></div>
+              </div>
+              <a className="text-link" href="https://github.com/NikoCartin/nossocr-wordpress" target="_blank" rel="noreferrer">View public case study <ArrowUpRight size={15} /></a>
             </div>
           </div>
         </div>
