@@ -13,6 +13,7 @@ import {
   Mail,
   Menu,
   Send,
+  Search,
   ShieldCheck,
   Sparkles,
   Workflow,
@@ -364,6 +365,7 @@ export default function Home() {
           <a href="#work" onClick={closeMenu}>Work</a>
           <a href="#echelon" onClick={closeMenu}>Echelon</a>
           <a href="#shopify-work" onClick={closeMenu}>Cases</a>
+          <a href="#seo" onClick={closeMenu}>SEO</a>
           <a href="#email" onClick={closeMenu}>Email Marketing</a>
           <a href="#archive" onClick={closeMenu}>Archive</a>
           <a href="#strategy" onClick={closeMenu}>Expertise</a>
@@ -560,6 +562,16 @@ export default function Home() {
               <div className="tag-list"><Tag>Node.js</Tag><Tag>Shopify Liquid</Tag><Tag>OAuth 2.0 + PKCE</Tag><Tag>MySQL</Tag><Tag>Security tests</Tag></div>
             </div>
             <a className="featured-app-link" href="https://github.com/NikoCartin/shopify-domain-verified-partner-benefits-starter" target="_blank" rel="noreferrer">View public repository <ArrowUpRight size={17} /></a>
+          </div>
+          <div className="featured-app" id="seo">
+            <div className="featured-app-mark"><Search size={23} /></div>
+            <div className="featured-app-copy">
+              <span>Featured technical SEO work</span>
+              <h3>Echelon Fit US SEO improvements</h3>
+              <p>Audited metadata, social markup, Product JSON-LD, semantic H1 coverage, and product-card rendering. Delivered a narrow five-file Liquid release through duplicate-theme QA, controlled production deployment, pull-back verification, a site-wide crawl, and mobile Lighthouse benchmarking.</p>
+              <div className="tag-list"><Tag>Technical SEO</Tag><Tag>Shopify Liquid</Tag><Tag>JSON-LD</Tag><Tag>Core Web Vitals</Tag><Tag>Lighthouse</Tag><Tag>Release engineering</Tag></div>
+            </div>
+            <a className="featured-app-link" href="https://github.com/NikoCartin/echelon-sops/blob/main/SEO-CASE-STUDY-echelon-fit-us-2026-10.md" target="_blank" rel="noreferrer">Read public case study <ArrowUpRight size={17} /></a>
           </div>
 
           <div className="case-group">
