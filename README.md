@@ -2,6 +2,12 @@
 
 Personal portfolio for **Nicolás Cartín Reyes**, Shopify Plus developer, full-stack e-commerce engineer, and digital strategist.
 
+<p align="center">
+  <a href="https://nikocartin.github.io/">
+    <img src="client/public/assets/commerce-systems-hero.jpg" alt="Nicolás Cartín Reyes commerce systems portfolio" width="100%"/>
+  </a>
+</p>
+
 ## Published site
 
 The site is published through GitHub Pages at:
