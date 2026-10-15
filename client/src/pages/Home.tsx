@@ -575,6 +575,16 @@ export default function Home() {
             </div>
             <a className="featured-app-link" href="https://github.com/NikoCartin/echelon-sops/blob/main/SEO-CASE-STUDY-echelon-fit-us-2026-10.md" target="_blank" rel="noreferrer">Read public case study <ArrowUpRight size={17} /></a>
           </div>
+          <div className="featured-app">
+            <div className="featured-app-mark"><Workflow size={23} /></div>
+            <div className="featured-app-copy">
+              <span>Shopify Flow · Sales-channel control</span>
+              <h3>Inventory-aware Amazon channel automation</h3>
+              <p>A scheduled workflow finds inventory-state-tagged products and removes them from a selected marketplace channel without changing Online Store publication or product data.</p>
+              <div className="tag-list"><Tag>Shopify Flow</Tag><Tag>Sales channels</Tag><Tag>Inventory operations</Tag><Tag>Advanced query</Tag><Tag>Release controls</Tag></div>
+            </div>
+            <a className="featured-app-link" href="https://github.com/NikoCartin/echelon-sops/blob/main/SOP-018-scheduled-sales-channel-publication-flow.md" target="_blank" rel="noreferrer">Read public SOP <ArrowUpRight size={17} /></a>
+          </div>
 
           <div className="case-group">
             <div className="case-group-heading"><span>01 / Echelon</span><h3>Commerce, infrastructure, and customer experience across regional storefronts.</h3></div>
