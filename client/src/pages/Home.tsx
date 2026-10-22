@@ -255,7 +255,7 @@ const echelonCommerceCases: EchelonCommerceCase[] = [
     title: "Session media reliability remediation",
     area: "Echelon Coach · Agora video sessions",
     image: "/assets/echelon-coach-storefront.png",
-    link: "https://github.com/NikoCartin/echelon-coach-ssl-recovery",
+    link: "https://github.com/NikoCartin/echelon-coach-session-media-reliability",
     liveUrl: "https://echeloncoach.com/virtualpt/",
     tags: ["Agora", "JavaScript", "PHP", "Mobile video"],
     problem: "Customers could connect from desktop but miss trainer audio or video, while mobile sessions could render the trainer video sideways.",
