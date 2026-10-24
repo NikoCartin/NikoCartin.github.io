@@ -806,24 +806,28 @@ export default function Home() {
               <img src="/assets/nosso-melissa-reels-en.webp" alt="Vertical Melissa collection campaign artwork designed for NossoCR Instagram Reels." loading="lazy" decoding="async" />
             </div>
             <div className="woocommerce-catalog-copy">
-              <span className="project-eyebrow">WooCommerce operations · SEO · Design</span>
-              <h3 id="woocommerce-catalog-title">Bulk Catalog Upload for WooCommerce</h3>
-              <p>Prepared the Melissa catalog update with validated WooCommerce import files, product photography, search-ready copy, and campaign creative.</p>
-              <div className="woocommerce-catalog-workstreams" aria-label="SEO troubleshooting and campaign design">
+              <span className="project-eyebrow">NossoCR · WooCommerce · Catalog · SEO · Creative</span>
+              <h3 id="woocommerce-catalog-title">Melissa catalog, SEO, and campaign update</h3>
+              <p>Three connected workstreams to prepare a more accurate product catalog, search-ready copy, and campaign creative for NossoCR.</p>
+              <div className="woocommerce-catalog-workstreams" aria-label="Bulk import, SEO update, and design work">
                 <div className="woocommerce-catalog-workstream">
-                  <span>SEO troubleshooting</span>
-                  <p>Found that robots.txt prevented automated crawling. Used the WooCommerce export for the catalog audit, then wrote 21 unique titles and short descriptions from confirmed product details.</p>
+                  <span>01 · Bulk import</span>
+                  <p>Audited 840 catalog rows and prepared WooCommerce CSV templates for 21 new products and updates to 22 existing ones. Used Python/pandas to validate variations, SKUs, prices, attributes, and image links; 117 relevant photos were linked. Final import status was not confirmed.</p>
                 </div>
                 <div className="woocommerce-catalog-workstream">
-                  <span>Melissa campaign design</span>
-                  <p>Designed English and Spanish 9:16 Reels artwork (1080 × 1920) with Python/Pillow and Poppins, preserving the supplied product photography and logos.</p>
+                  <span>02 · SEO update</span>
+                  <p>Replaced generic long-description copy in the prepared update with 21 distinct Spanish short descriptions (55–72 words) and standardized titles. Used confirmed product facts, aligned each title with its copy, and script-validated all 21 pairs. The final import was not confirmed.</p>
+                </div>
+                <div className="woocommerce-catalog-workstream">
+                  <span>03 · Design</span>
+                  <p>Explored layouts with Gemini, then built the final Spanish and English 9:16 Reels designs in Python/Pillow with Poppins, original logos, and the product cutout. Kept the copy and benefits in Instagram safe zones; no generated logos or product imagery.</p>
                 </div>
               </div>
               <div className="woocommerce-catalog-metrics" aria-label="Project results">
-                <div><strong>21</strong><span>new products</span></div>
-                <div><strong>22</strong><span>products updated</span></div>
+                <div><strong>840</strong><span>catalog rows analyzed</span></div>
+                <div><strong>21</strong><span>new product records prepared</span></div>
                 <div><strong>117</strong><span>photos linked</span></div>
-                <div><strong>21</strong><span>SEO titles and descriptions</span></div>
+                <div><strong>21</strong><span>SEO title and description pairs</span></div>
               </div>
               <div className="tag-list"><Tag>WooCommerce</Tag><Tag>WordPress</Tag><Tag>Python · pandas</Tag><Tag>Data validation</Tag><Tag>SEO</Tag><Tag>Design</Tag></div>
               <a className="text-link" href="https://github.com/NikoCartin/nossocr-wordpress/blob/main/case-studies/woocommerce-bulk-catalog-upload.md" target="_blank" rel="noreferrer">Read the catalog case study <ArrowUpRight size={15} /></a>
