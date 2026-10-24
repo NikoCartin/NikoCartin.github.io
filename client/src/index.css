@@ -323,6 +323,21 @@ img { display: block; max-width: 100%; }
 .woocommerce-facts b { color: #252a33; font-size: .72rem; line-height: 1.4; }
 .woocommerce-feature-copy .text-link { margin-top: 22px; color: #171b22; font-family: var(--font-mono); font-size: .64rem; letter-spacing: .02em; }
 .woocommerce-feature-copy .text-link:hover { color: #406cbb; }
+.woocommerce-catalog-case { display: grid; grid-template-columns: minmax(170px, 220px) minmax(0, 1fr); gap: clamp(24px, 4vw, 46px); align-items: center; margin-top: 22px; padding: clamp(20px, 3vw, 34px); border: 1px solid rgba(17,21,29,.1); border-radius: 16px; background: #fff; }
+.woocommerce-catalog-media { overflow: hidden; border-radius: 10px; background: #f4f0e9; }
+.woocommerce-catalog-media img { display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: cover; }
+.woocommerce-catalog-copy { min-width: 0; }
+.woocommerce-catalog-copy .project-eyebrow { display: block; margin-bottom: 12px; color: #406cbb; }
+.woocommerce-catalog-copy h3 { max-width: 620px; margin: 0; color: var(--ink); font-size: clamp(1.65rem, 2.65vw, 2.65rem); line-height: 1; letter-spacing: -.055em; }
+.woocommerce-catalog-copy > p { max-width: 680px; margin: 15px 0 0; color: #646268; font-size: .82rem; line-height: 1.55; }
+.woocommerce-catalog-metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 20px; }
+.woocommerce-catalog-metrics div { display: flex; flex-direction: column; gap: 4px; padding-top: 10px; border-top: 1px solid rgba(17,21,29,.15); }
+.woocommerce-catalog-metrics strong { color: #1d4e91; font-size: 1.18rem; line-height: 1; }
+.woocommerce-catalog-metrics span { color: #646268; font-size: .61rem; line-height: 1.35; }
+.woocommerce-catalog-copy .tag-list { margin-top: 17px; }
+.woocommerce-catalog-copy .tag { color: #48505a; border-color: rgba(17,21,29,.2); }
+.woocommerce-catalog-copy .text-link { margin-top: 16px; color: #1d4e91; font-family: var(--font-mono); font-size: .64rem; letter-spacing: .02em; }
+.woocommerce-catalog-copy .text-link:hover { color: #b94e3d; }
 .platform-section { padding-top: 130px; padding-bottom: 124px; background: var(--ink); }
 .platform-header { display: flex; justify-content: space-between; gap: 38px; align-items: end; }
 .stack-callout { max-width: 260px; display: flex; gap: 11px; align-items: flex-start; padding: 16px; color: #f5f1e8; background: #252c3a; border-radius: 11px; font-size: .76rem; line-height: 1.4; }
@@ -486,6 +501,11 @@ img { display: block; max-width: 100%; }
   .woocommerce-feature-copy { padding: 3px 4px 8px; }
   .woocommerce-feature-copy h3 { font-size: 1.9rem; }
   .woocommerce-facts div { grid-template-columns: 78px 1fr; gap: 7px; }
+  .woocommerce-catalog-case { grid-template-columns: 1fr; gap: 22px; padding: 18px; }
+  .woocommerce-catalog-media { width: min(100%, 180px); }
+  .woocommerce-catalog-copy h3 { font-size: 1.8rem; }
+  .woocommerce-catalog-metrics { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .woocommerce-catalog-copy .tag-list { gap: 6px; }
   .platform-section { padding-top: 81px; padding-bottom: 82px; }
   .platform-header { align-items: flex-start; flex-direction: column; }
   .stack-callout { max-width: none; }

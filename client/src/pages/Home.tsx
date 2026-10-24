@@ -801,6 +801,24 @@ export default function Home() {
               <a className="text-link" href="https://github.com/NikoCartin/nossocr-wordpress" target="_blank" rel="noreferrer">View public case study <ArrowUpRight size={15} /></a>
             </div>
           </div>
+          <article className="woocommerce-catalog-case" aria-labelledby="woocommerce-catalog-title">
+            <div className="woocommerce-catalog-media">
+              <img src="/assets/nosso-melissa-reels-en.webp" alt="Vertical Melissa collection campaign artwork designed for NossoCR Instagram Reels." loading="lazy" decoding="async" />
+            </div>
+            <div className="woocommerce-catalog-copy">
+              <span className="project-eyebrow">WooCommerce operations · SEO · Design</span>
+              <h3 id="woocommerce-catalog-title">Bulk Catalog Upload for WooCommerce</h3>
+              <p>Reviewed the catalog, built and validated Python and pandas import files, prepared product imagery, optimized unique titles and descriptions, and designed launch-ready Reels artwork.</p>
+              <div className="woocommerce-catalog-metrics" aria-label="Project results">
+                <div><strong>21</strong><span>new products</span></div>
+                <div><strong>22</strong><span>products updated</span></div>
+                <div><strong>117</strong><span>photos linked</span></div>
+                <div><strong>21</strong><span>SEO titles and descriptions</span></div>
+              </div>
+              <div className="tag-list"><Tag>WooCommerce</Tag><Tag>WordPress</Tag><Tag>Python · pandas</Tag><Tag>Data validation</Tag><Tag>SEO</Tag><Tag>Design</Tag></div>
+              <a className="text-link" href="https://github.com/NikoCartin/nossocr-wordpress/blob/main/case-studies/woocommerce-bulk-catalog-upload.md" target="_blank" rel="noreferrer">Read the catalog case study <ArrowUpRight size={15} /></a>
+            </div>
+          </article>
         </div>
       </section>
 
