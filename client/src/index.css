@@ -330,6 +330,10 @@ img { display: block; max-width: 100%; }
 .woocommerce-catalog-copy .project-eyebrow { display: block; margin-bottom: 12px; color: #406cbb; }
 .woocommerce-catalog-copy h3 { max-width: 620px; margin: 0; color: var(--ink); font-size: clamp(1.65rem, 2.65vw, 2.65rem); line-height: 1; letter-spacing: -.055em; }
 .woocommerce-catalog-copy > p { max-width: 680px; margin: 15px 0 0; color: #646268; font-size: .82rem; line-height: 1.55; }
+.woocommerce-catalog-workstreams { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 17px; }
+.woocommerce-catalog-workstream { padding: 12px; border: 1px solid rgba(17,21,29,.12); border-radius: 9px; background: #fbfaf8; }
+.woocommerce-catalog-workstream > span { color: #406cbb; font-family: var(--font-mono); font-size: .58rem; letter-spacing: .04em; text-transform: uppercase; }
+.woocommerce-catalog-workstream p { margin: 7px 0 0; color: #646268; font-size: .7rem; line-height: 1.48; }
 .woocommerce-catalog-metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 20px; }
 .woocommerce-catalog-metrics div { display: flex; flex-direction: column; gap: 4px; padding-top: 10px; border-top: 1px solid rgba(17,21,29,.15); }
 .woocommerce-catalog-metrics strong { color: #1d4e91; font-size: 1.18rem; line-height: 1; }
@@ -504,6 +508,7 @@ img { display: block; max-width: 100%; }
   .woocommerce-catalog-case { grid-template-columns: 1fr; gap: 22px; padding: 18px; }
   .woocommerce-catalog-media { width: min(100%, 180px); }
   .woocommerce-catalog-copy h3 { font-size: 1.8rem; }
+  .woocommerce-catalog-workstreams { grid-template-columns: 1fr; }
   .woocommerce-catalog-metrics { grid-template-columns: 1fr 1fr; gap: 12px; }
   .woocommerce-catalog-copy .tag-list { gap: 6px; }
   .platform-section { padding-top: 81px; padding-bottom: 82px; }

@@ -808,7 +808,17 @@ export default function Home() {
             <div className="woocommerce-catalog-copy">
               <span className="project-eyebrow">WooCommerce operations · SEO · Design</span>
               <h3 id="woocommerce-catalog-title">Bulk Catalog Upload for WooCommerce</h3>
-              <p>Reviewed the catalog, built and validated Python and pandas import files, prepared product imagery, optimized unique titles and descriptions, and designed launch-ready Reels artwork.</p>
+              <p>Prepared the Melissa catalog update with validated WooCommerce import files, product photography, search-ready copy, and campaign creative.</p>
+              <div className="woocommerce-catalog-workstreams" aria-label="SEO troubleshooting and campaign design">
+                <div className="woocommerce-catalog-workstream">
+                  <span>SEO troubleshooting</span>
+                  <p>Found that robots.txt prevented automated crawling. Used the WooCommerce export for the catalog audit, then wrote 21 unique titles and short descriptions from confirmed product details.</p>
+                </div>
+                <div className="woocommerce-catalog-workstream">
+                  <span>Melissa campaign design</span>
+                  <p>Designed English and Spanish 9:16 Reels artwork (1080 × 1920) with Python/Pillow and Poppins, preserving the supplied product photography and logos.</p>
+                </div>
+              </div>
               <div className="woocommerce-catalog-metrics" aria-label="Project results">
                 <div><strong>21</strong><span>new products</span></div>
                 <div><strong>22</strong><span>products updated</span></div>
