@@ -57,11 +57,13 @@ The portfolio presents selected work across:
 
 ## NossoCR WordPress engineering
 
-The WordPress section includes a collection-filtering contribution led by **Nícolas Cartín Reyes, Lead Developer**, using the site's existing WooCommerce, Elementor Pro, and YITH stack with targeted PHP hooks and responsive CSS. The case covers leaf-category and brand eligibility, contextual Color and Size filters, desktop-only sidebar presentation, and recorded release checks.
+The WordPress section includes a collection-filtering contribution led by **Nícolas Cartín Reyes, Lead Developer**, using the site's existing WooCommerce, Elementor Pro, and YITH stack with targeted PHP hooks and responsive CSS. The case covers leaf-category and brand eligibility, contextual Color and Size filters, a desktop sidebar above 1024 px, and a mobile and tablet bottom-sheet drawer at 1024 px and below. It records 19 verified checks across canonical pages and 390, 768, and 1280 px viewports.
 
 - Portfolio section: https://nikocartin.github.io/#woocommerce
 - [Public engineering case study](https://github.com/NikoCartin/nossocr-wordpress/blob/main/case-studies/collection-filter-sidebar.md)
-- The collection screenshot is captured from the public interface with prices and result counts omitted; it contains no administrative session data.
+- Desktop screenshot: `client/public/assets/nosso-collection-filters.webp`
+- Mobile drawer screenshot: `client/public/assets/nosso-mobile-filter-drawer.webp`
+- Both screenshots show the public interface; prices and result counts are omitted, and no administrative session data is included.
 - Production code, import files, and operating records remain in the private maintenance repository. No conversion uplift is claimed.
 
 Developed and maintained by **Nicolás Cartín Reyes, Lead Developer**.

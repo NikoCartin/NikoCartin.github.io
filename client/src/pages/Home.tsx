@@ -803,16 +803,24 @@ export default function Home() {
           </div>
           <article className="woocommerce-filter-case" id="nosso-collection-filters" aria-labelledby="woocommerce-filter-title">
             <div className="woocommerce-filter-intro">
-              <figure className="woocommerce-filter-proof">
-                <a className="image-link" href="/assets/nosso-collection-filters.webp" target="_blank" rel="noreferrer" aria-label="Open the NossoCR collection filtering screenshot">
-                  <img src="/assets/nosso-collection-filters.webp" alt="NossoCR collection page with contextual Color and Talla checkboxes in a left sidebar beside the product grid." loading="lazy" decoding="async" />
-                </a>
-                <figcaption>Live collection interface. Prices and result counts omitted.</figcaption>
-              </figure>
+              <div className="woocommerce-filter-gallery" role="group" aria-label="Desktop and mobile collection filter screenshots">
+                <figure className="woocommerce-filter-proof">
+                  <a className="image-link" href="/assets/nosso-collection-filters.webp" target="_blank" rel="noreferrer" aria-label="Open the NossoCR desktop collection filter screenshot">
+                    <img src="/assets/nosso-collection-filters.webp" alt="Desktop NossoCR collection page showing contextual Color and Talla filters in a left sidebar beside the product grid." loading="lazy" decoding="async" />
+                  </a>
+                  <figcaption>Desktop: contextual filters in the collection sidebar.</figcaption>
+                </figure>
+                <figure className="woocommerce-filter-proof">
+                  <a className="image-link" href="/assets/nosso-mobile-filter-drawer.webp" target="_blank" rel="noreferrer" aria-label="Open the NossoCR mobile filter drawer screenshot">
+                    <img src="/assets/nosso-mobile-filter-drawer.webp" alt="Mobile NossoCR collection filter bottom sheet with Color and Talla options, a close control, Clear link, and View results button." loading="lazy" decoding="async" />
+                  </a>
+                  <figcaption>Mobile: a filter drawer with clear and apply actions.</figcaption>
+                </figure>
+              </div>
               <div className="woocommerce-catalog-copy">
-                <span className="project-eyebrow">Lead Developer · WordPress engineering · Product discovery</span>
-                <h3 id="woocommerce-filter-title">Contextual collection filters and a desktop sidebar.</h3>
-                <p>Extended the existing WooCommerce archive with targeted PHP hooks and responsive CSS, connecting Color and Size filters to the collection a shopper is viewing.</p>
+                <span className="project-eyebrow">Lead Developer · WordPress engineering · Responsive UX</span>
+                <h3 id="woocommerce-filter-title">Responsive collection filters for WooCommerce.</h3>
+                <p>Extended the WooCommerce archive with targeted PHP hooks and responsive CSS, connecting Color and Size filters to the collection a shopper is viewing. The experience adapts from a desktop sidebar to a mobile and tablet filter drawer.</p>
                 <div className="tag-list"><Tag>WordPress</Tag><Tag>WooCommerce</Tag><Tag>Elementor Pro</Tag><Tag>PHP hooks</Tag><Tag>CSS Grid</Tag><Tag>YITH AJAX</Tag><Tag>Release QA</Tag></div>
                 <div className="woocommerce-filter-links">
                   <a className="text-link" href="https://github.com/NikoCartin/nossocr-wordpress/blob/main/case-studies/collection-filter-sidebar.md" target="_blank" rel="noreferrer">Read the engineering case <ArrowUpRight size={15} /></a>
@@ -823,15 +831,15 @@ export default function Home() {
             <dl className="woocommerce-catalog-workstreams woocommerce-filter-facts">
               <div className="woocommerce-catalog-workstream">
                 <dt>Problem</dt>
-                <dd>Shoppers needed focused color and size navigation without cluttering parent categories or disrupting smaller-screen layouts.</dd>
+                <dd>Shoppers needed focused color and size navigation without cluttering parent categories or losing a usable filtering experience on smaller screens.</dd>
               </div>
               <div className="woocommerce-catalog-workstream">
                 <dt>Solution</dt>
-                <dd>Scoped the preset to leaf categories and brand archives, used contextual checkbox options, and added a desktop sidebar that disappears at 1024 px and below without leaving an empty column.</dd>
+                <dd>Scoped contextual checkbox filters to leaf categories and brand archives. Kept the sidebar above 1024 px and added a mobile and tablet bottom sheet at 1024 px and below, with backdrop and Escape dismissal, focus handling, scroll lock, clear and apply actions, and session state preserved through YITH AJAX updates.</dd>
               </div>
               <div className="woocommerce-catalog-workstream">
                 <dt>Impact</dt>
-                <dd>Deployed a working collection-filtering experience. Seven layout checks passed; a live color selection returned matching products and updated the available sizes. Release and rollback records are versioned.</dd>
+                <dd>Deployed and verified 19 of 19 checks across canonical category and brand URLs at 390, 768, and 1280 px. Parent categories stayed hidden, brand archives remained eligible, and the Verde Musgo selection, AJAX refresh, apply, and clear worked as expected. No sales or conversion uplift is claimed.</dd>
               </div>
             </dl>
           </article>
