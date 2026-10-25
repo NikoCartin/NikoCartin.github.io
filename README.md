@@ -64,6 +64,7 @@ The WordPress section includes a collection-filtering contribution led by **Níc
 - Desktop screenshot: `client/public/assets/nosso-collection-filters.webp`
 - Mobile drawer screenshot: `client/public/assets/nosso-mobile-filter-drawer.webp`
 - Both screenshots show the public interface; prices and result counts are omitted, and no administrative session data is included.
+- On mobile, a Mobile/Desktop switch presents one preview at a time, defaulting to Mobile for a balanced layout. Wider screens show both captures together.
 - Production code, import files, and operating records remain in the private maintenance repository. No conversion uplift is claimed.
 
 Developed and maintained by **Nicolás Cartín Reyes, Lead Developer**.
