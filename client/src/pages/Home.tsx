@@ -353,6 +353,7 @@ function SectionHeading({ eyebrow, title, text }: { eyebrow: string; title: stri
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [filterPreviewMode, setFilterPreviewMode] = useState<"mobile" | "desktop">("mobile");
 
   const closeMenu = () => setMenuOpen(false);
 
@@ -803,14 +804,18 @@ export default function Home() {
           </div>
           <article className="woocommerce-filter-case" id="nosso-collection-filters" aria-labelledby="woocommerce-filter-title">
             <div className="woocommerce-filter-intro">
-              <div className="woocommerce-filter-gallery" role="group" aria-label="Desktop and mobile collection filter screenshots">
-                <figure className="woocommerce-filter-proof">
+              <div className="woocommerce-filter-gallery" role="group" aria-label="Desktop and mobile collection filter screenshots" data-active-preview={filterPreviewMode}>
+                <div className="woocommerce-filter-preview-controls" role="group" aria-label="Choose a collection filter preview">
+                  <button type="button" aria-pressed={filterPreviewMode === "mobile"} onClick={() => setFilterPreviewMode("mobile")}>Mobile view</button>
+                  <button type="button" aria-pressed={filterPreviewMode === "desktop"} onClick={() => setFilterPreviewMode("desktop")}>Desktop view</button>
+                </div>
+                <figure className="woocommerce-filter-proof woocommerce-filter-proof--desktop">
                   <a className="image-link" href="/assets/nosso-collection-filters.webp" target="_blank" rel="noreferrer" aria-label="Open the NossoCR desktop collection filter screenshot">
                     <img src="/assets/nosso-collection-filters.webp" alt="Desktop NossoCR collection page showing contextual Color and Talla filters in a left sidebar beside the product grid." loading="lazy" decoding="async" />
                   </a>
                   <figcaption>Desktop: contextual filters in the collection sidebar.</figcaption>
                 </figure>
-                <figure className="woocommerce-filter-proof">
+                <figure className="woocommerce-filter-proof woocommerce-filter-proof--mobile">
                   <a className="image-link" href="/assets/nosso-mobile-filter-drawer.webp" target="_blank" rel="noreferrer" aria-label="Open the NossoCR mobile filter drawer screenshot">
                     <img src="/assets/nosso-mobile-filter-drawer.webp" alt="Mobile NossoCR collection filter bottom sheet with Color and Talla options, a close control, Clear link, and View results button." loading="lazy" decoding="async" />
                   </a>
