@@ -342,6 +342,21 @@ img { display: block; max-width: 100%; }
 .woocommerce-catalog-copy .tag { color: #48505a; border-color: rgba(17,21,29,.2); }
 .woocommerce-catalog-copy .text-link { margin-top: 16px; color: #1d4e91; font-family: var(--font-mono); font-size: .64rem; letter-spacing: .02em; }
 .woocommerce-catalog-copy .text-link:hover { color: #b94e3d; }
+.woocommerce-filter-case { margin-top: 22px; padding: clamp(20px, 3vw, 34px); border: 1px solid rgba(17,21,29,.1); border-radius: 16px; background: #fff; scroll-margin-top: 90px; }
+.woocommerce-filter-intro { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 46px); align-items: center; }
+.woocommerce-filter-proof { min-width: 0; margin: 0; }
+.woocommerce-filter-proof .image-link { display: block; overflow: hidden; border: 1px solid rgba(17,21,29,.1); border-radius: 10px; background: #f4f0e9; }
+.woocommerce-filter-proof img { display: block; width: 100%; height: auto; }
+.woocommerce-filter-proof figcaption { margin-top: 9px; color: #6d6c70; font-family: var(--font-mono); font-size: .57rem; line-height: 1.5; }
+.woocommerce-filter-links { display: flex; flex-wrap: wrap; gap: 0 22px; }
+.woocommerce-filter-facts { margin-bottom: 0; }
+.woocommerce-filter-facts dt { color: #406cbb; font-family: var(--font-mono); font-size: .58rem; letter-spacing: .04em; text-transform: uppercase; }
+.woocommerce-filter-facts dd { margin: 7px 0 0; color: #646268; font-size: .7rem; line-height: 1.48; }
+@media (max-width: 800px) {
+  .woocommerce-filter-intro { grid-template-columns: 1fr; }
+  .woocommerce-filter-case { padding: 18px; }
+  .woocommerce-filter-facts { grid-template-columns: 1fr; }
+}
 .platform-section { padding-top: 130px; padding-bottom: 124px; background: var(--ink); }
 .platform-header { display: flex; justify-content: space-between; gap: 38px; align-items: end; }
 .stack-callout { max-width: 260px; display: flex; gap: 11px; align-items: flex-start; padding: 16px; color: #f5f1e8; background: #252c3a; border-radius: 11px; font-size: .76rem; line-height: 1.4; }

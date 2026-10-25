@@ -782,8 +782,8 @@ export default function Home() {
           <div className="woocommerce-heading-row">
             <SectionHeading
               eyebrow="NossoCR · WordPress &amp; WooCommerce"
-              title="A storefront beyond Shopify."
-              text="As Lead Developer, I built and managed the NossoCR storefront for a Costa Rican multi-brand fashion retailer, combining WordPress, WooCommerce, content, and customer acquisition paths."
+              title="WordPress engineering behind the storefront."
+              text="As Lead Developer, I built and manage the NossoCR storefront for a Costa Rican multi-brand fashion retailer. The work connects Elementor, custom PHP and CSS, WooCommerce product discovery, content, and customer acquisition paths."
             />
             <a className="text-link" href="https://nossocr.com/" target="_blank" rel="noreferrer">Visit NossoCR <ArrowUpRight size={16} /></a>
           </div>
@@ -801,6 +801,40 @@ export default function Home() {
               <a className="text-link" href="https://github.com/NikoCartin/nossocr-wordpress" target="_blank" rel="noreferrer">View public case study <ArrowUpRight size={15} /></a>
             </div>
           </div>
+          <article className="woocommerce-filter-case" id="nosso-collection-filters" aria-labelledby="woocommerce-filter-title">
+            <div className="woocommerce-filter-intro">
+              <figure className="woocommerce-filter-proof">
+                <a className="image-link" href="/assets/nosso-collection-filters.webp" target="_blank" rel="noreferrer" aria-label="Open the NossoCR collection filtering screenshot">
+                  <img src="/assets/nosso-collection-filters.webp" alt="NossoCR collection page with contextual Color and Talla checkboxes in a left sidebar beside the product grid." loading="lazy" decoding="async" />
+                </a>
+                <figcaption>Live collection interface. Prices and result counts omitted.</figcaption>
+              </figure>
+              <div className="woocommerce-catalog-copy">
+                <span className="project-eyebrow">Lead Developer · WordPress engineering · Product discovery</span>
+                <h3 id="woocommerce-filter-title">Contextual collection filters and a desktop sidebar.</h3>
+                <p>Extended the existing WooCommerce archive with targeted PHP hooks and responsive CSS, connecting Color and Size filters to the collection a shopper is viewing.</p>
+                <div className="tag-list"><Tag>WordPress</Tag><Tag>WooCommerce</Tag><Tag>Elementor Pro</Tag><Tag>PHP hooks</Tag><Tag>CSS Grid</Tag><Tag>YITH AJAX</Tag><Tag>Release QA</Tag></div>
+                <div className="woocommerce-filter-links">
+                  <a className="text-link" href="https://github.com/NikoCartin/nossocr-wordpress/blob/main/case-studies/collection-filter-sidebar.md" target="_blank" rel="noreferrer">Read the engineering case <ArrowUpRight size={15} /></a>
+                  <a className="text-link" href="https://nossocr.com/product-category/tienda-mujer/bottoms-mujer/" target="_blank" rel="noreferrer">Explore the live collection <ArrowUpRight size={15} /></a>
+                </div>
+              </div>
+            </div>
+            <dl className="woocommerce-catalog-workstreams woocommerce-filter-facts">
+              <div className="woocommerce-catalog-workstream">
+                <dt>Problem</dt>
+                <dd>Shoppers needed focused color and size navigation without cluttering parent categories or disrupting smaller-screen layouts.</dd>
+              </div>
+              <div className="woocommerce-catalog-workstream">
+                <dt>Solution</dt>
+                <dd>Scoped the preset to leaf categories and brand archives, used contextual checkbox options, and added a desktop sidebar that disappears at 1024 px and below without leaving an empty column.</dd>
+              </div>
+              <div className="woocommerce-catalog-workstream">
+                <dt>Impact</dt>
+                <dd>Deployed a working collection-filtering experience. Seven layout checks passed; a live color selection returned matching products and updated the available sizes. Release and rollback records are versioned.</dd>
+              </div>
+            </dl>
+          </article>
           <article className="woocommerce-catalog-case" aria-labelledby="woocommerce-catalog-title">
             <div className="woocommerce-catalog-media">
               <img src="/assets/nosso-melissa-reels-en.webp" alt="Vertical Melissa collection campaign artwork designed for NossoCR Instagram Reels." loading="lazy" decoding="async" />
