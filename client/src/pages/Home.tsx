@@ -810,13 +810,13 @@ export default function Home() {
                   <button type="button" aria-pressed={filterPreviewMode === "desktop"} onClick={() => setFilterPreviewMode("desktop")}>Desktop view</button>
                 </div>
                 <figure className="woocommerce-filter-proof woocommerce-filter-proof--desktop">
-                  <a className="image-link" href="/assets/nosso-collection-filters.webp" target="_blank" rel="noreferrer" aria-label="Open the NossoCR desktop collection filter screenshot">
+                  <a className="image-link" href="https://nossocr.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit NossoCR from the desktop collection filter preview">
                     <img src="/assets/nosso-collection-filters.webp" alt="Desktop NossoCR collection page showing contextual Color and Talla filters in a left sidebar beside the product grid." loading="lazy" decoding="async" />
                   </a>
                   <figcaption>Desktop: contextual filters in the collection sidebar.</figcaption>
                 </figure>
                 <figure className="woocommerce-filter-proof woocommerce-filter-proof--mobile">
-                  <a className="image-link" href="/assets/nosso-mobile-filter-drawer.webp" target="_blank" rel="noreferrer" aria-label="Open the NossoCR mobile filter drawer screenshot">
+                  <a className="image-link" href="https://nossocr.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit NossoCR from the mobile filter drawer preview">
                     <img src="/assets/nosso-mobile-filter-drawer.webp" alt="Mobile NossoCR collection filter bottom sheet with Color and Talla options, a close control, Clear link, and View results button." loading="lazy" decoding="async" />
                   </a>
                   <figcaption>Mobile: a filter drawer with clear and apply actions.</figcaption>
