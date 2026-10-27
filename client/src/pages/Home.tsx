@@ -589,6 +589,16 @@ export default function Home() {
             </div>
             <a className="featured-app-link" href="https://github.com/NikoCartin/shopify-domain-verified-partner-benefits-starter" target="_blank" rel="noreferrer">View public repository <ArrowUpRight size={17} /></a>
           </div>
+          <div className="featured-app">
+            <div className="featured-app-mark"><Code2 size={23} /></div>
+            <div className="featured-app-copy">
+              <span>Open-source starter</span>
+              <h3>First Month Free Discount Function Starter</h3>
+              <p>A store-neutral Shopify Functions starter for membership first-month-free product discounts. It demonstrates a Rust/WASM Product Discount Function, dynamic eligibility through product metafields, discount-owned JSON configuration, fail-closed matching, and unit tests.</p>
+              <div className="tag-list"><Tag>Rust/WASM</Tag><Tag>Shopify Functions</Tag><Tag>GraphQL</Tag><Tag>Dynamic eligibility</Tag><Tag>Unit tests</Tag></div>
+            </div>
+            <a className="featured-app-link" href="https://github.com/NikoCartin/shopify-first-month-free" target="_blank" rel="noreferrer">View public repository <ArrowUpRight size={17} /></a>
+          </div>
           <div className="featured-app" id="seo">
             <div className="featured-app-mark"><Search size={23} /></div>
             <div className="featured-app-copy">
