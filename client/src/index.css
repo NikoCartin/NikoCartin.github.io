@@ -261,6 +261,9 @@ img { display: block; max-width: 100%; }
 .case-study-media { position: relative; display: block; height: 188px; overflow: hidden; background: #29313f; }
 .case-study-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 500ms var(--ease-out), filter 300ms var(--ease-out); }
 .case-study-media:hover img { transform: scale(1.045); filter: brightness(1.07); }
+.case-study-media-snapshot { background: #eaf5fb; }
+.case-study-media-snapshot img { object-fit: contain; object-position: center; }
+.case-study-media-snapshot:hover img { transform: scale(1.018); }
 .case-study-media span { position: absolute; top: 12px; right: 12px; display: grid; width: 32px; height: 32px; place-items: center; color: var(--ink); background: var(--paper); border-radius: 50%; opacity: 0; transform: translate(4px, -4px); transition: opacity 180ms var(--ease-out), transform 180ms var(--ease-out); }
 .case-study-media:hover span { opacity: 1; transform: none; }
 .case-study-body { padding: 22px 21px 22px; }

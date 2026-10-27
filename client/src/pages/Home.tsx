@@ -181,6 +181,7 @@ type EchelonCommerceCase = {
   title: string;
   area: string;
   image: string;
+  imagePresentation?: "contain";
   link: string;
   liveUrl?: string;
   tags: string[];
@@ -219,6 +220,17 @@ const echelonCommerceCases: EchelonCommerceCase[] = [
     problem: "Free equipment shipping needed to apply only to eligible Premier Yearly and 2-Year membership purchases, not generic customer or product tags.",
     solution: "Built a portable extension-only Shopify app with a Rust/WASM delivery discount Function, App Home configurator, Direct API Access, automatic discount metafield configuration, explicit exclusions, tests, and CI validation.",
     impact: "Created a reusable custom app architecture that controls checkout eligibility and fails closed when configuration or membership criteria are missing.",
+  },
+  {
+    title: "Premier Monthly first-month-free checkout function",
+    area: "Echelon Fit US · Automatic product discount",
+    image: "/assets/echelon-premier-monthly-free-cart-validation-2026-10-27.png",
+    imagePresentation: "contain",
+    link: "https://echelonfit.com",
+    tags: ["Rust/WASM", "Shopify Functions", "Dynamic metafields", "Cart QA"],
+    problem: "Premier Monthly needed to become free for the first 30 days when it was added with qualifying equipment, without a discount code or a brittle manual equipment list.",
+    solution: "Built an independent Shopify Product Discount Function that reads each equipment PDP's membership metafield at checkout, targets only the configured Premier Monthly line, and is administered through the extension-only app's App Home.",
+    impact: "Validated a $39.99 automatic discount in cart and checkout while keeping equipment paid. New qualifying equipment can follow its PDP membership configuration instead of requiring a code change.",
   },
   {
     title: "Echelon Partners Program",
@@ -603,7 +615,7 @@ export default function Home() {
             <div className="case-study-grid">
               {echelonCommerceCases.map((project) => (
                 <article className="case-study-card" key={project.title}>
-                  <a className="case-study-media" href={project.liveUrl ?? project.link} target="_blank" rel="noreferrer"><img src={project.image} alt="" loading="lazy" decoding="async" /><span><ArrowUpRight size={17} /></span></a>
+                  <a className={project.imagePresentation === "contain" ? "case-study-media case-study-media-snapshot" : "case-study-media"} href={project.liveUrl ?? project.link} target="_blank" rel="noreferrer"><img src={project.image} alt="" loading="lazy" decoding="async" /><span><ArrowUpRight size={17} /></span></a>
                   <div className="case-study-body">
                     <span className="case-study-area">{project.area}</span>
                     <h4>{project.title}</h4>
