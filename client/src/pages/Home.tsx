@@ -644,7 +644,7 @@ export default function Home() {
               </div>
               <div className="woocommerce-catalog-workstream">
                 <dt>Impact</dt>
-                <dd>Validated on an unpublished theme for Canada, UK, Ireland, Germany, France, US, and unmapped visitors at desktop and mobile sizes, with zero axe-core WCAG 2.2 AA violations on the dialog and no third-party IP requests. Production release is pending approval; no conversion impact is claimed.</dd>
+                <dd>Validated on an unpublished theme for Canada, UK, Ireland, Germany, France, US, and unmapped visitors at desktop and mobile sizes, with zero axe-core WCAG 2.2 AA violations on the dialog and no third-party IP requests. Released to the live US storefront after the same checks passed on production; no conversion impact is claimed.</dd>
               </div>
             </dl>
           </article>
