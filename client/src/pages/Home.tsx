@@ -432,8 +432,8 @@ export default function Home() {
         <nav className={menuOpen ? "site-nav is-open" : "site-nav"} aria-label="Main navigation">
           <a href="#work" onClick={closeMenu}>Work</a>
           <a href="#echelon" onClick={closeMenu}>Echelon</a>
-          <a href="#shopify-work" onClick={closeMenu}>Cases</a>
           <a href="#case-studies" onClick={closeMenu}>Case Studies</a>
+          <a href="#shopify-work" onClick={closeMenu}>Cases</a>
           <a href="#woocommerce" onClick={closeMenu}>WordPress</a>
           <a href="#seo" onClick={closeMenu}>SEO</a>
           <a href="#email" onClick={closeMenu}>Email Marketing</a>
@@ -590,6 +590,99 @@ export default function Home() {
             <p>Shopify Plus · Liquid · JavaScript · TypeScript · React · Rust/WASM · GraphQL · Python · Shopify CLI · AWS · Linux · Nginx · SSL/TLS · GitHub</p>
             <a className="text-link" href="https://github.com/NikoCartin/echelon-sops" target="_blank" rel="noreferrer">Explore related documentation <ArrowUpRight size={16} /></a>
           </div>
+        </div>
+      </section>
+
+      <section className="woocommerce-section case-studies-section" id="case-studies">
+        <div className="section-shell">
+          <div className="woocommerce-heading-row">
+            <SectionHeading
+              eyebrow="Echelon · Case studies"
+              title="From a storefront signal to a shipped fix."
+              text="Two recent Echelon Fit US projects: replacing an IP auto-redirect with a consent-aware store suggestion, and a mobile checkout CRO effort that moved from analytics validation to live theme fixes."
+            />
+          </div>
+          <article className="woocommerce-filter-case" id="geo-store-routing" aria-labelledby="geo-routing-title">
+            <div className="woocommerce-filter-intro">
+              <div className="woocommerce-filter-gallery" role="group" aria-label="Desktop and mobile geo store suggestion screenshots" data-active-preview={geoPreviewMode}>
+                <div className="woocommerce-filter-preview-controls" role="group" aria-label="Choose a geo store suggestion preview">
+                  <button type="button" aria-pressed={geoPreviewMode === "mobile"} onClick={() => setGeoPreviewMode("mobile")}>Mobile view</button>
+                  <button type="button" aria-pressed={geoPreviewMode === "desktop"} onClick={() => setGeoPreviewMode("desktop")}>Desktop view</button>
+                </div>
+                <figure className="woocommerce-filter-proof woocommerce-filter-proof--desktop">
+                  <a className="image-link" href="https://github.com/NikoCartin/shopify-geo-store-suggestion" target="_blank" rel="noopener noreferrer" aria-label="View the open-source geo store suggestion from the desktop preview">
+                    <img src="/assets/echelon-geo-store-suggestion-desktop.webp" alt="Desktop Echelon rower collection page with a centered dialog asking Shopping from Canada?, a Canadian flag, a Go to Echelon Canada button and a Stay on Echelon US button." loading="lazy" decoding="async" />
+                  </a>
+                  <figcaption>Desktop: a centered store suggestion for a visitor from Canada.</figcaption>
+                </figure>
+                <figure className="woocommerce-filter-proof woocommerce-filter-proof--mobile">
+                  <a className="image-link" href="https://github.com/NikoCartin/shopify-geo-store-suggestion" target="_blank" rel="noopener noreferrer" aria-label="View the open-source geo store suggestion from the mobile preview">
+                    <img src="/assets/echelon-geo-store-suggestion-mobile.webp" alt="Mobile Echelon page with the Shopping from Canada? dialog, flags, and stacked Go to Echelon Canada and Stay on Echelon US buttons." loading="lazy" decoding="async" />
+                  </a>
+                  <figcaption>Mobile: the same choice with stacked actions.</figcaption>
+                </figure>
+              </div>
+              <div className="woocommerce-catalog-copy">
+                <span className="project-eyebrow">Lead Developer · Shopify Liquid · Internationalization · Privacy</span>
+                <h3 id="geo-routing-title">Consent-aware geo store routing.</h3>
+                <p>Replaced an IP auto-redirect with a store suggestion built on Shopify's own country detection. Visitors choose their regional store, links open the same product when it exists there, and the choice is stored only as cookie consent allows.</p>
+                <div className="tag-list"><Tag>Shopify Liquid</Tag><Tag>JavaScript</Tag><Tag>Customer Privacy API</Tag><Tag>OneTrust</Tag><Tag>WCAG 2.2</Tag><Tag>Playwright</Tag><Tag>axe-core</Tag></div>
+                <div className="woocommerce-filter-links">
+                  <a className="text-link" href="https://github.com/NikoCartin/shopify-geo-store-suggestion" target="_blank" rel="noreferrer">Explore the open-source starter <ArrowUpRight size={15} /></a>
+                  <a className="text-link" href="https://github.com/NikoCartin/shopify-geo-store-suggestion/blob/main/docs/design-decisions.md" target="_blank" rel="noreferrer">Read the design decisions <ArrowUpRight size={15} /></a>
+                </div>
+              </div>
+            </div>
+            <dl className="woocommerce-catalog-workstreams woocommerce-filter-facts">
+              <div className="woocommerce-catalog-workstream">
+                <dt>Problem</dt>
+                <dd>The previous script called a rate-limited third-party IP API on every page view and redirected visitors and crawlers without a choice. Same-path redirects could land on 404s where product handles differ between regional stores, and the stored choice did not follow cookie consent.</dd>
+              </div>
+              <div className="woocommerce-catalog-workstream">
+                <dt>Solution</dt>
+                <dd>Built two Liquid snippets: a centered, focus-trapped dialog with country flags, verified deep links with a home-page fallback, a 14-day memory tied to OneTrust and Shopify Customer Privacy consent, crawler and checkout exclusions, and footer region links with hreflang. Benchmarked the design against Shopify, Google, Baymard, and peer storefronts.</dd>
+              </div>
+              <div className="woocommerce-catalog-workstream">
+                <dt>Impact</dt>
+                <dd>Validated on an unpublished theme for Canada, UK, Ireland, Germany, France, US, and unmapped visitors at desktop and mobile sizes, with zero axe-core WCAG 2.2 AA violations on the dialog and no third-party IP requests. Production release is pending approval; no conversion impact is claimed.</dd>
+              </div>
+            </dl>
+          </article>
+          <article className="woocommerce-catalog-case cro-case" id="mobile-checkout-cro" aria-labelledby="cro-case-title">
+            <div className="woocommerce-catalog-media">
+              <img src="/assets/echelon-cro-mobile-pdp.webp" alt="Mobile Echelon Stride-6 product page showing the title, price, a monthly Shop Pay price, and the chat launcher raised above the sticky Add to cart button." loading="lazy" decoding="async" />
+            </div>
+            <div className="woocommerce-catalog-copy">
+              <span className="project-eyebrow">Echelon Fit US · CRO · Mobile checkout · Analytics</span>
+              <h3 id="cro-case-title">Mobile checkout CRO, from analytics signal to live fixes.</h3>
+              <p>When the checkout-to-cart rate fell to roughly half of its summer level, I validated the tracking, tested checkout on real phones and social in-app browsers, and shipped the theme fixes that removed friction between the product page and payment.</p>
+              <div className="woocommerce-catalog-workstreams" aria-label="Measurement, testing, and fixes">
+                <div className="woocommerce-catalog-workstream">
+                  <span>01 · Measurement</span>
+                  <p>Matched a controlled live mobile checkout against Triple Whale and Shopify Analytics. The attribution platform under-counted checkouts and over-counted add-to-carts, so Shopify Analytics became the source of truth for the metric.</p>
+                </div>
+                <div className="woocommerce-catalog-workstream">
+                  <span>02 · Real-device testing</span>
+                  <p>Tested the full path on a physical iPhone and inside the Instagram, Facebook, and Snapchat browsers without real purchases. Wallets and express checkout worked; a financing window issue was routed to its vendor.</p>
+                </div>
+                <div className="woocommerce-catalog-workstream">
+                  <span>03 · Live fixes</span>
+                  <p>Raised the chat launcher above sticky actions, moved the monthly membership option up on phones, stopped a game popup from loading once the cart has items, and restored a price and financing area hidden at 1024 px and below.</p>
+                </div>
+              </div>
+              <div className="woocommerce-catalog-metrics" aria-label="Project scope">
+                <div><strong>7</strong><span>friction points mapped</span></div>
+                <div><strong>3</strong><span>in-app browsers tested</span></div>
+                <div><strong>4</strong><span>express payment methods verified</span></div>
+                <div><strong>2–4</strong><span>week measurement window</span></div>
+              </div>
+              <p className="cro-note">Paid-social landing-page findings were handed to the performance team that owns those pages. No conversion uplift is claimed yet.</p>
+              <div className="woocommerce-filter-links">
+                <a className="text-link" href="https://github.com/NikoCartin/echelon-triple-whale-analytics-public/blob/main/docs/05-mobile-cro-remediation.md" target="_blank" rel="noreferrer">Read the CRO case study <ArrowUpRight size={15} /></a>
+                <a className="text-link" href="https://github.com/NikoCartin/echelon-triple-whale-analytics-public" target="_blank" rel="noreferrer">View the analytics investigation <ArrowUpRight size={15} /></a>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -852,99 +945,6 @@ export default function Home() {
               <a className="text-link" href="https://www.3m.com/" target="_blank" rel="noreferrer">Visit 3M.com <ArrowUpRight size={15} /></a>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="woocommerce-section case-studies-section" id="case-studies">
-        <div className="section-shell">
-          <div className="woocommerce-heading-row">
-            <SectionHeading
-              eyebrow="Echelon · Case studies"
-              title="From a storefront signal to a shipped fix."
-              text="Two recent Echelon Fit US projects: replacing an IP auto-redirect with a consent-aware store suggestion, and a mobile checkout CRO effort that moved from analytics validation to live theme fixes."
-            />
-          </div>
-          <article className="woocommerce-filter-case" id="geo-store-routing" aria-labelledby="geo-routing-title">
-            <div className="woocommerce-filter-intro">
-              <div className="woocommerce-filter-gallery" role="group" aria-label="Desktop and mobile geo store suggestion screenshots" data-active-preview={geoPreviewMode}>
-                <div className="woocommerce-filter-preview-controls" role="group" aria-label="Choose a geo store suggestion preview">
-                  <button type="button" aria-pressed={geoPreviewMode === "mobile"} onClick={() => setGeoPreviewMode("mobile")}>Mobile view</button>
-                  <button type="button" aria-pressed={geoPreviewMode === "desktop"} onClick={() => setGeoPreviewMode("desktop")}>Desktop view</button>
-                </div>
-                <figure className="woocommerce-filter-proof woocommerce-filter-proof--desktop">
-                  <a className="image-link" href="https://github.com/NikoCartin/shopify-geo-store-suggestion" target="_blank" rel="noopener noreferrer" aria-label="View the open-source geo store suggestion from the desktop preview">
-                    <img src="/assets/echelon-geo-store-suggestion-desktop.webp" alt="Desktop Echelon rower collection page with a centered dialog asking Shopping from Canada?, a Canadian flag, a Go to Echelon Canada button and a Stay on Echelon US button." loading="lazy" decoding="async" />
-                  </a>
-                  <figcaption>Desktop: a centered store suggestion for a visitor from Canada.</figcaption>
-                </figure>
-                <figure className="woocommerce-filter-proof woocommerce-filter-proof--mobile">
-                  <a className="image-link" href="https://github.com/NikoCartin/shopify-geo-store-suggestion" target="_blank" rel="noopener noreferrer" aria-label="View the open-source geo store suggestion from the mobile preview">
-                    <img src="/assets/echelon-geo-store-suggestion-mobile.webp" alt="Mobile Echelon page with the Shopping from Canada? dialog, flags, and stacked Go to Echelon Canada and Stay on Echelon US buttons." loading="lazy" decoding="async" />
-                  </a>
-                  <figcaption>Mobile: the same choice with stacked actions.</figcaption>
-                </figure>
-              </div>
-              <div className="woocommerce-catalog-copy">
-                <span className="project-eyebrow">Lead Developer · Shopify Liquid · Internationalization · Privacy</span>
-                <h3 id="geo-routing-title">Consent-aware geo store routing.</h3>
-                <p>Replaced an IP auto-redirect with a store suggestion built on Shopify's own country detection. Visitors choose their regional store, links open the same product when it exists there, and the choice is stored only as cookie consent allows.</p>
-                <div className="tag-list"><Tag>Shopify Liquid</Tag><Tag>JavaScript</Tag><Tag>Customer Privacy API</Tag><Tag>OneTrust</Tag><Tag>WCAG 2.2</Tag><Tag>Playwright</Tag><Tag>axe-core</Tag></div>
-                <div className="woocommerce-filter-links">
-                  <a className="text-link" href="https://github.com/NikoCartin/shopify-geo-store-suggestion" target="_blank" rel="noreferrer">Explore the open-source starter <ArrowUpRight size={15} /></a>
-                  <a className="text-link" href="https://github.com/NikoCartin/shopify-geo-store-suggestion/blob/main/docs/design-decisions.md" target="_blank" rel="noreferrer">Read the design decisions <ArrowUpRight size={15} /></a>
-                </div>
-              </div>
-            </div>
-            <dl className="woocommerce-catalog-workstreams woocommerce-filter-facts">
-              <div className="woocommerce-catalog-workstream">
-                <dt>Problem</dt>
-                <dd>The previous script called a rate-limited third-party IP API on every page view and redirected visitors and crawlers without a choice. Same-path redirects could land on 404s where product handles differ between regional stores, and the stored choice did not follow cookie consent.</dd>
-              </div>
-              <div className="woocommerce-catalog-workstream">
-                <dt>Solution</dt>
-                <dd>Built two Liquid snippets: a centered, focus-trapped dialog with country flags, verified deep links with a home-page fallback, a 14-day memory tied to OneTrust and Shopify Customer Privacy consent, crawler and checkout exclusions, and footer region links with hreflang. Benchmarked the design against Shopify, Google, Baymard, and peer storefronts.</dd>
-              </div>
-              <div className="woocommerce-catalog-workstream">
-                <dt>Impact</dt>
-                <dd>Validated on an unpublished theme for Canada, UK, Ireland, Germany, France, US, and unmapped visitors at desktop and mobile sizes, with zero axe-core WCAG 2.2 AA violations on the dialog and no third-party IP requests. Production release is pending approval; no conversion impact is claimed.</dd>
-              </div>
-            </dl>
-          </article>
-          <article className="woocommerce-catalog-case cro-case" id="mobile-checkout-cro" aria-labelledby="cro-case-title">
-            <div className="woocommerce-catalog-media">
-              <img src="/assets/echelon-cro-mobile-pdp.webp" alt="Mobile Echelon Stride-6 product page showing the title, price, a monthly Shop Pay price, and the chat launcher raised above the sticky Add to cart button." loading="lazy" decoding="async" />
-            </div>
-            <div className="woocommerce-catalog-copy">
-              <span className="project-eyebrow">Echelon Fit US · CRO · Mobile checkout · Analytics</span>
-              <h3 id="cro-case-title">Mobile checkout CRO, from analytics signal to live fixes.</h3>
-              <p>When the checkout-to-cart rate fell to roughly half of its summer level, I validated the tracking, tested checkout on real phones and social in-app browsers, and shipped the theme fixes that removed friction between the product page and payment.</p>
-              <div className="woocommerce-catalog-workstreams" aria-label="Measurement, testing, and fixes">
-                <div className="woocommerce-catalog-workstream">
-                  <span>01 · Measurement</span>
-                  <p>Matched a controlled live mobile checkout against Triple Whale and Shopify Analytics. The attribution platform under-counted checkouts and over-counted add-to-carts, so Shopify Analytics became the source of truth for the metric.</p>
-                </div>
-                <div className="woocommerce-catalog-workstream">
-                  <span>02 · Real-device testing</span>
-                  <p>Tested the full path on a physical iPhone and inside the Instagram, Facebook, and Snapchat browsers without real purchases. Wallets and express checkout worked; a financing window issue was routed to its vendor.</p>
-                </div>
-                <div className="woocommerce-catalog-workstream">
-                  <span>03 · Live fixes</span>
-                  <p>Raised the chat launcher above sticky actions, moved the monthly membership option up on phones, stopped a game popup from loading once the cart has items, and restored a price and financing area hidden at 1024 px and below.</p>
-                </div>
-              </div>
-              <div className="woocommerce-catalog-metrics" aria-label="Project scope">
-                <div><strong>7</strong><span>friction points mapped</span></div>
-                <div><strong>3</strong><span>in-app browsers tested</span></div>
-                <div><strong>4</strong><span>express payment methods verified</span></div>
-                <div><strong>2–4</strong><span>week measurement window</span></div>
-              </div>
-              <p className="cro-note">Paid-social landing-page findings were handed to the performance team that owns those pages. No conversion uplift is claimed yet.</p>
-              <div className="woocommerce-filter-links">
-                <a className="text-link" href="https://github.com/NikoCartin/echelon-triple-whale-analytics-public/blob/main/docs/05-mobile-cro-remediation.md" target="_blank" rel="noreferrer">Read the CRO case study <ArrowUpRight size={15} /></a>
-                <a className="text-link" href="https://github.com/NikoCartin/echelon-triple-whale-analytics-public" target="_blank" rel="noreferrer">View the analytics investigation <ArrowUpRight size={15} /></a>
-              </div>
-            </div>
-          </article>
         </div>
       </section>
 
