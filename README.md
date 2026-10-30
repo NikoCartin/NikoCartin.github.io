@@ -52,8 +52,14 @@ The portfolio presents selected work across:
 - Shopify Functions, Rust/WASM, GraphQL, and custom apps
 - E-commerce frontend, backend, and infrastructure work
 - AWS, Linux, Nginx, SSL/TLS, and production recovery
+- Internationalization, consent-aware geolocation, and WCAG 2.2 AA accessibility
 - Digital marketing, SEO, CRO, email marketing, and CRM workflows
 - Primal Strength, Echelon Fitness, Echelon Coach, and earlier web projects
+
+## Echelon case studies
+
+- **Consent-aware geo store routing:** replaces an IP auto-redirect with a Shopify-native, accessible store suggestion, consent-based storage, and safe deep links. Shown with a desktop and mobile switch. Open-source starter: [shopify-geo-store-suggestion](https://github.com/NikoCartin/shopify-geo-store-suggestion).
+- **Mobile checkout CRO:** tracking validation, real-device and in-app browser checkout testing, and live mobile friction fixes. [Case study](https://github.com/NikoCartin/echelon-triple-whale-analytics-public/blob/main/docs/05-mobile-cro-remediation.md).
 
 ## NossoCR WordPress engineering
 
