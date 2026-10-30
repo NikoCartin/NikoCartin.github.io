@@ -275,6 +275,17 @@ const echelonCommerceCases: EchelonCommerceCase[] = [
     impact: "Live on Stride-6s-10. Future pre-orders can be switched on or off from Shopify Admin without a theme release.",
   },
   {
+    title: "Rower coaches from instructor metaobjects",
+    area: "Echelon Fit US · Theme architecture",
+    image: "/assets/echelon-rower-coaches-metaobjects.webp",
+    link: "https://github.com/NikoCartin/echelon-sops/blob/main/SOP-032-metaobject-driven-sections.md",
+    liveUrl: "https://echelonfit.com/collections/rower",
+    tags: ["Liquid", "Metaobjects", "JavaScript"],
+    problem: "The rower page listed its coaches in hardcoded JavaScript. The list had drifted from the real roster, showing instructors who had left or did not teach rowing.",
+    solution: "Rebuilt the section to read the same instructor metaobjects used by the instructors page, filtered by the Row teaching category, and output them as JSON for the page script, with guards for missing names or photos.",
+    impact: "Live with the eight current rowing instructors. The content team now updates the section from Shopify Admin without a theme release, and the pattern is documented as a reusable SOP.",
+  },
+  {
     title: "AWS Echelon Coach API recovery",
     area: "Echelon Coach · Backend and infrastructure",
     image: "/assets/echelon-coach-storefront.png",
@@ -669,7 +680,7 @@ export default function Home() {
             <div className="case-study-grid">
               {echelonCommerceCases.map((project) => (
                 <article className="case-study-card" key={project.title}>
-                  <a className={project.imagePresentation === "contain" ? "case-study-media case-study-media-snapshot" : "case-study-media"} href={project.liveUrl ?? project.link} target="_blank" rel="noreferrer"><img src={project.image} alt="" loading="lazy" decoding="async" /><span><ArrowUpRight size={17} /></span></a>
+                  <a className={project.imagePresentation === "contain" ? "case-study-media case-study-media-snapshot" : "case-study-media"} href={project.liveUrl ?? project.link} target="_blank" rel="noreferrer" aria-label={`${project.title} (opens in a new tab)`}><img src={project.image} alt="" loading="lazy" decoding="async" /><span><ArrowUpRight size={17} /></span></a>
                   <div className="case-study-body">
                     <span className="case-study-area">{project.area}</span>
                     <h4>{project.title}</h4>
@@ -694,7 +705,7 @@ export default function Home() {
             <div className="case-study-grid">
               {primalCommerceCases.map((project) => (
                 <article className="case-study-card" key={project.title}>
-                  <a className="case-study-media" href={project.link} target="_blank" rel="noreferrer"><img src={project.image} alt="" loading="lazy" decoding="async" /><span><ArrowUpRight size={17} /></span></a>
+                  <a className="case-study-media" href={project.link} target="_blank" rel="noreferrer" aria-label={`${project.title} (opens in a new tab)`}><img src={project.image} alt="" loading="lazy" decoding="async" /><span><ArrowUpRight size={17} /></span></a>
                   <div className="case-study-body">
                     <span className="case-study-area">{project.area}</span>
                     <h4>{project.title}</h4>
@@ -822,7 +833,7 @@ export default function Home() {
           <div className="archive-grid">
             {earlierProjects.map((project) => (
               <article className="archive-card" key={project.title}>
-                <a className="archive-media" href={project.link} target="_blank" rel="noreferrer"><img src={project.image} alt="" loading="lazy" decoding="async" /><span><ArrowUpRight size={17} /></span></a>
+                <a className="archive-media" href={project.link} target="_blank" rel="noreferrer" aria-label={`${project.title} (opens in a new tab)`}><img src={project.image} alt="" loading="lazy" decoding="async" /><span><ArrowUpRight size={17} /></span></a>
                 <div className="archive-copy">
                   <span>{project.type}</span>
                   <h3>{project.title}</h3>
