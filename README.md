@@ -59,6 +59,7 @@ The portfolio presents selected work across:
 ## Echelon case studies
 
 - **Consent-aware geo store routing:** replaces an IP auto-redirect with a Shopify-native, accessible store suggestion, consent-based storage, and safe deep links. Shown with a desktop and mobile switch. Open-source starter: [shopify-geo-store-suggestion](https://github.com/NikoCartin/shopify-geo-store-suggestion).
+- **Consumer financing page rebuild:** schema-driven Liquid section for the Echelon Fit US financing page, with click-loaded ChargeAfter, an accessible FAQ, readable disclosure, and a template-swap release with one-step rollback. Live page: [echelonfit.com/pages/echelon-financing](https://echelonfit.com/pages/echelon-financing).
 - **Mobile checkout CRO:** tracking validation, real-device and in-app browser checkout testing, and live mobile friction fixes. [Case study](https://github.com/NikoCartin/echelon-triple-whale-analytics-public/blob/main/docs/05-mobile-cro-remediation.md).
 
 ## NossoCR WordPress engineering

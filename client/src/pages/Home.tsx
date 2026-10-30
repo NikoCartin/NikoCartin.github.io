@@ -599,7 +599,7 @@ export default function Home() {
             <SectionHeading
               eyebrow="Echelon · Case studies"
               title="From a storefront signal to a shipped fix."
-              text="Two recent Echelon Fit US projects: replacing an IP auto-redirect with a consent-aware store suggestion, and a mobile checkout CRO effort that moved from analytics validation to live theme fixes."
+              text="Three recent Echelon Fit US projects: replacing an IP auto-redirect with a consent-aware store suggestion, a mobile checkout CRO effort that moved from analytics validation to live theme fixes, and a rebuilt consumer financing page."
             />
           </div>
           <article className="woocommerce-filter-case" id="geo-store-routing" aria-labelledby="geo-routing-title">
@@ -680,6 +680,40 @@ export default function Home() {
               <div className="woocommerce-filter-links">
                 <a className="text-link" href="https://github.com/NikoCartin/echelon-triple-whale-analytics-public/blob/main/docs/05-mobile-cro-remediation.md" target="_blank" rel="noreferrer">Read the CRO case study <ArrowUpRight size={15} /></a>
                 <a className="text-link" href="https://github.com/NikoCartin/echelon-triple-whale-analytics-public" target="_blank" rel="noreferrer">View the analytics investigation <ArrowUpRight size={15} /></a>
+              </div>
+            </div>
+          </article>
+          <article className="woocommerce-catalog-case cro-case" id="financing-page" aria-labelledby="financing-case-title">
+            <div className="woocommerce-catalog-media">
+              <img src="/assets/echelon-financing-page-mobile.webp" alt="Mobile Echelon financing page with the heading Train now. Pay over time., a Shop equipment button, a Check your rate button and a photo of a rider on a Connect bike." loading="lazy" decoding="async" />
+            </div>
+            <div className="woocommerce-catalog-copy">
+              <span className="project-eyebrow">Echelon Fit US · Shopify Liquid · Consumer financing · Mobile UX</span>
+              <h3 id="financing-case-title">Consumer financing page, rebuilt as a theme section.</h3>
+              <p>The financing page still described a previous lender setup, repeated merchant-facing FAQs, and ran to roughly nine phone screens. I rebuilt it as a configurable section aligned with the current ChargeAfter checkout flow.</p>
+              <div className="woocommerce-catalog-workstreams" aria-label="Audit, build, and release">
+                <div className="woocommerce-catalog-workstream">
+                  <span>01 · Audit</span>
+                  <p>Reviewed the live page at desktop and phone sizes, traced each Apply button to its financing flow, and removed leftover commercial lender code from the consumer theme.</p>
+                </div>
+                <div className="woocommerce-catalog-workstream">
+                  <span>02 · Build</span>
+                  <p>Wrote a schema-driven Liquid section with product cards, ways-to-pay cards, an accessible FAQ, and a readable disclosure. The ChargeAfter script loads only on click, through a button handler that still works when the theme's speed app delays inline scripts.</p>
+                </div>
+                <div className="woocommerce-catalog-workstream">
+                  <span>03 · Release</span>
+                  <p>Validated on an unpublished theme, released as two new files with no existing files changed, and switched the page template with a one-step rollback. Interim copy reuses the lender's existing disclosure until finance approves APR wording.</p>
+                </div>
+              </div>
+              <div className="woocommerce-catalog-metrics" aria-label="Project scope">
+                <div><strong>~35%</strong><span>shorter on phones</span></div>
+                <div><strong>2</strong><span>new theme files</span></div>
+                <div><strong>0</strong><span>existing files changed</span></div>
+                <div><strong>1</strong><span>step rollback</span></div>
+              </div>
+              <p className="cro-note">No conversion impact is claimed. Monthly payment estimates stay off until finance confirms the APR wording.</p>
+              <div className="woocommerce-filter-links">
+                <a className="text-link" href="https://echelonfit.com/pages/echelon-financing" target="_blank" rel="noreferrer">View the live page <ArrowUpRight size={15} /></a>
               </div>
             </div>
           </article>
