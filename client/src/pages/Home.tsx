@@ -116,9 +116,9 @@ const echelonWorkstreams = [
 const earlierProjects = [
   {
     title: "Grupo Inmarca",
-    type: "React landing page · PHP contact flow",
-    text: "A responsive institutional and commercial landing page for a Brazilian fashion distributor in Costa Rica, with brand presentation, contact routing, WhatsApp, and custom responsive styling.",
-    image: "/assets/grupo-inmarca.png",
+    type: "HTML/CSS/JavaScript · PHP/PHPMailer",
+    text: "Led the redesign and development of Grupo Inmarca’s institutional and commercial website, combining editorial brand presentation with wholesale enquiries and retail shopping paths. Built a responsive 15-brand carousel, integrated a PHP/PHPMailer contact endpoint with WhatsApp fallback, and implemented visitor privacy preferences with consent-gated Google Maps and analytics configuration. Connected brand discovery to Nosso and Marbella storefronts.",
+    image: "/assets/grupo-inmarca-current.webp",
     link: "https://github.com/NikoCartin/landing-page-grupo-inmarca",
   },
   {
