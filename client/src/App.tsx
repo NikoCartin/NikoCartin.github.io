@@ -8,10 +8,14 @@ import Home from "./pages/Home";
 
 
 function Router() {
+  const base = import.meta.env.BASE_URL === "./"
+    ? window.location.pathname.replace(/\/[^/]*$/, "")
+    : import.meta.env.BASE_URL.replace(/\/$/, "");
   return (
-    <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+    <WouterRouter base={base}>
       <Switch>
         <Route path={"/"} component={Home} />
+        <Route path={"/index.html"} component={Home} />
         <Route path={"/404"} component={NotFound} />
         {/* Final fallback route */}
         <Route component={NotFound} />
