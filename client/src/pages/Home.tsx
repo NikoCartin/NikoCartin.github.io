@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -29,7 +29,7 @@ const engineeringCases = [
     eyebrow: "Shopify Plus · Product experience",
     title: "Multi-store commerce systems for fitness and equipment brands.",
     body: "Lead Shopify Plus development and e-commerce operations across regional storefronts. The work spans product data, inventory-aware buying paths, metafields, collections, financing, cart behavior, QA, and production releases.",
-    image: "/assets/primal-storefront.jpg",
+    image: "./assets/primal-storefront.jpg",
     tags: ["Shopify", "Liquid", "JavaScript", "Metafields", "Shopify CLI"],
     link: "https://github.com/NikoCartin/primal-strength-us-shopify",
     linkLabel: "View project overview",
@@ -39,7 +39,7 @@ const engineeringCases = [
     eyebrow: "Shopify Functions · App extensions",
     title: "Checkout rules that fail safely, not silently.",
     body: "Built Rust/WASM Shopify Functions and extension-only app controls for membership-gated shipping and promotional gift logic. Eligibility is cart-line based, exclusions take precedence, and validation happens before payment.",
-    image: "/assets/echelon-recovery.jpg",
+    image: "./assets/echelon-recovery.jpg",
     tags: ["Rust", "WASM", "GraphQL", "Polaris", "Checkout"],
     link: "https://github.com/NikoCartin/shopify-membership-shipping-discount-starter",
     linkLabel: "Explore the open-source starter",
@@ -49,7 +49,7 @@ const engineeringCases = [
     eyebrow: "Commercial UX · Production recovery",
     title: "A commercial storefront hardened for real operational pressure.",
     body: "Maintained React-powered Shopify product experiences, quote flows, technical product data, routing, lead capture, and asset quality. Recovered a production JavaScript regression and introduced a controlled deployment and rollback baseline.",
-    image: "/assets/echelon-commercial-hero.webp",
+    image: "./assets/echelon-commercial-hero.webp",
     tags: ["React", "Shopify", "Formspree", "QA", "Git"],
     link: "https://github.com/NikoCartin/echelon-commercial-portfolio",
     linkLabel: "Read the case-study overview",
@@ -90,25 +90,25 @@ const echelonWorkstreams = [
   {
     title: "Regional storefront operations",
     text: "Supported US, UK, Canada, France, Germany, and Ireland storefront experiences through Liquid, product operations, collection merchandising, apps, geo-routing, and release validation.",
-    image: "/assets/echelon-storefront.jpg",
+    image: "./assets/echelon-storefront.jpg",
     tags: ["US · UK · CA", "Liquid", "Geo-routing"],
   },
   {
     title: "Dynamic product architecture",
-    text: "Architected a reusable UK equipment template with 17 sections and 10 supporting snippets for galleries, memberships, financing, accessories, reviews, video, responsive UX, and cart behavior.",
-    image: "/assets/echelon-recovery.jpg",
+    text: "Extended the reusable UK equipment template with native Liquid and progressive JavaScript, preserving the existing purchase controller while improving product content, reviews, financing and family-specific buying paths.",
+    image: "./assets/echelon-recovery.jpg",
     tags: ["17 sections", "10 snippets", "Metafields"],
   },
   {
     title: "Commerce functions and promotional logic",
     text: "Built a Rust/WASM membership shipping Function and a fail-closed ThermaChill chair-gift workflow that protects paid garments and discounts only the marked gift line.",
-    image: "/assets/echelon-storefront.jpg",
+    image: "./assets/echelon-storefront.jpg",
     tags: ["Rust/WASM", "Shopify Functions", "Cart QA"],
   },
   {
     title: "Commercial storefront hardening",
     text: "Improved product-data presentation, quote flows, Market Segment capture, specification downloads, navigation, technical SEO, runtime recovery, and stable production deployment for Echelon Commercial.",
-    image: "/assets/echelon-commercial-catalog.webp",
+    image: "./assets/echelon-commercial-catalog.webp",
     tags: ["React", "Formspree", "Production QA"],
   },
 ];
@@ -118,28 +118,28 @@ const earlierProjects = [
     title: "Grupo Inmarca",
     type: "HTML/CSS/JavaScript · PHP/PHPMailer",
     text: "Led the redesign and development of Grupo Inmarca’s institutional and commercial website, combining editorial brand presentation with wholesale enquiries and retail shopping paths. Built a responsive 15-brand carousel, integrated a PHP/PHPMailer contact endpoint with WhatsApp fallback, and implemented visitor privacy preferences with consent-gated Google Maps and analytics configuration. Connected brand discovery to Nosso and Marbella storefronts.",
-    image: "/assets/grupo-inmarca-current.webp",
+    image: "./assets/grupo-inmarca-current.webp",
     link: "https://github.com/NikoCartin/landing-page-grupo-inmarca",
   },
   {
     title: "MarbellaCR no-code e-commerce",
     type: "Lead Developer · Hostinger AI Website Builder",
     text: "Recreated MarbellaCR's lost e-commerce site after the original agency did not provide the backups. Built a no-code Hostinger AI Website Builder solution with custom styling, layout design, graphic editing, promotions, WhatsApp catalog, social content, and SEO.",
-    image: "/assets/marbella-banner.png",
+    image: "./assets/marbella-banner.png",
     link: "https://www.marbellacr.com/",
   },
   {
     title: "Laravel inventory system",
     type: "PHP · MySQL · MVC",
     text: "A complete inventory management system with products, suppliers, categories, CRUD operations, responsive UI, Blade templates, Eloquent ORM, and a clear MVC architecture.",
-    image: "/assets/inventory-laravel.png",
+    image: "./assets/inventory-laravel.png",
     link: "https://github.com/NikoCartin/InventarioRapidoLaravel",
   },
   {
     title: "AJAX and PHP commerce systems",
     type: "Native web · Backend foundations",
     text: "Built shopping cart and e-commerce systems with PHP sessions, MySQL persistence, product management, checkout flows, Bootstrap, JavaScript, and AJAX state updates.",
-    image: "/assets/ajax-cart.png",
+    image: "./assets/ajax-cart.png",
     link: "https://github.com/NikoCartin/carrito-compras-ajax",
   },
 ];
@@ -178,6 +178,7 @@ const strategicDomains = [
 ];
 
 type EchelonCommerceCase = {
+  id?: string;
   title: string;
   area: string;
   image: string;
@@ -194,7 +195,7 @@ const echelonCommerceCases: EchelonCommerceCase[] = [
   {
     title: "Regional Shopify storefront operations",
     area: "Echelon US · UK · Canada · Germany · France",
-    image: "/assets/echelon-us-primal-storefront.png",
+    image: "./assets/echelon-us-primal-storefront.png",
     link: "https://echelonfit.com",
     tags: ["Shopify Plus", "Liquid", "Merchandising"],
     problem: "Regional storefronts needed consistent product, collection, inventory, app, and customer-facing updates across different markets.",
@@ -202,19 +203,20 @@ const echelonCommerceCases: EchelonCommerceCase[] = [
     impact: "Improved consistency and operational reliability across a multi-store commerce environment while keeping regional needs intact.",
   },
   {
+    id: "uk-pdp-architecture",
     title: "UK dynamic equipment template",
     area: "Echelon UK · Product architecture",
-    image: "/assets/echelon-storefront.jpg",
+    image: "./assets/echelon-storefront.jpg",
     link: "https://echelonfit.uk",
-    tags: ["17 sections", "10 snippets", "Metafields"],
-    problem: "Hardcoded product templates made new equipment SKUs difficult to launch and maintain consistently.",
-    solution: "Architected a reusable template with 17 sections and 10 supporting snippets for galleries, memberships, financing, accessories, reviews, video, responsive UX, and cart behavior.",
-    impact: "Created a flexible product foundation that lets new equipment pages use structured data instead of repeated template edits.",
+    tags: ["Shopify Liquid", "Progressive JavaScript", "Product data", "Regression QA"],
+    problem: "Equipment pages needed a consistent experience without flattening important differences: membership plans, equipment-only purchases, genuine reviews, accessories and SKU-specific preorder messaging.",
+    solution: "Extended the reusable Liquid architecture around the existing commerce controller, rather than replacing it. Product and family data drive relevant modules; native integrations keep their original equipment and review bindings. Stair Max retains three plans; Pilates remains equipment-only with optional FitPass.",
+    impact: "Shipped scoped template improvements with representative bike, treadmill and rower checks, plus special-configuration coverage. Fresh backups, exact-file deployment, live readback and rollback records make the work maintainable without treating the entire theme as a release payload.",
   },
   {
     title: "Custom Shopify membership shipping app",
     area: "Echelon Fit US · Checkout logic",
-    image: "/assets/echelon-premier-membership-selector.png",
+    image: "./assets/echelon-premier-membership-selector.png",
     link: "https://github.com/NikoCartin/shopify-membership-shipping-discount-starter",
     tags: ["Rust/WASM", "App Home", "Shopify Functions"],
     problem: "Free equipment shipping needed to apply only to eligible Premier Yearly and 2-Year membership purchases, not generic customer or product tags.",
@@ -224,7 +226,7 @@ const echelonCommerceCases: EchelonCommerceCase[] = [
   {
     title: "Premier Monthly first-month-free checkout function",
     area: "Echelon Fit US · Automatic product discount",
-    image: "/assets/echelon-premier-monthly-free-cart-validation-2026-10-27.png",
+    image: "./assets/echelon-premier-monthly-free-cart-validation-2026-10-27.png",
     imagePresentation: "contain",
     link: "https://echelonfit.com",
     tags: ["Rust/WASM", "Shopify Functions", "Dynamic metafields", "Cart QA"],
@@ -235,7 +237,7 @@ const echelonCommerceCases: EchelonCommerceCase[] = [
   {
     title: "Echelon Partners Program",
     area: "Echelon Fit US · Custom partner verification",
-    image: "/assets/echelon-partners-program.webp",
+    image: "./assets/echelon-partners-program.webp",
     link: "https://echelonfit.com/pages/partners",
     tags: ["Node.js", "Customer Account API", "OAuth 2.0 + PKCE", "MySQL"],
     problem: "Partner benefits needed a verified, one-time path based on an approved corporate domain rather than a generic discount code or self-declared organization.",
@@ -245,7 +247,7 @@ const echelonCommerceCases: EchelonCommerceCase[] = [
   {
     title: "ThermaChill configuration and chair gift",
     area: "Echelon Fit US · Cart and product experience",
-    image: "/assets/thermachill-selector.png",
+    image: "./assets/thermachill-selector.png",
     link: "https://echelonfit.com/products/thermachill",
     tags: ["App Extension", "Cart logic", "Shopify Discount Function"],
     problem: "ThermaChill needed a configurable garment selector and a Recliner Chair gift without making the garments or ThermaChill free.",
@@ -255,7 +257,7 @@ const echelonCommerceCases: EchelonCommerceCase[] = [
   {
     title: "WCAG 2.2 AA accessibility remediation",
     area: "Echelon US · Canada · UK · Theme accessibility",
-    image: "/assets/echelon-accessibility-statement.webp",
+    image: "./assets/echelon-accessibility-statement.webp",
     link: "https://github.com/NikoCartin/echelon-sops/blob/main/SOP-026-wcag22-theme-audit-remediation.md",
     liveUrl: "https://echelonfit.com/pages/accessibility-statement",
     tags: ["WCAG 2.2 AA", "axe-core", "Playwright", "Liquid"],
@@ -266,7 +268,7 @@ const echelonCommerceCases: EchelonCommerceCase[] = [
   {
     title: "Per-product pre-order messaging",
     area: "Echelon UK · Dynamic product template",
-    image: "/assets/echelon-uk-preorder-message.webp",
+    image: "./assets/echelon-uk-preorder-message.webp",
     link: "https://github.com/NikoCartin/echelon-sops/blob/main/SOP-030-uk-per-product-preorder-message.md",
     liveUrl: "https://echelonfit.uk/products/echelon-stride-6s-auto-fold-connected-treadmill",
     tags: ["Liquid", "Metafields", "Product template"],
@@ -277,7 +279,7 @@ const echelonCommerceCases: EchelonCommerceCase[] = [
   {
     title: "Rower coaches from instructor metaobjects",
     area: "Echelon Fit US · Theme architecture",
-    image: "/assets/echelon-rower-coaches-metaobjects.webp",
+    image: "./assets/echelon-rower-coaches-metaobjects.webp",
     link: "https://github.com/NikoCartin/echelon-sops/blob/main/SOP-032-metaobject-driven-sections.md",
     liveUrl: "https://echelonfit.com/collections/rower",
     tags: ["Liquid", "Metaobjects", "JavaScript"],
@@ -288,7 +290,7 @@ const echelonCommerceCases: EchelonCommerceCase[] = [
   {
     title: "AWS Echelon Coach API recovery",
     area: "Echelon Coach · Backend and infrastructure",
-    image: "/assets/echelon-coach-storefront.png",
+    image: "./assets/echelon-coach-storefront.png",
     link: "https://github.com/NikoCartin/echelon-coach-ssl-recovery",
     liveUrl: "https://echeloncoach.com/virtualpt/",
     tags: ["AWS", "Linux", "Nginx", "SSL/TLS"],
@@ -299,7 +301,7 @@ const echelonCommerceCases: EchelonCommerceCase[] = [
   {
     title: "Session media reliability remediation",
     area: "Echelon Coach · Agora video sessions",
-    image: "/assets/echelon-coach-storefront.png",
+    image: "./assets/echelon-coach-storefront.png",
     link: "https://github.com/NikoCartin/echelon-coach-session-media-reliability",
     liveUrl: "https://echeloncoach.com/virtualpt/",
     tags: ["Agora", "JavaScript", "PHP", "Mobile video"],
@@ -310,7 +312,7 @@ const echelonCommerceCases: EchelonCommerceCase[] = [
   {
     title: "Commercial storefront hardening",
     area: "Echelon Commercial · Frontend and production QA",
-    image: "/assets/echelon-commercial.png",
+    image: "./assets/echelon-commercial.png",
     link: "https://echeloncommercial.com",
     tags: ["React", "Formspree", "Runtime recovery"],
     problem: "A production JavaScript runtime issue and storefront workflow gaps affected navigation, quote flows, and customer-facing product experiences.",
@@ -323,7 +325,7 @@ const primalCommerceCases = [
   {
     title: "Government purchasing (GSA) page",
     area: "Primal Strength US · B2B purchasing path",
-    image: "/assets/primal-gsa-page.webp",
+    image: "./assets/primal-gsa-page.webp",
     link: "https://us.primalstrength.com/pages/gsa",
     tags: ["Liquid", "Page template", "B2B", "Responsive UX"],
     problem: "Government buyers needed a clear route to purchase Primal Strength equipment through the authorized GSA contract holder.",
@@ -333,7 +335,7 @@ const primalCommerceCases = [
   {
     title: "Quote template purchase-path remediation",
     area: "Primal Strength US · Quote products",
-    image: "/assets/primal-quote-form.png",
+    image: "./assets/primal-quote-form.png",
     link: "https://us.primalstrength.com",
     tags: ["Liquid", "Templates", "POS"],
     problem: "Quote products displayed Request a Quote but some remained published to POS and retained an underlying Shopify cart path.",
@@ -343,7 +345,7 @@ const primalCommerceCases = [
   {
     title: "Dynamic product video system",
     area: "Primal Strength US · Product content",
-    image: "/assets/primal-see-it-in-action.png",
+    image: "./assets/primal-see-it-in-action.png",
     link: "https://github.com/NikoCartin/primal-strength-us-shopify",
     tags: ["Metafields", "YouTube", "Vimeo", "Liquid"],
     problem: "Marketing needed to add product videos without hardcoding each product page or waiting for a theme release.",
@@ -353,7 +355,7 @@ const primalCommerceCases = [
   {
     title: "Financing and US checkout adaptation",
     area: "Primal Strength US · Product and order experience",
-    image: "/assets/primal-product-page.png",
+    image: "./assets/primal-product-page.png",
     link: "https://us.primalstrength.com",
     tags: ["ChargeAfter", "SKU data", "Checkout", "Email"],
     problem: "The US storefront carried regional financing and fulfillment assumptions that did not match the intended US customer journey.",
@@ -363,7 +365,7 @@ const primalCommerceCases = [
   {
     title: "Formspree to HubSpot market routing",
     area: "Primal Strength US + Echelon Commercial · Lead operations",
-    image: "/assets/primal-quote-form.png",
+    image: "./assets/primal-quote-form.png",
     link: "https://us.primalstrength.com",
     tags: ["Formspree", "HubSpot", "Workflows", "Market segments"],
     problem: "Quote and contact submissions needed to reach the designated owner by email while also creating a CRM record for structured sales follow-up.",
@@ -373,7 +375,7 @@ const primalCommerceCases = [
   {
     title: "Klaviyo footer and collection merchandising",
     area: "Primal Strength US · Growth and discovery",
-    image: "/assets/primal-home-gym-collection.png",
+    image: "./assets/primal-home-gym-collection.png",
     link: "https://us.primalstrength.com",
     tags: ["Klaviyo", "Collections", "Merchandising"],
     problem: "The storefront needed an approved newsletter capture experience and a clearer way to surface in-stock products using the default template.",
@@ -383,7 +385,7 @@ const primalCommerceCases = [
   {
     title: "See It in Action product media",
     area: "Primal Strength US · Product storytelling",
-    image: "/assets/primal-home-strength.png",
+    image: "./assets/primal-home-strength.png",
     link: "https://us.primalstrength.com",
     tags: ["PDP content", "Video", "UX"],
     problem: "Technical equipment pages needed stronger product education without sacrificing a clean purchase path.",
@@ -410,6 +412,14 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [filterPreviewMode, setFilterPreviewMode] = useState<"mobile" | "desktop">("mobile");
   const [geoPreviewMode, setGeoPreviewMode] = useState<"mobile" | "desktop">("mobile");
+  const [financingRegion, setFinancingRegion] = useState<"us" | "ca" | "uk">("us");
+  const financingLightbox = useRef<HTMLDialogElement>(null);
+  const financingPreviews = {
+    us: { image: "./assets/portfolio-financing-us.webp", alt: "US product-page financing chooser with native Shop Pay and Echelon Financing, including small Bread Pay and Katapult marks.", caption: "US: provider-owned offers inside a shared comparison.", label: "US", detail: "Shop Pay / Affirm and Echelon Financing" },
+    ca: { image: "./assets/portfolio-financing-ca.webp", alt: "Canadian product page with CAD pricing and native Shop Pay messaging beside the equipment price.", caption: "Canada: local currency and native Canadian offers.", label: "Canada", detail: "CAD pricing and native Shop Pay / Affirm" },
+    uk: { image: "./assets/portfolio-financing-uk.webp", alt: "UK mobile financing chooser showing native Shop Pay and Newpay information.", caption: "UK: native Shop Pay and a separate Newpay entry.", label: "UK", detail: "Shop Pay / Affirm and Newpay" },
+  };
+  const financingPreview = financingPreviews[financingRegion];
 
   const closeMenu = () => setMenuOpen(false);
 
@@ -450,7 +460,7 @@ export default function Home() {
 
       <section className="hero" id="top">
         <div className="hero-portrait" aria-hidden="true">
-          <img src="/assets/nicolas-graduation-portrait.webp" alt="" loading="eager" fetchPriority="high" decoding="async" />
+          <img src="./assets/nicolas-graduation-portrait.webp" alt="" loading="eager" fetchPriority="high" decoding="async" />
         </div>
         <div className="hero-grid" />
         <div className="hero-content">
@@ -463,8 +473,9 @@ export default function Home() {
           <div className="hero-actions">
             <a className="button button-primary" href="#work">View selected work <ArrowRight size={17} /></a>
             <a className="button button-quiet" href="https://mail.google.com/mail/?view=cm&fs=1&to=nicolascartinreyes@gmail.com&su=Portfolio%20inquiry&body=Hi%20N%C3%ADcolas%2C%0A%0AI%27d%20like%20to%20discuss%20a%20project%20with%20you." target="_blank" rel="noreferrer">Start a conversation <Mail size={17} /></a>
-            <a className="resume-link" href="/assets/Nicolas-Cartin-Reyes-FlowCV-Resume-2026-10-12.pdf" target="_blank" rel="noreferrer">Resume PDF <ArrowUpRight size={15} /></a>
+            <a className="resume-link" href="./assets/Nicolas-Cartin-Reyes-FlowCV-Resume-2026-10-12.pdf" target="_blank" rel="noreferrer">Resume PDF <ArrowUpRight size={15} /></a>
           </div>
+          <a className="latest-case-link" href="#native-financing">Latest case: native financing across three regions <ArrowRight size={15} /></a>
         </div>
         <aside className="hero-fact-card" aria-label="Professional overview">
           <span className="fact-label">Education</span>
@@ -486,7 +497,7 @@ export default function Home() {
 
       <section className="education-section">
         <div className="section-shell education-grid">
-          <div className="education-photo"><img src="/assets/nicolas-graduation-uia.jpg" alt="Nícolas Cartín Reyes at his graduation ceremony from UIA." loading="lazy" decoding="async" /></div>
+          <div className="education-photo"><img src="./assets/nicolas-graduation-uia.jpg" alt="Nícolas Cartín Reyes at his graduation ceremony from UIA." loading="lazy" decoding="async" /></div>
           <div className="education-copy">
             <span className="eyebrow"><span className="eyebrow-dot" />Education &amp; selected credentials</span>
             <h2>A technical foundation with product and business context.</h2>
@@ -599,9 +610,72 @@ export default function Home() {
             <SectionHeading
               eyebrow="Echelon · Case studies"
               title="From a storefront signal to a shipped fix."
-              text="Three recent Echelon Fit US projects: replacing an IP auto-redirect with a consent-aware store suggestion, a mobile checkout CRO effort that moved from analytics validation to live theme fixes, and a rebuilt consumer financing page."
+              text="Regional product-page financing, consent-aware store routing, mobile checkout investigation and a rebuilt financing page. Each case connects the implementation to its verification and release boundaries."
             />
           </div>
+          <article className="regional-financing-case" id="native-financing" aria-labelledby="native-financing-title">
+            <div className="regional-case-heading">
+              <span className="project-eyebrow">Shopify Liquid · JavaScript · Regional integrations</span>
+              <h3 id="native-financing-title">Native financing UX across three regional storefronts.</h3>
+              <p>I brought a consistent financing experience to US, Canadian and UK product pages without replacing the providers' widgets, the membership system or the existing purchase flow.</p>
+            </div>
+            <div className="regional-case-grid">
+              <div className="regional-gallery">
+                <div className="regional-controls" role="group" aria-label="Regional financing screenshots">
+                  {(["us", "ca", "uk"] as const).map((region) => (
+                    <button key={region} type="button" aria-pressed={financingRegion === region} onClick={() => setFinancingRegion(region)}>{financingPreviews[region].label}</button>
+                  ))}
+                </div>
+                <figure>
+                  <div className={`regional-screenshot regional-screenshot--${financingRegion}`}>
+                    <img src={financingPreview.image} alt={financingPreview.alt} loading="lazy" decoding="async" />
+                  </div>
+                  <figcaption aria-live="polite">{financingPreview.caption}</figcaption>
+                </figure>
+                <button className="regional-enlarge" type="button" onClick={() => financingLightbox.current?.showModal()}>Enlarge screenshot <Search size={15} /></button>
+                <p className="regional-capture-note">Release QA captures, November 2026. Prices and financing offers shown are point-in-time provider outputs, not current quotes.</p>
+              </div>
+              <div className="regional-case-copy">
+                <div className="regional-workstream">
+                  <span>Integration</span>
+                  <h4>A shared experience, not a rebuilt lender.</h4>
+                  <p>Native components remain responsible for repayment terms, APR and eligibility. The interface improves placement, provider recognition and access to the original offer dialogs; Canadian pricing and regional providers stay local.</p>
+                </div>
+                <div className="regional-workstream">
+                  <span>Commerce behavior</span>
+                  <h4>The equipment quote stays with the equipment.</h4>
+                  <p>Variant changes retain the equipment identity used by the native quote. Membership controls, authentic product-specific reviews and special purchase configurations remain part of the original commerce system.</p>
+                </div>
+                <div className="regional-workstream">
+                  <span>Production delivery</span>
+                  <h4>Small releases. Explicit verification.</h4>
+                  <p>Reviewed draft previews, scoped file uploads, fresh backups and live readback kept the rollout separate from unrelated theme work. Responsive and dialog checks covered representative equipment rather than claiming every possible basket.</p>
+                </div>
+              </div>
+            </div>
+            <div className="regional-outcome">
+              <div><strong>3 regions</strong><span>US, Canada and UK</span></div>
+              <div><strong>Native offers</strong><span>Provider-owned amounts and terms</span></div>
+              <div><strong>Scoped releases</strong><span>Backups, readback and rollback</span></div>
+            </div>
+            <div className="regional-engineering-details">
+              <details>
+                <summary>Engineering detail: recovering native review initialization</summary>
+                <p>A delayed app-loader left the native review widget empty. I isolated the initialization failure and added a guarded loader for the already-configured provider script, without fabricating ratings, replaying unrelated app code or changing optimizer settings. Defensive checks covered duplicate requests, malformed configuration and untrusted script URLs. The evidence did not establish that financing code caused the original loader issue.</p>
+              </details>
+              <details>
+                <summary>Release detail: preserving the surrounding storefront</summary>
+                <p>Approved changes moved through existing development themes, with only reviewed paths uploaded to the existing live themes. Post-release comparisons checked the released bytes and protected files. Purchase controls, membership configurations and native integrations were checked separately from visual layout; rollback restores the relevant pre-release files rather than replacing the whole theme.</p>
+              </details>
+            </div>
+            <p className="regional-boundary">Delivered and checked at the product-page layer. Final US/Canada checkout financing eligibility remains a separate investigation; no conversion or revenue uplift is claimed.</p>
+            <a className="text-link regional-architecture-link" href="#uk-pdp-architecture">Explore the reusable UK product architecture <ArrowRight size={16} /></a>
+            <dialog ref={financingLightbox} className="regional-lightbox" aria-labelledby="regional-lightbox-title" onClick={(event) => { if (event.target === event.currentTarget) financingLightbox.current?.close(); }}>
+              <div className="regional-lightbox-header"><h4 id="regional-lightbox-title">{financingPreview.label}: {financingPreview.detail}</h4><button type="button" onClick={() => financingLightbox.current?.close()} aria-label="Close screenshot"><X size={22} /></button></div>
+              <img src={financingPreview.image} alt={financingPreview.alt} />
+              <p>{financingPreview.caption} Point-in-time release capture; offers may change.</p>
+            </dialog>
+          </article>
           <article className="woocommerce-filter-case" id="geo-store-routing" aria-labelledby="geo-routing-title">
             <div className="woocommerce-filter-intro">
               <div className="woocommerce-filter-gallery" role="group" aria-label="Desktop and mobile geo store suggestion screenshots" data-active-preview={geoPreviewMode}>
@@ -611,13 +685,13 @@ export default function Home() {
                 </div>
                 <figure className="woocommerce-filter-proof woocommerce-filter-proof--desktop">
                   <a className="image-link" href="https://github.com/NikoCartin/shopify-geo-store-suggestion" target="_blank" rel="noopener noreferrer" aria-label="View the open-source geo store suggestion from the desktop preview">
-                    <img src="/assets/echelon-geo-store-suggestion-desktop.webp" alt="Desktop Echelon rower collection page with a centered dialog asking Shopping from Canada?, a Canadian flag, a Go to Echelon Canada button and a Stay on Echelon US button." loading="lazy" decoding="async" />
+                    <img src="./assets/echelon-geo-store-suggestion-desktop.webp" alt="Desktop Echelon rower collection page with a centered dialog asking Shopping from Canada?, a Canadian flag, a Go to Echelon Canada button and a Stay on Echelon US button." loading="lazy" decoding="async" />
                   </a>
                   <figcaption>Desktop: a centered store suggestion for a visitor from Canada.</figcaption>
                 </figure>
                 <figure className="woocommerce-filter-proof woocommerce-filter-proof--mobile">
                   <a className="image-link" href="https://github.com/NikoCartin/shopify-geo-store-suggestion" target="_blank" rel="noopener noreferrer" aria-label="View the open-source geo store suggestion from the mobile preview">
-                    <img src="/assets/echelon-geo-store-suggestion-mobile.webp" alt="Mobile Echelon page with the Shopping from Canada? dialog, flags, and stacked Go to Echelon Canada and Stay on Echelon US buttons." loading="lazy" decoding="async" />
+                    <img src="./assets/echelon-geo-store-suggestion-mobile.webp" alt="Mobile Echelon page with the Shopping from Canada? dialog, flags, and stacked Go to Echelon Canada and Stay on Echelon US buttons." loading="lazy" decoding="async" />
                   </a>
                   <figcaption>Mobile: the same choice with stacked actions.</figcaption>
                 </figure>
@@ -650,7 +724,7 @@ export default function Home() {
           </article>
           <article className="woocommerce-catalog-case cro-case" id="mobile-checkout-cro" aria-labelledby="cro-case-title">
             <div className="woocommerce-catalog-media">
-              <img src="/assets/echelon-cro-mobile-pdp.webp" alt="Mobile Echelon Stride-6 product page showing the title, price, a monthly Shop Pay price, and the chat launcher raised above the sticky Add to cart button." loading="lazy" decoding="async" />
+              <img src="./assets/echelon-cro-mobile-pdp.webp" alt="Mobile Echelon Stride-6 product page showing the title, price, a monthly Shop Pay price, and the chat launcher raised above the sticky Add to cart button." loading="lazy" decoding="async" />
             </div>
             <div className="woocommerce-catalog-copy">
               <span className="project-eyebrow">Echelon Fit US · CRO · Mobile checkout · Analytics</span>
@@ -685,7 +759,7 @@ export default function Home() {
           </article>
           <article className="woocommerce-catalog-case cro-case" id="financing-page" aria-labelledby="financing-case-title">
             <div className="woocommerce-catalog-media">
-              <img src="/assets/echelon-financing-page-mobile.webp" alt="Mobile Echelon financing page with the heading Train now. Pay over time., a Shop equipment button, a Check your rate button and a photo of a rider on a Connect bike." loading="lazy" decoding="async" />
+              <img src="./assets/echelon-financing-page-mobile.webp" alt="Mobile Echelon financing page with the heading Train now. Pay over time., a Shop equipment button, a Check your rate button and a photo of a rider on a Connect bike." loading="lazy" decoding="async" />
             </div>
             <div className="woocommerce-catalog-copy">
               <span className="project-eyebrow">Echelon Fit US · Shopify Liquid · Consumer financing · Mobile UX</span>
@@ -806,7 +880,7 @@ export default function Home() {
             <div className="case-group-heading"><span>01 / Echelon</span><h3>Commerce, infrastructure, and customer experience across regional storefronts.</h3></div>
             <div className="case-study-grid">
               {echelonCommerceCases.map((project) => (
-                <article className="case-study-card" key={project.title}>
+                <article className="case-study-card" key={project.title} id={project.id}>
                   <a className={project.imagePresentation === "contain" ? "case-study-media case-study-media-snapshot" : "case-study-media"} href={project.liveUrl ?? project.link} target="_blank" rel="noreferrer" aria-label={`${project.title} (opens in a new tab)`}><img src={project.image} alt="" loading="lazy" decoding="async" /><span><ArrowUpRight size={17} /></span></a>
                   <div className="case-study-body">
                     <span className="case-study-area">{project.area}</span>
@@ -891,7 +965,7 @@ export default function Home() {
               </div>
               <div className="campaign-proof">
                 <a className="image-link" href="https://hablemosdemma.com/" target="_blank" rel="noreferrer" aria-label="Visit Hablemos de MMA">
-                  <img src="/assets/hmma-midyear-campaign-metrics.png" alt="Performance dashboard for the Hablemos de MMA Mid-Year Promo email campaign." loading="lazy" decoding="async" />
+                  <img src="./assets/hmma-midyear-campaign-metrics.png" alt="Performance dashboard for the Hablemos de MMA Mid-Year Promo email campaign." loading="lazy" decoding="async" />
                 </a>
               </div>
               <p className="campaign-caption">Hablemos de MMA · 70 recipients · July 2026. The performance snapshot also recorded a 5.7% bounce rate, a useful signal for list hygiene and deliverability review.</p>
@@ -920,13 +994,13 @@ export default function Home() {
                   <span><Check size={15} />Mobile-first composition</span>
                 </div>
               </div>
-              <div className="email-phone-preview"><a className="image-link" href="https://hablemosdemma.com/" target="_blank" rel="noreferrer" aria-label="Visit Hablemos de MMA"><img src="/assets/hmma-midyear-email-design.png" alt="Mid-year promotional email designed for Hablemos de MMA customers." loading="lazy" decoding="async" /></a></div>
+              <div className="email-phone-preview"><a className="image-link" href="https://hablemosdemma.com/" target="_blank" rel="noreferrer" aria-label="Visit Hablemos de MMA"><img src="./assets/hmma-midyear-email-design.png" alt="Mid-year promotional email designed for Hablemos de MMA customers." loading="lazy" decoding="async" /></a></div>
             </div>
             <div className="campaign-history-case">
               <span className="campaign-mini-label">Campaign portfolio</span>
               <h3>A repeatable campaign practice, with measurable learnings.</h3>
               <p>The campaign library includes welcome, promotion, loyalty, and seasonal Black November sends. Results are reviewed across open rate, click rate, CTOR, recipients, and list quality to guide the next iteration.</p>
-              <a className="image-link" href="https://hablemosdemma.com/" target="_blank" rel="noreferrer" aria-label="Visit Hablemos de MMA"><img src="/assets/hmma-campaign-history.png" alt="Hablemos de MMA campaign history showing performance metrics across promotional, welcome, and seasonal emails." loading="lazy" decoding="async" /></a>
+              <a className="image-link" href="https://hablemosdemma.com/" target="_blank" rel="noreferrer" aria-label="Visit Hablemos de MMA"><img src="./assets/hmma-campaign-history.png" alt="Hablemos de MMA campaign history showing performance metrics across promotional, welcome, and seasonal emails." loading="lazy" decoding="async" /></a>
             </div>
           </div>
           <div className="email-proof-row">
@@ -971,7 +1045,7 @@ export default function Home() {
             ))}
           </div>
           <div className="ux-case-strip">
-            <a className="image-link" href="https://www.3m.com/" target="_blank" rel="noreferrer" aria-label="Visit 3M.com"><img src="/assets/three-m-ux.png" alt="3M Annual Report page redesign example from a UX design portfolio case." loading="lazy" decoding="async" /></a>
+            <a className="image-link" href="https://www.3m.com/" target="_blank" rel="noreferrer" aria-label="Visit 3M.com"><img src="./assets/three-m-ux.png" alt="3M Annual Report page redesign example from a UX design portfolio case." loading="lazy" decoding="async" /></a>
             <div>
               <span className="eyebrow"><span className="eyebrow-dot" />3M UX design stretch assignment</span>
               <h3>Design-system thinking for complex, content-heavy experiences.</h3>
@@ -993,7 +1067,7 @@ export default function Home() {
             <a className="text-link" href="https://nossocr.com/" target="_blank" rel="noreferrer">Visit NossoCR <ArrowUpRight size={16} /></a>
           </div>
           <div className="woocommerce-feature">
-            <a className="woocommerce-feature-media image-link" href="https://nossocr.com/" target="_blank" rel="noreferrer" aria-label="Visit NossoCR"><img src="/assets/nosso-storefront.png" alt="NossoCR WordPress and WooCommerce storefront homepage." loading="lazy" decoding="async" /></a>
+            <a className="woocommerce-feature-media image-link" href="https://nossocr.com/" target="_blank" rel="noreferrer" aria-label="Visit NossoCR"><img src="./assets/nosso-storefront.png" alt="NossoCR WordPress and WooCommerce storefront homepage." loading="lazy" decoding="async" /></a>
             <div className="woocommerce-feature-copy">
               <span className="project-eyebrow">NossoCR · WordPress &amp; WooCommerce</span>
               <h3>Product discovery, promotions, and direct customer contact in one storefront.</h3>
@@ -1015,13 +1089,13 @@ export default function Home() {
                 </div>
                 <figure className="woocommerce-filter-proof woocommerce-filter-proof--desktop">
                   <a className="image-link" href="https://nossocr.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit NossoCR from the desktop collection filter preview">
-                    <img src="/assets/nosso-collection-filters.webp" alt="Desktop NossoCR collection page showing contextual Color and Talla filters in a left sidebar beside the product grid." loading="lazy" decoding="async" />
+                    <img src="./assets/nosso-collection-filters.webp" alt="Desktop NossoCR collection page showing contextual Color and Talla filters in a left sidebar beside the product grid." loading="lazy" decoding="async" />
                   </a>
                   <figcaption>Desktop: contextual filters in the collection sidebar.</figcaption>
                 </figure>
                 <figure className="woocommerce-filter-proof woocommerce-filter-proof--mobile">
                   <a className="image-link" href="https://nossocr.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit NossoCR from the mobile filter drawer preview">
-                    <img src="/assets/nosso-mobile-filter-drawer.webp" alt="Mobile NossoCR collection filter bottom sheet with Color and Talla options, a close control, Clear link, and View results button." loading="lazy" decoding="async" />
+                    <img src="./assets/nosso-mobile-filter-drawer.webp" alt="Mobile NossoCR collection filter bottom sheet with Color and Talla options, a close control, Clear link, and View results button." loading="lazy" decoding="async" />
                   </a>
                   <figcaption>Mobile: a filter drawer with clear and apply actions.</figcaption>
                 </figure>
@@ -1054,7 +1128,7 @@ export default function Home() {
           </article>
           <article className="woocommerce-catalog-case" aria-labelledby="woocommerce-catalog-title">
             <div className="woocommerce-catalog-media">
-              <img src="/assets/nosso-melissa-reels-en.webp" alt="Vertical Melissa collection campaign artwork designed for NossoCR Instagram Reels." loading="lazy" decoding="async" />
+              <img src="./assets/nosso-melissa-reels-en.webp" alt="Vertical Melissa collection campaign artwork designed for NossoCR Instagram Reels." loading="lazy" decoding="async" />
             </div>
             <div className="woocommerce-catalog-copy">
               <span className="project-eyebrow">NossoCR · WooCommerce · Catalog · SEO · Creative</span>
@@ -1123,7 +1197,7 @@ export default function Home() {
               <a className="text-link" href={githubUrl} target="_blank" rel="noreferrer">Browse GitHub projects <ArrowUpRight size={16} /></a>
             </div>
           </div>
-          <div className="hmma-image-wrap"><a className="image-link" href="https://hablemosdemma.com/" target="_blank" rel="noreferrer" aria-label="Visit Hablemos de MMA"><img src="/assets/hmma-platform.webp" alt="Hablemos de MMA platform preview." loading="lazy" decoding="async" /></a></div>
+          <div className="hmma-image-wrap"><a className="image-link" href="https://hablemosdemma.com/" target="_blank" rel="noreferrer" aria-label="Visit Hablemos de MMA"><img src="./assets/hmma-platform.webp" alt="Hablemos de MMA platform preview." loading="lazy" decoding="async" /></a></div>
         </div>
       </section>
 
@@ -1153,7 +1227,7 @@ export default function Home() {
         aria-label="Chat with Nícolas on WhatsApp"
         title="Chat on WhatsApp"
       >
-        <img src="/assets/whatsapp-official.svg" alt="" aria-hidden="true" />
+        <img src="./assets/whatsapp-official.svg" alt="" aria-hidden="true" />
       </a>
     </main>
   );
