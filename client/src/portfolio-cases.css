@@ -27,6 +27,10 @@
 }
 .latest-case-link svg { flex: 0 0 auto; }
 .latest-case-link:hover { color: var(--coral); }
+.fact-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .72fr); gap: var(--case-space-4); line-height: 1.5; }
+.fact-row > * { min-width: 0; }
+.intro-strip { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); padding-right: max(7vw, 96px); }
+.intro-tools { display: grid; grid-template-columns: repeat(4, max-content); gap: var(--case-space-3); }
 #native-financing, #uk-pdp-architecture { scroll-margin-top: var(--case-space-6); }
 .regional-financing-case {
   margin-bottom: var(--case-space-12);
@@ -154,6 +158,10 @@
 @media (max-width: 900px) {
   .regional-case-grid { grid-template-columns: 1fr; }
   .regional-screenshot { height: 460px; }
+}
+@media (max-width: 1120px) {
+  .intro-strip { grid-template-columns: 1fr; padding-right: 88px; }
+  .intro-tools { display: flex; justify-content: flex-start; max-width: 100%; }
 }
 @media (max-width: 480px) {
   .regional-case-heading h3 { max-width: 100%; }
