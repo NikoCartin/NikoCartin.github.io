@@ -58,6 +58,8 @@ The portfolio presents selected work across:
 
 ## Echelon case studies
 
+- **Regional product-page financing:** Native Shopify Liquid and JavaScript presentation across the US, Canada and UK, retaining provider-owned offers, equipment identity, membership controls and authentic product reviews. Includes regional screenshot switching, an enlargement dialog, native review initialization recovery and scoped-release safeguards. Screenshots are point-in-time captures; no conversion/revenue uplift or final checkout activation is claimed.
+- **UK reusable product architecture:** Expanded case study on product/family-driven Liquid components and progressive enhancements around the existing commerce controller, including Stair Max membership choices, equipment-only Pilates with optional FitPass, native integration bindings and release verification.
 - **Consent-aware geo store routing:** replaces an IP auto-redirect with a Shopify-native, accessible store suggestion, consent-based storage, and safe deep links. Shown with a desktop and mobile switch. Open-source starter: [shopify-geo-store-suggestion](https://github.com/NikoCartin/shopify-geo-store-suggestion).
 - **Consumer financing page rebuild:** schema-driven Liquid section for the Echelon Fit US financing page, with click-loaded ChargeAfter, an accessible FAQ, readable disclosure, and a template-swap release with one-step rollback. Live page: [echelonfit.com/pages/echelon-financing](https://echelonfit.com/pages/echelon-financing).
 - **Mobile checkout CRO:** tracking validation, real-device and in-app browser checkout testing, and live mobile friction fixes. [Case study](https://github.com/NikoCartin/echelon-triple-whale-analytics-public/blob/main/docs/05-mobile-cro-remediation.md).
@@ -75,3 +77,7 @@ The WordPress section includes a collection-filtering contribution led by **Níc
 - Production code, import files, and operating records remain in the private maintenance repository. No conversion uplift is claimed.
 
 Developed and maintained by **Nicolás Cartín Reyes, Lead Developer**.
+
+## Regional financing portfolio release
+
+The November 3, 2026 preview was explicitly approved for live deployment. See the [release record](docs/releases/2026-11-03-regional-financing-portfolio.md) for scope, deployment method, verification and rollback boundaries.
