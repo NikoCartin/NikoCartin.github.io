@@ -32,6 +32,24 @@
 .intro-strip { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); padding-right: max(7vw, 96px); }
 .intro-tools { display: grid; grid-template-columns: repeat(4, max-content); gap: var(--case-space-3); }
 #native-financing, #uk-pdp-architecture { scroll-margin-top: var(--case-space-6); }
+#echelon-cart-confidence { scroll-margin-top: var(--case-space-6); }
+.cart-confidence-case { margin-top: var(--case-space-12); margin-bottom: 0; }
+.cart-case-story { margin: var(--case-space-8) 0; }
+.cart-case-story > div { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: var(--case-space-6); padding: var(--case-space-5) 0; border-top: 1px solid var(--case-line); }
+.cart-case-story dt { color: var(--case-accent); font-family: var(--font-mono); font-size: var(--case-text-sm); line-height: 1.7; }
+.cart-case-story dd { margin: 0; color: var(--case-muted); font-size: var(--case-text-body); line-height: 1.7; }
+.cart-case-gallery { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(0, .85fr); gap: var(--case-space-6); align-items: center; }
+.cart-case-figure { margin: 0; min-width: 0; }
+.cart-case-image-button { display: block; width: 100%; padding: 0; border: 1px solid var(--case-line); border-radius: var(--case-space-3); overflow: hidden; background: #f2f7fb; cursor: zoom-in; }
+.cart-case-image-button img { display: block; width: 100%; height: auto; }
+.cart-case-figure figcaption { display: flex; align-items: center; justify-content: space-between; gap: var(--case-space-3); padding: 0 var(--case-space-1); font-size: var(--case-text-sm); color: var(--ink); }
+.cart-confidence-case :focus-visible { outline: 3px solid var(--coral); outline-offset: 4px; }
+.cart-confidence-case .regional-lightbox > img { display: block; width: auto; height: auto; max-width: 100%; }
+@media (max-width: 640px) {
+  .cart-case-story > div { grid-template-columns: 1fr; gap: var(--case-space-2); }
+  .cart-case-gallery { grid-template-columns: 1fr; gap: var(--case-space-6); }
+  .cart-case-figure--mobile { width: min(100%, 340px); justify-self: center; }
+}
 .regional-financing-case {
   margin-bottom: var(--case-space-12);
   padding: clamp(var(--case-space-5), 3vw, var(--case-space-10));

@@ -414,6 +414,13 @@ export default function Home() {
   const [geoPreviewMode, setGeoPreviewMode] = useState<"mobile" | "desktop">("mobile");
   const [financingRegion, setFinancingRegion] = useState<"us" | "ca" | "uk">("us");
   const financingLightbox = useRef<HTMLDialogElement>(null);
+  const cartLightbox = useRef<HTMLDialogElement>(null);
+  const [cartPreviewMode, setCartPreviewMode] = useState<"desktop" | "mobile">("desktop");
+  const cartPreviews = {
+    desktop: { image: "./assets/portfolio-cart-desktop.webp", width: 1600, height: 1232, label: "Desktop", alt: "Live Echelon US cart in a laptop presentation frame, showing the compact financing chooser and yellow product-specific star ratings beside the cart items." },
+    mobile: { image: "./assets/portfolio-cart-mobile.webp", width: 1000, height: 1509, label: "Mobile", alt: "Live Echelon US cart in a phone presentation frame, showing financing options above authentic membership and treadmill ratings, with checkout below." },
+  };
+  const cartPreview = cartPreviews[cartPreviewMode];
   const financingPreviews = {
     us: { image: "./assets/portfolio-financing-us.webp", alt: "US product-page financing chooser with native Shop Pay and Echelon Financing, including small Bread Pay and Katapult marks.", caption: "US: provider-owned offers inside a shared comparison.", label: "US", detail: "Shop Pay / Affirm and Echelon Financing" },
     ca: { image: "./assets/portfolio-financing-ca.webp", alt: "Canadian product page with CAD pricing and native Shop Pay messaging beside the equipment price.", caption: "Canada: local currency and native Canadian offers.", label: "Canada", detail: "CAD pricing and native Shop Pay / Affirm" },
@@ -475,7 +482,7 @@ export default function Home() {
             <a className="button button-quiet" href="https://mail.google.com/mail/?view=cm&fs=1&to=nicolascartinreyes@gmail.com&su=Portfolio%20inquiry&body=Hi%20N%C3%ADcolas%2C%0A%0AI%27d%20like%20to%20discuss%20a%20project%20with%20you." target="_blank" rel="noreferrer">Start a conversation <Mail size={17} /></a>
             <a className="resume-link" href="./assets/Nicolas-Cartin-Reyes-FlowCV-Resume-2026-10-12.pdf" target="_blank" rel="noreferrer">Resume PDF <ArrowUpRight size={15} /></a>
           </div>
-          <a className="latest-case-link" href="#native-financing">Latest case: native financing across three regions <ArrowRight size={15} /></a>
+          <a className="latest-case-link" href="#echelon-cart-confidence">Latest case: financing and real reviews in the cart <ArrowRight size={15} /></a>
         </div>
         <aside className="hero-fact-card" aria-label="Professional overview">
           <span className="fact-label">Education</span>
@@ -596,6 +603,47 @@ export default function Home() {
               </article>
             ))}
           </div>
+          <article className="regional-financing-case cart-confidence-case" id="echelon-cart-confidence" aria-labelledby="cart-confidence-title">
+            <div className="regional-case-heading">
+              <span className="project-eyebrow">Echelon US · Shopify Liquid · Cart UX · Bazaarvoice</span>
+              <h3 id="cart-confidence-title">Financing and social proof, together in the cart.</h3>
+              <p>I refined the cart's financing presentation and brought genuine product ratings into the purchase decision, using the existing payment integrations and native review data.</p>
+            </div>
+            <dl className="cart-case-story">
+              <div>
+                <dt>Problem</dt>
+                <dd>Financing widgets were too small to notice, and the cart had no product star ratings to support the purchase decision. Shoppers weighing a high-ticket purchase lacked clear payment visibility and product-specific social proof at the point of checkout.</dd>
+              </div>
+              <div>
+                <dt>Solution</dt>
+                <dd>I gave financing a clear “More ways to pay” panel, with recognizable provider logos beside a single “View financing options” action. The compact layout makes room directly below for yellow stars, real averages and review counts for the products in the cart, sourced dynamically from Bazaarvoice rather than hard-coded ratings.</dd>
+              </div>
+              <div>
+                <dt>Verification</dt>
+                <dd>Released after desktop and mobile review, then checked on the live storefront at 1440px and 390px. Ratings matched the native provider, the financing chooser opened and closed, and removing a product refreshed the review list. The existing payment widgets, checkout and membership logic were retained.</dd>
+              </div>
+            </dl>
+            <div className="cart-case-gallery" aria-label="Live cart desktop and mobile screenshots">
+              {(["desktop", "mobile"] as const).map((mode) => (
+                <figure className={`cart-case-figure cart-case-figure--${mode}`} key={mode}>
+                  <button type="button" className="cart-case-image-button" aria-label={`Enlarge ${mode} cart screenshot`} onClick={() => { setCartPreviewMode(mode); cartLightbox.current?.showModal(); }}>
+                    <img src={cartPreviews[mode].image} alt={cartPreviews[mode].alt} width={cartPreviews[mode].width} height={cartPreviews[mode].height} loading="lazy" decoding="async" />
+                  </button>
+                  <figcaption><span>{cartPreviews[mode].label} view</span><button type="button" className="regional-enlarge" onClick={() => { setCartPreviewMode(mode); cartLightbox.current?.showModal(); }}>Enlarge <Search size={15} /></button></figcaption>
+                </figure>
+              ))}
+            </div>
+            <p className="regional-capture-note">Live storefront captures, November 15, 2026, presented in laptop and phone frames. Prices, offers and review counts reflect that capture, not current quotes or ratings.</p>
+            <p className="regional-boundary">Live implementation verified within this scope. No order or financing application was submitted during QA, and no conversion or revenue uplift is claimed.</p>
+            <dialog ref={cartLightbox} className="regional-lightbox" aria-labelledby="cart-lightbox-title" onClick={(event) => { if (event.target === event.currentTarget) cartLightbox.current?.close(); }}>
+              <div className="regional-lightbox-header">
+                <h4 id="cart-lightbox-title">Echelon US cart: {cartPreview.label.toLowerCase()} view</h4>
+                <button type="button" aria-label="Close cart screenshot" onClick={() => cartLightbox.current?.close()}><X size={20} /></button>
+              </div>
+              <img src={cartPreview.image} alt={cartPreview.alt} width={cartPreview.width} height={cartPreview.height} decoding="async" />
+              <p>Live capture, November 15, 2026. Device frame added for presentation; the cart UI and displayed ratings are from the actual storefront.</p>
+            </dialog>
+          </article>
           <div className="echelon-proof-bar">
             <span>Representative stack</span>
             <p>Shopify Plus · Liquid · JavaScript · TypeScript · React · Rust/WASM · GraphQL · Python · Shopify CLI · AWS · Linux · Nginx · SSL/TLS · GitHub</p>
