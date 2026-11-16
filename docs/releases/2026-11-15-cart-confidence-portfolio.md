@@ -1,14 +1,12 @@
 # US cart financing and product-rating case study
 
-Status: portfolio preview awaiting approval. GitHub Pages has not been updated.
+Status: publication approved on November 15, 2026. Release and live verification results are recorded below when complete.
 
 ## Scope
 
 Add one focused case study inside the existing Echelon section, preserving the current portfolio design and unrelated projects. The latest-case hero anchor now reaches that article. Both approved laptop and phone presentations are included, with accessible native-dialog enlargement.
 
 The problem statement reflects the requested framing: financing widgets were too small, and the cart lacked product star ratings to support the purchase. The solution describes the final compact provider-logo/chooser layout and dynamic, authentic product-specific Bazaarvoice summaries.
-
-This case concerns the live US cart implementation, not the unrelated unpublished UK Summit work.
 
 ## Evidence and claim boundaries
 
@@ -25,9 +23,17 @@ The implementation record confirms scoped release and live desktop/mobile checks
 
 ## Release boundary
 
-Work is isolated on `preview/us-cart-case-20261115`, based on the current fetched main revision. The pre-existing untracked package lock is preserved and excluded. Production source, generated root assets, dependency manifests and the Pages workflow are not changed by this preview.
+The reviewed work was prepared on `preview/us-cart-case-20261115`, based on main revision `117c6bbbb51c0c6930095963ee2676cce9fbfcab`. The pre-existing untracked package lock is preserved and excluded. Dependency manifests, the Pages workflow, existing case studies and unrelated portfolio content are unchanged.
 
-Publishing requires portfolio approval. Do not push the preview to main or trigger the GitHub Pages workflow as part of the preview.
+The user explicitly approved publication with “And publish the portfolio update”. The approved source is released through the existing main-branch GitHub Actions workflow, which validates and builds the site, then updates the generated root HTML/assets used by GitHub Pages. No Pages configuration, DNS, repository visibility or Shopify storefront change is authorized or required.
+
+## Documentation and tracker
+
+The portfolio-specific tracker entry is separate from the completed US storefront implementation. Both records distinguish portfolio publication from the original commerce work and retain the boundary on unmeasured business outcomes.
+
+Tracker: https://docs.google.com/spreadsheets/d/1G6y-j6zifFepKyy4PQ7irN9DoKcS_Nxto9_xKoEAyPU/edit#gid=493767023&range=A180:J180
+
+Public portfolio: https://nikocartin.github.io/
 
 ## Preview QA
 
@@ -36,3 +42,7 @@ TypeScript checking and the production build passed. The local production bundle
 Both desktop and mobile case screenshots were visually inspected. The new case retains readable problem/solution/verification copy, both real presentation images and point-in-time/commercial-result qualifications. The new gallery stacks on narrow screens.
 
 The same seven bounded checks passed again against the deployed hosted payload in a fresh isolated context. Hosted screenshots confirmed the existing desktop/mobile hero, the new case and screenshot enlargement. No page errors, missing in-page destinations, broken loaded images or document-level horizontal overflow were captured in those checks. This is scoped portfolio QA, not a new audit of the Shopify storefront or all external destinations.
+
+## Rollback
+
+If release verification identifies a regression, use a new reviewed source rollback commit against the recorded pre-release revision and let the same workflow regenerate the public output. Do not force-push history, change Pages settings or replace unrelated portfolio work.
