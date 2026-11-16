@@ -1,6 +1,6 @@
 # US cart financing and product-rating case study
 
-Status: publication approved on November 15, 2026. Release and live verification results are recorded below when complete.
+Status: published and verified on November 15, 2026, Costa Rica time. GitHub documentation and tracker entry P149 are complete.
 
 ## Scope
 
@@ -42,6 +42,20 @@ TypeScript checking and the production build passed. The local production bundle
 Both desktop and mobile case screenshots were visually inspected. The new case retains readable problem/solution/verification copy, both real presentation images and point-in-time/commercial-result qualifications. The new gallery stacks on narrow screens.
 
 The same seven bounded checks passed again against the deployed hosted payload in a fresh isolated context. Hosted screenshots confirmed the existing desktop/mobile hero, the new case and screenshot enlargement. No page errors, missing in-page destinations, broken loaded images or document-level horizontal overflow were captured in those checks. This is scoped portfolio QA, not a new audit of the Shopify storefront or all external destinations.
+
+## Production release and public verification
+
+- Source release: `c728973be78d1192926e4a99bd1d4a0e8430b3e3`, including the reviewed case-study implementation `7348eb976952657b57faea590e7d3f1699642a82`.
+- Generated public output: `87bed8d17faf289ca036aa5ffe3c638b74a148ec`.
+- [Build and publish portfolio](https://github.com/NikoCartin/NikoCartin.github.io/actions/runs/43784126414): completed successfully.
+- [GitHub Pages production deployment](https://github.com/NikoCartin/NikoCartin.github.io/actions/runs/43784168034): completed successfully.
+- [Live portfolio](https://nikocartin.github.io/): opened in a fresh isolated browser context and rendered the approved cart case inside the Echelon section with both real desktop/mobile presentations.
+
+All seven bounded checks were repeated successfully against the public site: latest-case navigation and Echelon placement; desktop enlargement with Escape/focus return; mobile enlargement with Escape/focus return; original financing controls, disclosure and dialog; geo/Nosso gallery round-trips; responsive/mobile-menu checks; and anchor/loaded-image validity. Responsive checks included 375, 390, 768 and 1440 pixels plus a short desktop window. No page errors were captured. Public screenshots were visually inspected for the case, mobile hero and enlarged image.
+
+Tracker P149 was written only to `Pipeline!A180:J180`, with status Completed. Independent readback verified all ten cells and confirmed surrounding rows were unchanged, at `2026-11-16T01:07:45.545Z` (November 15 in Costa Rica). The entry contains the live URL, this document, source/generated revisions, successful workflows, scope and verification boundaries.
+
+No Shopify storefront, checkout, inventory, provider configuration or tracking implementation was changed by this portfolio release. No new commerce outcome or conversion uplift is claimed.
 
 ## Rollback
 
