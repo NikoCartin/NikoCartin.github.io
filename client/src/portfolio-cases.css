@@ -192,3 +192,20 @@
 @media (prefers-reduced-motion: reduce) {
   .regional-controls button { transition: none; }
 }
+
+/* Sample CRO report case */
+.sample-report-case .sample-report-cover { display: block; padding: 6px; border-radius: 12px; background: #fff; border: 1px solid rgba(17,21,29,.12); box-shadow: 0 10px 28px rgba(17,21,29,.13); align-self: start; }
+.sample-report-case .sample-report-cover img { display: block; width: 100%; height: auto; aspect-ratio: 900 / 1165; object-fit: contain; border-radius: 6px; }
+.sample-report-cover:focus-visible, .sample-report-pages a:focus-visible { outline: 3px solid #1F5FAD; outline-offset: 3px; }
+.sample-report-pages { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; max-width: 420px; }
+.sample-report-pages a { display: block; border: 1px solid rgba(17,21,29,.12); border-radius: 6px; overflow: hidden; background: #fff; transition: transform .15s ease, box-shadow .15s ease; }
+.sample-report-pages a:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(17,21,29,.12); }
+.sample-report-pages img { display: block; width: 100%; height: auto; }
+@media (max-width: 760px) {
+  .sample-report-case .sample-report-cover { max-width: 260px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sample-report-pages a { transition: none; }
+}
+.sample-report-case .woocommerce-filter-links { align-items: center; gap: 12px 22px; margin-top: 18px; }
+.sample-report-download { min-height: 44px; }

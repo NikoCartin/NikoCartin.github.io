@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import {
+  ArrowDown,
   ArrowRight,
   ArrowUpRight,
   Check,
@@ -449,14 +450,11 @@ export default function Home() {
         <nav className={menuOpen ? "site-nav is-open" : "site-nav"} aria-label="Main navigation">
           <a href="#work" onClick={closeMenu}>Work</a>
           <a href="#echelon" onClick={closeMenu}>Echelon</a>
-          <a href="#case-studies" onClick={closeMenu}>Case Studies</a>
-          <a href="#shopify-work" onClick={closeMenu}>Cases</a>
-          <a href="#woocommerce" onClick={closeMenu}>WordPress</a>
-          <a href="#seo" onClick={closeMenu}>SEO</a>
-          <a href="#email" onClick={closeMenu}>Email Marketing</a>
-          <a href="#archive" onClick={closeMenu}>Archive</a>
+          <a href="#case-studies" onClick={closeMenu}>CRO</a>
+          <a href="#sample-cro-report" onClick={closeMenu}>Reports</a>
+          <a href="#shopify-work" onClick={closeMenu}>Shopify</a>
+          <a href="#email" onClick={closeMenu}>Email</a>
           <a href="#strategy" onClick={closeMenu}>Expertise</a>
-          <a href="#systems" onClick={closeMenu}>Systems</a>
           <a href="#contact" onClick={closeMenu}>Contact</a>
           <a href={linkedInUrl} target="_blank" rel="noreferrer">LinkedIn</a>
           <a className="nav-github" href={githubUrl} target="_blank" rel="noreferrer">
@@ -471,11 +469,11 @@ export default function Home() {
         </div>
         <div className="hero-grid" />
         <div className="hero-content">
-          <div className="availability-pill"><span className="availability-dot" />Available for remote Shopify, full-stack &amp; digital strategy work</div>
-          <p className="hero-kicker">Full Stack Developer &amp; Digital Strategist · Shopify Plus <span className="platform-label">· WordPress</span></p>
+          <div className="availability-pill"><span className="availability-dot" />Available for remote Shopify, CRO, full-stack &amp; digital strategy work</div>
+          <p className="hero-kicker">Full Stack Developer &amp; Digital Strategist · Shopify Plus · CRO <span className="platform-label">· WordPress</span></p>
           <h1>I build commerce<br /><em>that works.</em></h1>
           <p className="hero-lede">
-            Shopify Plus and WordPress development, full-stack e-commerce, and lifecycle email for teams that need a reliable storefront and a clear path to purchase.
+            Shopify Plus and WordPress development, conversion rate optimization and A/B testing, full-stack e-commerce, and lifecycle email for teams that need a reliable storefront and a clear path to purchase.
           </p>
           <div className="hero-actions">
             <a className="button button-primary" href="#work">View selected work <ArrowRight size={17} /></a>
@@ -658,7 +656,7 @@ export default function Home() {
             <SectionHeading
               eyebrow="Echelon · Case studies"
               title="From a storefront signal to a shipped fix."
-              text="Regional product-page financing, consent-aware store routing, mobile checkout investigation and a rebuilt financing page. Each case connects the implementation to its verification and release boundaries."
+              text="Regional product-page financing, consent-aware store routing, mobile checkout investigation and a rebuilt financing page, plus a sample CRO report with A/B test write-ups. Each case connects the implementation to its verification and release boundaries."
             />
           </div>
           <article className="regional-financing-case" id="native-financing" aria-labelledby="native-financing-title">
@@ -836,6 +834,44 @@ export default function Home() {
               <p className="cro-note">No conversion impact is claimed. Monthly payment estimates stay off until finance confirms the APR wording.</p>
               <div className="woocommerce-filter-links">
                 <a className="text-link" href="https://echelonfit.com/pages/echelon-financing" target="_blank" rel="noreferrer">View the live page <ArrowUpRight size={15} /></a>
+              </div>
+            </div>
+          </article>
+          <article className="woocommerce-catalog-case sample-report-case" id="sample-cro-report" aria-labelledby="sample-report-title">
+            <a className="woocommerce-catalog-media sample-report-cover" href="./assets/Nico-Cartin-Reyes-Sample-CRO-Report.pdf" target="_blank" rel="noreferrer" aria-label="Open the sample CRO report PDF">
+              <img src="./assets/sample-cro-report-p1.webp" alt="First page of the sample CRO report: delivery numbers, a seven-step process diagram and charts of a mobile cart-to-checkout drop." width={900} height={1165} loading="lazy" decoding="async" />
+            </a>
+            <div className="woocommerce-catalog-copy">
+              <span className="project-eyebrow">CRO · A/B testing · Shopify · Reporting</span>
+              <h3 id="sample-report-title">Sample CRO report, from diagnosis to A/B test decision.</h3>
+              <p>A four-page report showing how I diagnose, fix, test and report conversion work for a multi-region DTC fitness brand on Shopify. The brand is anonymized.</p>
+              <div className="woocommerce-catalog-workstreams" aria-label="Report contents">
+                <div className="woocommerce-catalog-workstream">
+                  <span>01 · Process and diagnosis</span>
+                  <p>A seven-step process, then a real mobile cart-to-checkout investigation with funnel and device charts, the friction found and the fixes shipped.</p>
+                </div>
+                <div className="woocommerce-catalog-workstream">
+                  <span>02 · Released fixes</span>
+                  <p>Six purchase-path changes, each with problem, cause and verified result: a double add-to-cart, outlet checkout, financing, cart reviews, a Shopify Function trial offer and a hidden paid item.</p>
+                </div>
+                <div className="woocommerce-catalog-workstream">
+                  <span>03 · A/B test reports</span>
+                  <p>Two test write-ups with hypothesis, design, confidence intervals, segment results, guardrails and a ship decision, plus sample-size planning and fix-or-test prioritization.</p>
+                </div>
+              </div>
+              <ul className="sample-report-pages" aria-label="Report pages">
+                {[1, 2, 3, 4].map((page) => (
+                  <li key={page}>
+                    <a href={`./assets/Nico-Cartin-Reyes-Sample-CRO-Report.pdf#page=${page}`} target="_blank" rel="noreferrer" aria-label={`Open page ${page} of the sample CRO report`}>
+                      <img src={`./assets/sample-cro-report-p${page}.webp`} alt="" width={900} height={1165} loading="lazy" decoding="async" />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <p className="cro-note">Pages 1 and 2 describe real, released work. The A/B test pages use illustrative data to show the reporting format and are labeled as such.</p>
+              <div className="woocommerce-filter-links">
+                <a className="button button-primary sample-report-download" href="./assets/Nico-Cartin-Reyes-Sample-CRO-Report.pdf" download="Nico-Cartin-Reyes-Sample-CRO-Report.pdf">Download the PDF <ArrowDown size={16} /></a>
+                <a className="text-link" href="./assets/Nico-Cartin-Reyes-Sample-CRO-Report.pdf" target="_blank" rel="noreferrer">View in browser <ArrowUpRight size={15} /></a>
               </div>
             </div>
           </article>
