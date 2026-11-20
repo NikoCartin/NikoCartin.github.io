@@ -1,6 +1,6 @@
 # Sample CRO report, navigation and hero update
 
-Status: preview only. Not published. Waiting for sign-off.
+Status: approved for publication on November 20, 2026 ("ok to deploy"), after review of the hosted preview.
 
 ## Scope
 
@@ -26,4 +26,8 @@ Pages 1 and 2 of the report describe real, released work with verified technical
 
 ## Release boundary
 
-Branch `preview/sample-cro-report-20261120`, based on main `1368fbad510c32c1746f24e8d2488453a18714c7`. Pushing to main publishes through the existing Pages workflow, so main is not changed until sign-off.
+Branch `preview/sample-cro-report-20261120`, based on main `1368fbad510c32c1746f24e8d2488453a18714c7`. Released by fast-forwarding main to the reviewed branch, which runs the existing Pages workflow (`pnpm check`, `pnpm build`, generated output commit). No Pages settings, DNS or repository visibility changes.
+
+## Rollback
+
+Revert the source commits on main with a new commit and let the same workflow regenerate the output. No force-push.
