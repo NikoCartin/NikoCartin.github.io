@@ -453,7 +453,9 @@ export default function Home() {
           <a href="#case-studies" onClick={closeMenu}>CRO</a>
           <a href="#sample-cro-report" onClick={closeMenu}>Reports</a>
           <a href="#shopify-work" onClick={closeMenu}>Shopify</a>
+          <a href="#payments" onClick={closeMenu}>Payments</a>
           <a href="#email" onClick={closeMenu}>Email</a>
+          <a href="#archive" onClick={closeMenu}>Earlier work</a>
           <a href="#strategy" onClick={closeMenu}>Expertise</a>
           <a href="#contact" onClick={closeMenu}>Contact</a>
           <a href={linkedInUrl} target="_blank" rel="noreferrer">LinkedIn</a>
@@ -938,6 +940,15 @@ export default function Home() {
               <div className="tag-list"><Tag>Shopify Liquid</Tag><Tag>JavaScript</Tag><Tag>Customer Privacy API</Tag><Tag>WCAG 2.2</Tag><Tag>Open source</Tag></div>
             </div>
             <a className="featured-app-link" href="https://github.com/NikoCartin/shopify-geo-store-suggestion" target="_blank" rel="noreferrer">View public repository <ArrowUpRight size={17} /></a>
+          </div>
+          <div className="featured-app" id="payments">
+            <div className="featured-app-mark"><ShieldCheck size={23} /></div>
+            <div className="featured-app-copy">
+              <span>Payments and checkout integrations</span>
+              <h3>HSA/FSA, financing, and checkout handoffs</h3>
+              <p>Installed and maintain Truemed HSA/FSA checkout on the Echelon US store, with its checkout method and HSA pages. Compared Truemed with Redo, which presents HSA/FSA as a payment method inside the merchant checkout, and installed Redo on the storefront. Integrated financing providers including ChargeAfter and Newpay, and fixed a Shop Pay Installments handoff so membership-required products reach Shop Pay with the membership included. Validated paths on real carts without placing orders. No revenue or conversion uplift is claimed.</p>
+              <div className="tag-list"><Tag>HSA/FSA</Tag><Tag>Truemed</Tag><Tag>Redo</Tag><Tag>Shop Pay Installments</Tag><Tag>ChargeAfter</Tag><Tag>Newpay</Tag><Tag>Checkout QA</Tag></div>
+            </div>
           </div>
           <div className="featured-app" id="seo">
             <div className="featured-app-mark"><Search size={23} /></div>
