@@ -242,7 +242,7 @@ const echelonCommerceCases: EchelonCommerceCase[] = [
     link: "https://echelonfit.com/pages/partners",
     tags: ["Node.js", "Customer Account API", "OAuth 2.0 + PKCE", "MySQL"],
     problem: "Partner benefits needed a verified, one-time path based on an approved corporate domain rather than a generic discount code or self-declared organization.",
-    solution: "Built the Partners page and backend runtime with organization selection, Shopify Customer Accounts authentication, exact domain validation, idempotent MySQL benefit records, App Proxy security, and Shopify Admin GraphQL discount creation.",
+    solution: "Built the Partners page and backend runtime with organization selection, Shopify Customer Accounts authentication, exact domain validation, idempotent MySQL benefit records, App Proxy security, and Shopify Admin GraphQL creation of a random, single-use 15% discount code for each new benefit. Previously issued 10% codes were left unchanged.",
     impact: "Delivered a custom partner experience that verifies eligibility, prevents repeat benefit issuance, applies a single-use 15% discount across the cart, and guides customers into a curated product path.",
   },
   {
