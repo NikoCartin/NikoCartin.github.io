@@ -45,7 +45,11 @@
 .cart-case-figure figcaption { display: flex; align-items: center; justify-content: space-between; gap: var(--case-space-3); padding: 0 var(--case-space-1); font-size: var(--case-text-sm); color: var(--ink); }
 .cart-confidence-case :focus-visible { outline: 3px solid var(--coral); outline-offset: 4px; }
 .cart-confidence-case .regional-lightbox > img { display: block; width: auto; height: auto; max-width: 100%; }
+.offer-case-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--case-space-6); align-items: start; max-width: 760px; margin-inline: auto; }
+.offer-case-image-button img { max-height: 680px; object-fit: cover; object-position: top; }
+.offer-case .regional-lightbox > img { max-height: 80vh; margin-inline: auto; }
 @media (max-width: 640px) {
+  .offer-case-gallery { grid-template-columns: 1fr; max-width: 380px; }
   .cart-case-story > div { grid-template-columns: 1fr; gap: var(--case-space-2); }
   .cart-case-gallery { grid-template-columns: 1fr; gap: var(--case-space-6); }
   .cart-case-figure--mobile { width: min(100%, 340px); justify-self: center; }

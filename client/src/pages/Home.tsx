@@ -422,6 +422,13 @@ export default function Home() {
     mobile: { image: "./assets/portfolio-cart-mobile.webp", width: 1000, height: 1509, label: "Mobile", alt: "Live Echelon US cart in a phone presentation frame, showing financing options above authentic membership and treadmill ratings, with checkout below." },
   };
   const cartPreview = cartPreviews[cartPreviewMode];
+  const offerLightbox = useRef<HTMLDialogElement>(null);
+  const [offerPreviewKey, setOfferPreviewKey] = useState<"panel" | "live">("panel");
+  const offerPreviews = {
+    panel: { image: "./assets/portfolio-thermachill-offer-panel.webp", width: 488, height: 1531, label: "Offer panel", detail: "Development preview at regular prices", alt: "ThermaChill builder development preview with the Buy more, save more panel showing 5%, 10% and 15% tiers, two garments selected and a $60 saving line above the configuration subtotal." },
+    live: { image: "./assets/portfolio-thermachill-live-builder.webp", width: 750, height: 1710, label: "Live builder", detail: "Four garments on Black Friday pricing", alt: "Live ThermaChill builder in a two-by-two grid with Double Boots, Shoulder Arm, Vest and the new Hip and Lower Back garment, all selected, with a configuration subtotal of $2,484.95." },
+  };
+  const offerPreview = offerPreviews[offerPreviewKey];
   const financingPreviews = {
     us: { image: "./assets/portfolio-financing-us.webp", alt: "US product-page financing chooser with native Shop Pay and Echelon Financing, including small Bread Pay and Katapult marks.", caption: "US: provider-owned offers inside a shared comparison.", label: "US", detail: "Shop Pay / Affirm and Echelon Financing" },
     ca: { image: "./assets/portfolio-financing-ca.webp", alt: "Canadian product page with CAD pricing and native Shop Pay messaging beside the equipment price.", caption: "Canada: local currency and native Canadian offers.", label: "Canada", detail: "CAD pricing and native Shop Pay / Affirm" },
@@ -481,7 +488,7 @@ export default function Home() {
             <a className="button button-quiet" href="https://mail.google.com/mail/?view=cm&fs=1&to=nicolascartinreyes@gmail.com&su=Portfolio%20inquiry&body=Hi%20N%C3%ADcolas%2C%0A%0AI%27d%20like%20to%20discuss%20a%20project%20with%20you." target="_blank" rel="noreferrer">Start a conversation <Mail size={17} /></a>
             <a className="resume-link" href="./assets/Nicolas-Cartin-Reyes-FlowCV-Resume-2026-10-12.pdf" target="_blank" rel="noreferrer">Resume PDF <ArrowUpRight size={15} /></a>
           </div>
-          <a className="latest-case-link" href="#echelon-cart-confidence">Latest case: financing and real reviews in the cart <ArrowRight size={15} /></a>
+          <a className="latest-case-link" href="#thermachill-buy-more">Latest case: tiered buy more, save more discount <ArrowRight size={15} /></a>
         </div>
         <aside className="hero-fact-card" aria-label="Professional overview">
           <span className="fact-label">Education</span>
@@ -641,6 +648,47 @@ export default function Home() {
               </div>
               <img src={cartPreview.image} alt={cartPreview.alt} width={cartPreview.width} height={cartPreview.height} decoding="async" />
               <p>Live capture, November 15, 2026. Device frame added for presentation; the cart UI and displayed ratings are from the actual storefront.</p>
+            </dialog>
+          </article>
+          <article className="regional-financing-case cart-confidence-case offer-case" id="thermachill-buy-more" aria-labelledby="thermachill-buy-more-title">
+            <div className="regional-case-heading">
+              <span className="project-eyebrow">Echelon US · Shopify Functions · Rust/WASM · Liquid · App Home</span>
+              <h3 id="thermachill-buy-more-title">Buy more, save more: a tiered recovery-system discount.</h3>
+              <p>I turned a marketing request into a guarded product discount: each extra ThermaChill garment earns a deeper saving, priced by a Rust/WASM Function and explained inside the builder.</p>
+            </div>
+            <dl className="cart-case-story">
+              <div>
+                <dt>Problem</dt>
+                <dd>Marketing wanted shoppers to build a fuller recovery system after Cyber Monday: an automatic discount that grows with each garment, no end date, and no stacking with Black Friday pricing or welcome codes. The builder also lacked the new Hip and Lower Back garment, and an expired chair-gift offer was still adding a $239.99 Recliner Chair to carts.</dd>
+              </div>
+              <div>
+                <dt>Solution</dt>
+                <dd>I added a second Function to the existing custom app: 5% on the first garment, 10% on the second and 15% from the third, capped at 15%. Each unit's discount is the gap between its current price and the tiered regular price, so a garment already on sale gets nothing extra. Configuration lives in a discount metafield and the discount is scheduled from App Home. In the theme, the builder gained the Hip garment, a two-by-two grid, a date-gated "Buy more, save more" panel with a live saving line, and a one-line switch that pauses the chair gift.</dd>
+              </div>
+              <div>
+                <dt>Verification</dt>
+                <dd>Compiled WASM tests covered the full kit ($22.50, $22.50, $33.75, $33.75 at regular prices) and returned no discount on Black Friday prices; the existing shipping Function passed 19 of 19 checks. The app version was released with Shopify CLI, the theme files were pushed one by one with the live theme readback matching byte for byte, and a live cart confirmed five lines, no chair and the correct subtotal. The discount is scheduled for December 1, combining with shipping only.</dd>
+              </div>
+            </dl>
+            <div className="offer-case-gallery" aria-label="ThermaChill builder screenshots">
+              {(["panel", "live"] as const).map((key) => (
+                <figure className="cart-case-figure" key={key}>
+                  <button type="button" className="cart-case-image-button offer-case-image-button" aria-label={`Enlarge ${offerPreviews[key].label.toLowerCase()} screenshot`} onClick={() => { setOfferPreviewKey(key); offerLightbox.current?.showModal(); }}>
+                    <img src={offerPreviews[key].image} alt={offerPreviews[key].alt} width={offerPreviews[key].width} height={offerPreviews[key].height} loading="lazy" decoding="async" />
+                  </button>
+                  <figcaption><span><b>{offerPreviews[key].label}</b> · {offerPreviews[key].detail}</span><button type="button" className="regional-enlarge" onClick={() => { setOfferPreviewKey(key); offerLightbox.current?.showModal(); }}>Enlarge <Search size={15} /></button></figcaption>
+                </figure>
+              ))}
+            </div>
+            <p className="regional-capture-note">Captures from November 25, 2026. The offer panel is a development preview with regular prices simulated; on the live store it appears from December 1, when Black Friday pricing ends.</p>
+            <p className="regional-boundary">Released and scheduled within this scope. Live tier behavior will be confirmed on a real cart after December 1, and no conversion or revenue uplift is claimed.</p>
+            <dialog ref={offerLightbox} className="regional-lightbox" aria-labelledby="offer-lightbox-title" onClick={(event) => { if (event.target === event.currentTarget) offerLightbox.current?.close(); }}>
+              <div className="regional-lightbox-header">
+                <h4 id="offer-lightbox-title">ThermaChill builder: {offerPreview.label.toLowerCase()}</h4>
+                <button type="button" aria-label="Close builder screenshot" onClick={() => offerLightbox.current?.close()}><X size={20} /></button>
+              </div>
+              <img src={offerPreview.image} alt={offerPreview.alt} width={offerPreview.width} height={offerPreview.height} decoding="async" />
+              <p>{offerPreview.detail}, November 25, 2026. Screenshots are from the actual storefront builder.</p>
             </dialog>
           </article>
           <div className="echelon-proof-bar">
