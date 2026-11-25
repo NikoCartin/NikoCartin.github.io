@@ -1,6 +1,6 @@
 # ThermaChill "Buy more, save more" case study
 
-Status: preview prepared on November 25, 2026. Not published; waiting for Nico's sign-off.
+Status: published and verified on November 25, 2026 (PR #4, merge 8464c10), after Nico approved: "Publica la sección de ThermaChill en el portfolio y haz merge del PR #4". Live check at 1440px: section, both images and the hero "Latest case" link to #thermachill-buy-more. Tracker P218.
 
 ## Scope
 
