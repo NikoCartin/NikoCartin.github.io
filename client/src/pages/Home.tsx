@@ -663,11 +663,11 @@ export default function Home() {
               </div>
               <div>
                 <dt>Solution</dt>
-                <dd>I added a second Function to the existing custom app: 5% on the first garment, 10% on the second and 15% from the third, capped at 15%. Each unit's discount is the gap between its current price and the tiered regular price, so a garment already on sale gets nothing extra. Configuration lives in a discount metafield and the discount is scheduled from App Home. In the theme, the builder gained the Hip garment, a two-by-two grid, a date-gated "Buy more, save more" panel with a live saving line, and a one-line switch that pauses the chair gift.</dd>
+                <dd>I added a second Function to the existing custom app: 5% on the first garment, 10% on the second and 15% from the third, counted in builder order and capped at 15%. Each unit's discount is the gap between its current price and the tiered regular price, so a garment already on sale gets nothing extra. Configuration lives in a discount metafield and the discount is scheduled from App Home. In the theme, the builder gained the Hip garment, a two-by-two grid, a date-gated "Buy more, save more" panel with a live saving line, and a one-line switch that pauses the chair gift.</dd>
               </div>
               <div>
                 <dt>Verification</dt>
-                <dd>Compiled WASM tests covered the full kit ($22.50, $22.50, $33.75, $33.75 at regular prices) and returned no discount on Black Friday prices; the existing shipping Function passed 19 of 19 checks. The app version was released with Shopify CLI, the theme files were pushed one by one with the live theme readback matching byte for byte, and a live cart confirmed five lines, no chair and the correct subtotal. The discount is scheduled for December 1, combining with shipping only.</dd>
+                <dd>Compiled WASM tests covered a full-kit cart ($22.50, $22.50, $33.75 and $33.75 off, by garment) and returned no discount on Black Friday prices; the existing shipping Function passed 19 of 19 checks. The app version was released with Shopify CLI, the theme files were pushed one by one with the live theme readback matching byte for byte, and a live cart confirmed five lines, no chair and the correct subtotal. The discount is scheduled for December 1, combining with shipping only.</dd>
               </div>
             </dl>
             <div className="offer-case-gallery" aria-label="ThermaChill builder screenshots">
