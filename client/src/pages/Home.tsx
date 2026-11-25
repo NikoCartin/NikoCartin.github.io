@@ -453,7 +453,6 @@ export default function Home() {
           <a href="#case-studies" onClick={closeMenu}>CRO</a>
           <a href="#sample-cro-report" onClick={closeMenu}>Reports</a>
           <a href="#shopify-work" onClick={closeMenu}>Shopify</a>
-          <a href="#payments" onClick={closeMenu}>Payments</a>
           <a href="#email" onClick={closeMenu}>Email</a>
           <a href="#archive" onClick={closeMenu}>Earlier work</a>
           <a href="#strategy" onClick={closeMenu}>Expertise</a>
