@@ -879,6 +879,57 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="woocommerce-section payments-section" id="payments">
+        <div className="section-shell">
+          <div className="woocommerce-heading-row">
+            <SectionHeading
+              eyebrow="Echelon · Payments and checkout"
+              title="Payments, financing and checkout integrations."
+              text="HSA/FSA checkout, consumer financing providers, native installment handoffs, and checkout shipping rules across the US, Canada, UK and Primal storefronts. Each release was tested on real carts without placing orders or submitting applications."
+            />
+          </div>
+          <div className="capability-grid">
+            <article className="capability-card">
+              <ShieldCheck size={23} strokeWidth={1.8} />
+              <h3>HSA/FSA checkout</h3>
+              <p>Installed and maintain Truemed HSA/FSA checkout on the US store, including its checkout method and HSA pages, and corrected the page content to use estimated savings of about 30% with the tax-savings caveats intact. Compared Truemed with Redo, which presents HSA/FSA inside the merchant checkout, and installed Redo on the storefront.</p>
+            </article>
+            <article className="capability-card">
+              <Layers3 size={23} strokeWidth={1.8} />
+              <h3>Financing providers</h3>
+              <p>Worked with ChargeAfter, Bread Pay, Katapult, Newpay, Affirm and Shop Pay Installments. Built the Primal ChargeAfter display in an unpublished theme, added provider recognition on US product pages, restored the official Newpay branding in the UK, and recorded Newpay as visible in checkout for 18 of 20 main equipment models.</p>
+            </article>
+            <article className="capability-card">
+              <Workflow size={23} strokeWidth={1.8} />
+              <h3>Installment handoffs</h3>
+              <p>On US and Canada membership product pages, Shop Pay Installments opened with the equipment only. The page now adds its own membership first, then hands off through the cart with installments preselected. Two small files per store, read back byte for byte, with equipment-only pages left on the native path.</p>
+            </article>
+            <article className="capability-card">
+              <Code2 size={23} strokeWidth={1.8} />
+              <h3>Checkout logic</h3>
+              <p>Built Rust/WASM Shopify Functions for membership free shipping and first-month-free discounts, with an App Home control panel and fail-closed behavior. Tested a 12-case checkout matrix before release, and verified UK membership free shipping on the live product page and cart.</p>
+            </article>
+            <article className="capability-card">
+              <Database size={23} strokeWidth={1.8} />
+              <h3>Shipping rates at checkout</h3>
+              <p>Restored checkout rates for outlet and open-box equipment with narrow, reversible shipping-app rules, retested neighbouring carts, and documented the rollback. Researched negotiated freight checkout for Primal and audited its tax-inclusive pricing setup.</p>
+            </article>
+            <article className="capability-card">
+              <Check size={23} strokeWidth={1.8} />
+              <h3>Guardrails</h3>
+              <p>Provider branding preserved, no unverified APR or 0% promises, authentic product ratings only, and an approved scope for every live release. No customer payment data, applications or orders were used in testing.</p>
+            </article>
+          </div>
+          <div className="woocommerce-filter-links">
+            <a className="text-link" href="#native-financing">Native financing across three stores <ArrowRight size={15} /></a>
+            <a className="text-link" href="#echelon-cart-confidence">Financing and reviews in the cart <ArrowRight size={15} /></a>
+            <a className="text-link" href="#financing-page">Rebuilt financing page <ArrowRight size={15} /></a>
+            <a className="text-link" href="https://github.com/NikoCartin/shopify-membership-shipping-discount-starter" target="_blank" rel="noreferrer">Membership shipping starter <ArrowUpRight size={15} /></a>
+          </div>
+          <p className="cro-note">No conversion or revenue uplift is claimed. Provider availability and eligibility remain the providers' decisions.</p>
+        </div>
+      </section>
+
       <section className="shopify-cases-section" id="shopify-work">
         <div className="section-shell">
           <div className="shopify-cases-intro">
@@ -939,15 +990,6 @@ export default function Home() {
               <div className="tag-list"><Tag>Shopify Liquid</Tag><Tag>JavaScript</Tag><Tag>Customer Privacy API</Tag><Tag>WCAG 2.2</Tag><Tag>Open source</Tag></div>
             </div>
             <a className="featured-app-link" href="https://github.com/NikoCartin/shopify-geo-store-suggestion" target="_blank" rel="noreferrer">View public repository <ArrowUpRight size={17} /></a>
-          </div>
-          <div className="featured-app" id="payments">
-            <div className="featured-app-mark"><ShieldCheck size={23} /></div>
-            <div className="featured-app-copy">
-              <span>Payments and checkout integrations</span>
-              <h3>HSA/FSA, financing, and checkout handoffs</h3>
-              <p>Installed and maintain Truemed HSA/FSA checkout on the Echelon US store, with its checkout method and HSA pages. Compared Truemed with Redo, which presents HSA/FSA as a payment method inside the merchant checkout, and installed Redo on the storefront. Integrated financing providers including ChargeAfter and Newpay, and fixed a Shop Pay Installments handoff so membership-required products reach Shop Pay with the membership included. Validated paths on real carts without placing orders. No revenue or conversion uplift is claimed.</p>
-              <div className="tag-list"><Tag>HSA/FSA</Tag><Tag>Truemed</Tag><Tag>Redo</Tag><Tag>Shop Pay Installments</Tag><Tag>ChargeAfter</Tag><Tag>Newpay</Tag><Tag>Checkout QA</Tag></div>
-            </div>
           </div>
           <div className="featured-app" id="seo">
             <div className="featured-app-mark"><Search size={23} /></div>
