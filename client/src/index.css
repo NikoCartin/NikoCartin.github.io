@@ -592,3 +592,12 @@ img { display: block; max-width: 100%; }
 .payments-section .woocommerce-filter-links { margin-top: 28px; flex-wrap: wrap; gap: 14px 28px; }
 @media (max-width: 1100px) { .payments-section .capability-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 700px) { .payments-section .capability-grid { grid-template-columns: 1fr; } }
+
+.hmma-shots { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-top: 44px; }
+.hmma-shots figure { margin: 0; }
+.hmma-shots .image-link { display: block; overflow: hidden; border-radius: 12px; box-shadow: 0 16px 40px rgba(17,21,29,.13); background: #272932; }
+.hmma-shots img { display: block; width: 100%; aspect-ratio: 16 / 11; object-fit: cover; object-position: top; }
+.hmma-shots figcaption { margin-top: 10px; color: #646268; font-size: .78rem; line-height: 1.45; }
+.hmma-streams { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px 32px; margin-top: 44px; }
+.hmma-case-section .woocommerce-filter-links { margin-top: 28px; gap: 12px 28px; }
+@media (max-width: 760px) { .hmma-shots, .hmma-streams { grid-template-columns: 1fr; } }
