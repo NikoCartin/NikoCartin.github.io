@@ -604,3 +604,5 @@ img { display: block; max-width: 100%; }
 .hmma-streams .woocommerce-catalog-workstream { padding: 18px; }
 .hmma-streams .woocommerce-catalog-workstream > span { font-size: .68rem; }
 .hmma-streams .woocommerce-catalog-workstream p { font-size: .88rem; line-height: 1.58; margin-top: 9px; }
+.hmma-case-section .text-link, .payments-section .text-link { color: #171b22; }
+.hmma-case-section .text-link:hover, .payments-section .text-link:hover { color: #406cbb; }
