@@ -243,7 +243,7 @@ const echelonCommerceCases: EchelonCommerceCase[] = [
     tags: ["Node.js", "Customer Account API", "OAuth 2.0 + PKCE", "MySQL"],
     problem: "Partner benefits needed a verified, one-time path based on an approved corporate domain rather than a generic discount code or self-declared organization.",
     solution: "Built the Partners page and backend runtime with organization selection, Shopify Customer Accounts authentication, exact domain validation, idempotent MySQL benefit records, App Proxy security, and Shopify Admin GraphQL discount creation.",
-    impact: "Delivered a custom partner experience that verifies eligibility, prevents repeat benefit issuance, applies a single-use 10% discount across the cart, and guides customers into a curated product path.",
+    impact: "Delivered a custom partner experience that verifies eligibility, prevents repeat benefit issuance, applies a single-use 15% discount across the cart, and guides customers into a curated product path.",
   },
   {
     title: "ThermaChill configuration and chair gift",
@@ -904,7 +904,7 @@ export default function Home() {
             <div className="featured-app-copy">
               <span>Featured custom program</span>
               <h3>Echelon Partners Program</h3>
-              <p>A custom partner-verification experience that combines Shopify Customer Accounts, OAuth 2.0 with PKCE, corporate-domain eligibility, MySQL benefit state, App Proxy security, and single-use 10% discount issuance.</p>
+              <p>A custom partner-verification experience that combines Shopify Customer Accounts, OAuth 2.0 with PKCE, corporate-domain eligibility, MySQL benefit state, App Proxy security, and single-use 15% discount issuance.</p>
               <div className="tag-list"><Tag>Node.js</Tag><Tag>Customer Account API</Tag><Tag>OAuth 2.0 + PKCE</Tag><Tag>MySQL</Tag><Tag>Admin GraphQL</Tag></div>
             </div>
             <a className="featured-app-link" href="https://echelonfit.com/pages/partners" target="_blank" rel="noreferrer">See live experience <ArrowUpRight size={17} /></a>
