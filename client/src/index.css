@@ -601,3 +601,6 @@ img { display: block; max-width: 100%; }
 .hmma-streams { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px 32px; margin-top: 44px; }
 .hmma-case-section .woocommerce-filter-links { margin-top: 28px; gap: 12px 28px; }
 @media (max-width: 760px) { .hmma-shots, .hmma-streams { grid-template-columns: 1fr; } }
+.hmma-streams .woocommerce-catalog-workstream { padding: 18px; }
+.hmma-streams .woocommerce-catalog-workstream > span { font-size: .68rem; }
+.hmma-streams .woocommerce-catalog-workstream p { font-size: .88rem; line-height: 1.58; margin-top: 9px; }
