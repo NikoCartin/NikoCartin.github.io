@@ -49,6 +49,7 @@
 .offer-case-image-button img { max-height: 680px; object-fit: cover; object-position: top; }
 .offer-case .regional-lightbox > img { max-height: 80vh; margin-inline: auto; }
 .offer-case-gallery--wide { max-width: none; }
+.offer-case-gallery--wide .offer-case-image-button img { max-height: none; }
 @media (max-width: 640px) {
   .offer-case-gallery { grid-template-columns: 1fr; max-width: 380px; }
   .offer-case-gallery--wide { max-width: none; }

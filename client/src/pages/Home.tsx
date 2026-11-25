@@ -432,8 +432,8 @@ export default function Home() {
   const pdpOfferLightbox = useRef<HTMLDialogElement>(null);
   const [pdpOfferKey, setPdpOfferKey] = useState<"reformer" | "rows">("reformer");
   const pdpOfferPreviews = {
-    reformer: { image: "./assets/portfolio-reformer-free-freight.webp", width: 1300, height: 875, label: "Meridian reformer", detail: "Free freight with any membership", alt: "Live Echelon Meridian 22-inch reformer product page with a Shipping Included ribbon on the main image, a sale price box reading Shipping included with any membership, continental US, and a Why Meridian feature grid under the gallery." },
-    rows: { image: "./assets/portfolio-row-s-free-soundbar.webp", width: 1300, height: 875, label: "Row-S", detail: "Free Soundbar through Dec 1", alt: "Live Echelon Row-S product page with a Free Speaker ribbon on the main image, a free Echelon Soundbar row inside the Doorbusters price box, and the top of a Black Friday bonus card under the gallery." },
+    reformer: { image: "./assets/portfolio-reformer-free-freight.webp", width: 1300, height: 935, label: "Meridian reformer", detail: "Free freight with any membership", alt: "Live Echelon Meridian 22-inch reformer product page with a Shipping Included ribbon on the main image, a sale price box reading Shipping included with any membership, continental US, and a Why Meridian feature grid under the gallery." },
+    rows: { image: "./assets/portfolio-row-s-free-soundbar.webp", width: 1300, height: 935, label: "Row-S", detail: "Free Soundbar through Dec 1", alt: "Live Echelon Row-S product page with a Free Speaker ribbon on the main image, a free Echelon Soundbar row inside the Doorbusters price box, and the top of a Black Friday bonus card under the gallery." },
   };
   const pdpOfferPreview = pdpOfferPreviews[pdpOfferKey];
   const financingPreviews = {
