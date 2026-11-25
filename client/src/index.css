@@ -606,3 +606,5 @@ img { display: block; max-width: 100%; }
 .hmma-streams .woocommerce-catalog-workstream p { font-size: .88rem; line-height: 1.58; margin-top: 9px; }
 .hmma-case-section .text-link, .payments-section .text-link { color: #171b22; }
 .hmma-case-section .text-link:hover, .payments-section .text-link:hover { color: #406cbb; }
+.payments-section .capability-card h3 { color: #f4f1ea; margin: 14px 0 10px; font-size: 1.15rem; line-height: 1.2; }
+.payments-section .capability-card { padding-bottom: 28px; }

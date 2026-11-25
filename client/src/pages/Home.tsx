@@ -892,7 +892,7 @@ export default function Home() {
             <article className="capability-card">
               <ShieldCheck size={23} strokeWidth={1.8} />
               <h3>HSA/FSA checkout</h3>
-              <p>Installed and maintain Truemed HSA/FSA checkout on the US store, including its checkout method and HSA pages, and corrected the page content to use estimated savings of about 30% with the tax-savings caveats intact. Compared Truemed with Redo, which presents HSA/FSA inside the merchant checkout, and installed Redo on the storefront.</p>
+              <p>Maintain Truemed HSA/FSA checkout on the US store, including its checkout method and HSA pages, and corrected the page content to use estimated savings of about 30% with the tax-savings caveats intact. Compared Truemed with Redo, which presents HSA/FSA inside the merchant checkout, and installed Redo on the storefront.</p>
             </article>
             <article className="capability-card">
               <Layers3 size={23} strokeWidth={1.8} />
