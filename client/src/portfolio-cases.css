@@ -48,8 +48,10 @@
 .offer-case-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--case-space-6); align-items: start; max-width: 760px; margin-inline: auto; }
 .offer-case-image-button img { max-height: 680px; object-fit: cover; object-position: top; }
 .offer-case .regional-lightbox > img { max-height: 80vh; margin-inline: auto; }
+.offer-case-gallery--wide { max-width: none; }
 @media (max-width: 640px) {
   .offer-case-gallery { grid-template-columns: 1fr; max-width: 380px; }
+  .offer-case-gallery--wide { max-width: none; }
   .offer-case-image-button img { max-height: none; }
   .cart-case-story > div { grid-template-columns: 1fr; gap: var(--case-space-2); }
   .cart-case-gallery { grid-template-columns: 1fr; gap: var(--case-space-6); }

@@ -429,6 +429,13 @@ export default function Home() {
     live: { image: "./assets/portfolio-thermachill-live-builder.webp", width: 750, height: 1710, label: "Live builder", detail: "Four garments on Black Friday pricing", alt: "Live ThermaChill builder in a two-by-two grid with Double Boots, Shoulder Arm, Vest and the new Hip and Lower Back garment, all selected, with a configuration subtotal of $2,484.95." },
   };
   const offerPreview = offerPreviews[offerPreviewKey];
+  const pdpOfferLightbox = useRef<HTMLDialogElement>(null);
+  const [pdpOfferKey, setPdpOfferKey] = useState<"reformer" | "rows">("reformer");
+  const pdpOfferPreviews = {
+    reformer: { image: "./assets/portfolio-reformer-free-freight.webp", width: 1300, height: 875, label: "Meridian reformer", detail: "Free freight with any membership", alt: "Live Echelon Meridian 22-inch reformer product page with a Shipping Included ribbon on the main image, a sale price box reading Shipping included with any membership, continental US, and a Why Meridian feature grid under the gallery." },
+    rows: { image: "./assets/portfolio-row-s-free-soundbar.webp", width: 1300, height: 875, label: "Row-S", detail: "Free Soundbar through Dec 1", alt: "Live Echelon Row-S product page with a Free Speaker ribbon on the main image, a free Echelon Soundbar row inside the Doorbusters price box, and the top of a Black Friday bonus card under the gallery." },
+  };
+  const pdpOfferPreview = pdpOfferPreviews[pdpOfferKey];
   const financingPreviews = {
     us: { image: "./assets/portfolio-financing-us.webp", alt: "US product-page financing chooser with native Shop Pay and Echelon Financing, including small Bread Pay and Katapult marks.", caption: "US: provider-owned offers inside a shared comparison.", label: "US", detail: "Shop Pay / Affirm and Echelon Financing" },
     ca: { image: "./assets/portfolio-financing-ca.webp", alt: "Canadian product page with CAD pricing and native Shop Pay messaging beside the equipment price.", caption: "Canada: local currency and native Canadian offers.", label: "Canada", detail: "CAD pricing and native Shop Pay / Affirm" },
@@ -488,7 +495,7 @@ export default function Home() {
             <a className="button button-quiet" href="https://mail.google.com/mail/?view=cm&fs=1&to=nicolascartinreyes@gmail.com&su=Portfolio%20inquiry&body=Hi%20N%C3%ADcolas%2C%0A%0AI%27d%20like%20to%20discuss%20a%20project%20with%20you." target="_blank" rel="noreferrer">Start a conversation <Mail size={17} /></a>
             <a className="resume-link" href="./assets/Nicolas-Cartin-Reyes-FlowCV-Resume-2026-10-12.pdf" target="_blank" rel="noreferrer">Resume PDF <ArrowUpRight size={15} /></a>
           </div>
-          <a className="latest-case-link" href="#thermachill-buy-more">Latest case: tiered buy more, save more discount <ArrowRight size={15} /></a>
+          <a className="latest-case-link" href="#pdp-offers">Latest case: Black Friday offers made visible on the product page <ArrowRight size={15} /></a>
         </div>
         <aside className="hero-fact-card" aria-label="Professional overview">
           <span className="fact-label">Education</span>
@@ -689,6 +696,47 @@ export default function Home() {
               </div>
               <img src={offerPreview.image} alt={offerPreview.alt} width={offerPreview.width} height={offerPreview.height} decoding="async" />
               <p>{offerPreview.detail}, November 25, 2026. Screenshots are from the actual storefront builder.</p>
+            </dialog>
+          </article>
+          <article className="regional-financing-case cart-confidence-case offer-case" id="pdp-offers" aria-labelledby="pdp-offers-title">
+            <div className="regional-case-heading">
+              <span className="project-eyebrow">Echelon US · Shopify Functions · Rust/WASM · Liquid · Shopify CLI</span>
+              <h3 id="pdp-offers-title">Black Friday offers shoppers can see before they add to cart.</h3>
+              <p>I made two equipment offers real at checkout and visible on the product page: free freight on the Meridian reformers with any membership, and a free Soundbar with the Row-S.</p>
+            </div>
+            <dl className="cart-case-story">
+              <div>
+                <dt>Problem</dt>
+                <dd>With the Monthly membership, a Meridian reformer checkout still charged $299.99 Standard Shipping, and nothing on the product page told shoppers that freight could be covered. On the Row-S, a free Soundbar was already applied automatically in the cart through December 1, but the product page did little to make the gift visible before the add-to-cart decision.</dd>
+              </div>
+              <div>
+                <dt>Solution</dt>
+                <dd>In the custom app's shipping Function, I made Standard Shipping free with any membership, Monthly included, when a delivery group holds only reformers or the Stride-8s; a reformer shipping alongside other equipment follows the existing rules. On the reformer pages I reused the Stride-8s patterns: a Shipping Included ribbon, a shipping line in the sale price box, short reassurance lines, and a Why Meridian grid written only from each product's own description. For the Row-S I built one snippet with three placements: a Free Speaker ribbon, a gift row next to the price, and a bonus card with a product photo. It hides itself when the discount ends.</dd>
+              </div>
+              <div>
+                <dt>Verification</dt>
+                <dd>The Function passed 27 of 27 Rust tests, and the app version was released with Shopify CLI. Every theme change was previewed on the development theme first. Before each push I re-pulled the live files and compared them with the backup; I pushed only the approved files and the live readback matched byte for byte. A live checkout with a reformer and the Monthly plan showed Standard Shipping at $0, down from $299.99, without placing an order. A weekly read-only check re-tests that checkout every Monday.</dd>
+              </div>
+            </dl>
+            <div className="offer-case-gallery offer-case-gallery--wide" aria-label="Product page offer screenshots">
+              {(["reformer", "rows"] as const).map((key) => (
+                <figure className="cart-case-figure" key={key}>
+                  <button type="button" className="cart-case-image-button offer-case-image-button" aria-label={`Enlarge ${pdpOfferPreviews[key].label} screenshot`} onClick={() => { setPdpOfferKey(key); pdpOfferLightbox.current?.showModal(); }}>
+                    <img src={pdpOfferPreviews[key].image} alt={pdpOfferPreviews[key].alt} width={pdpOfferPreviews[key].width} height={pdpOfferPreviews[key].height} loading="lazy" decoding="async" />
+                  </button>
+                  <figcaption><span><b>{pdpOfferPreviews[key].label}</b> · {pdpOfferPreviews[key].detail}</span><button type="button" className="regional-enlarge" onClick={() => { setPdpOfferKey(key); pdpOfferLightbox.current?.showModal(); }}>Enlarge <Search size={15} /></button></figcaption>
+                </figure>
+              ))}
+            </div>
+            <p className="regional-capture-note">Live storefront captures from November 25, 2026, at 1440px, cropped to the product area.</p>
+            <p className="regional-boundary">Released within this scope. No conversion or revenue uplift is claimed; the Soundbar promotion ends December 1.</p>
+            <dialog ref={pdpOfferLightbox} className="regional-lightbox" aria-labelledby="pdp-offer-lightbox-title" onClick={(event) => { if (event.target === event.currentTarget) pdpOfferLightbox.current?.close(); }}>
+              <div className="regional-lightbox-header">
+                <h4 id="pdp-offer-lightbox-title">{pdpOfferPreview.label}: {pdpOfferPreview.detail.toLowerCase()}</h4>
+                <button type="button" aria-label="Close product page screenshot" onClick={() => pdpOfferLightbox.current?.close()}><X size={20} /></button>
+              </div>
+              <img src={pdpOfferPreview.image} alt={pdpOfferPreview.alt} width={pdpOfferPreview.width} height={pdpOfferPreview.height} decoding="async" />
+              <p>Live capture, November 25, 2026. Screenshot from the actual storefront.</p>
             </dialog>
           </article>
           <div className="echelon-proof-bar">
