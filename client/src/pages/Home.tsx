@@ -1374,9 +1374,9 @@ export default function Home() {
         <div className="section-shell">
           <div className="woocommerce-heading-row">
             <SectionHeading
-              eyebrow="Independent · Founder project"
+              eyebrow="Beyond client systems · Founder project"
               title="Hablemos de MMA: a store, a newsroom and a community."
-              text="A Spanish-language platform for the martial arts community in Costa Rica. It sells equipment, publishes fight news and interviews, and keeps the community connected through video, a gallery, WhatsApp and email. I run it end to end: catalog, content, design, campaigns and support."
+              text="A Spanish-language platform for the martial arts community in Costa Rica. It sells equipment, publishes fight news and interviews, and keeps the community connected through video, a gallery, WhatsApp and email. I run it end to end: catalog, content, design, campaigns and support. Alongside it I have built e-commerce, landing-page, inventory and frontend projects in WordPress, WooCommerce, PHP, Laravel, React and native JavaScript."
             />
           </div>
           <div className="hmma-shots">
@@ -1408,24 +1408,9 @@ export default function Home() {
             <a className="text-link" href="https://hablemosdemma.com/tienda-hmma" target="_blank" rel="noreferrer">Store <ArrowUpRight size={15} /></a>
             <a className="text-link" href="https://hablemosdemma.com/blog-hmma" target="_blank" rel="noreferrer">Blog <ArrowUpRight size={15} /></a>
             <a className="text-link" href="#email">Email campaign <ArrowRight size={15} /></a>
+            <a className="text-link" href={githubUrl} target="_blank" rel="noreferrer">Browse GitHub projects <ArrowUpRight size={15} /></a>
           </div>
           <p className="cro-note">Built on a hosted website builder rather than custom code. No sales or traffic figures are claimed. Screenshots taken from the live site on November 25, 2026.</p>
-        </div>
-      </section>
-
-      <section className="additional-work">
-        <div className="section-shell additional-work-grid">
-          <div>
-            <span className="eyebrow"><span className="eyebrow-dot" />Beyond client systems</span>
-            <h2>Independent work that keeps the craft practical.</h2>
-            <p>Founder of Hablemos de MMA, a content and commerce platform for the martial arts community in Costa Rica. I have also built e-commerce, landing-page, inventory, and frontend projects across WordPress, WooCommerce, PHP, Laravel, React, and native JavaScript.</p>
-            <div className="additional-links">
-              <a className="text-link" href="#hmma">Read the Hablemos de MMA case <ArrowRight size={16} /></a>
-              <a className="text-link" href="https://hablemosdemma.com/" target="_blank" rel="noreferrer">Visit Hablemos de MMA <ArrowUpRight size={16} /></a>
-              <a className="text-link" href={githubUrl} target="_blank" rel="noreferrer">Browse GitHub projects <ArrowUpRight size={16} /></a>
-            </div>
-          </div>
-          <div className="hmma-image-wrap"><a className="image-link" href="https://hablemosdemma.com/" target="_blank" rel="noreferrer" aria-label="Visit Hablemos de MMA"><img src="./assets/hmma-platform.webp" alt="Hablemos de MMA platform preview." loading="lazy" decoding="async" /></a></div>
         </div>
       </section>
 
